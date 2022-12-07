@@ -1,5 +1,7 @@
+import Card from "./components/UI/Card";
+
 const App = function () {
-  return <div>App</div>;
+  return <Card>App</Card>;
 };
 
 export default App;

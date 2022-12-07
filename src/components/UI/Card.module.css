@@ -1,0 +1,11 @@
+.card {
+  outline: 2px solid #af017190;
+  border-radius: 15px;
+  padding: 1rem;
+
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  background-color: #af017190;
+}
