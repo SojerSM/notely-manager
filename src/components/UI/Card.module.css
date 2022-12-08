@@ -1,9 +1,12 @@
 .card {
   outline: 2px solid #af017190;
-  border-radius: 15px;
+  border-radius: 25px;
   padding: 1rem;
 
   transition: all 0.25s ease;
+
+  display: flex;
+  justify-content: center;
 }
 
 .card:hover {

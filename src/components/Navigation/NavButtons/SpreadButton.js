@@ -2,7 +2,7 @@ import styles from "./SpreadButton.module.css";
 
 const SpreadButton = function (props) {
   return (
-    <button className={styles.button}>
+    <button className={styles.button} onClick={props.onClick}>
       <svg className={styles["svg-icon"]} viewBox="0 0 20 20">
         <path
           fill="none"

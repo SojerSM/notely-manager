@@ -8,10 +8,10 @@ const ActionsPage = function (props) {
       <div className={styles.title}>
         Organise your life in a <span>smarter</span> way.
       </div>
-      <div>
-        <ActionButton>Action 1</ActionButton>
-        <ActionButton>Action 2</ActionButton>
-        <ActionButton>Action 3</ActionButton>
+      <div className={styles.actions}>
+        <ActionButton title={"Notes"} />
+        <ActionButton title={"Tasks"} />
+        <ActionButton title={"Lists"} />
       </div>
     </main>
   );
