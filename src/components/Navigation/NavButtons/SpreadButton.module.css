@@ -1,7 +1,3 @@
-.svg-icon {
-  margin-left: 0.2rem;
-}
-
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
@@ -11,6 +7,14 @@
 .svg-icon circle {
   stroke: #4c0033;
   stroke-width: 1;
+}
+
+.svg-icon-right {
+  margin-left: 0.2rem;
+}
+
+.svg-icon-left {
+  margin-right: 0.2rem;
 }
 
 .button {

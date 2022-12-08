@@ -14,7 +14,7 @@ const Navigation = function (condition) {
 
   return (
     <nav className={`${styles.nav} ${isExpanded && styles["nav-expanded"]}`}>
-      <SpreadButton onClick={expandHandler} />
+      <SpreadButton onClick={expandHandler} isExpanded={isExpanded} />
     </nav>
   );
 };
