@@ -1,0 +1,38 @@
+.svg-icon {
+  margin-left: 0.2rem;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4c0033;
+}
+
+.svg-icon circle {
+  stroke: #4c0033;
+  stroke-width: 1;
+}
+
+.button {
+  position: absolute;
+  top: 3rem;
+  left: calc(100% - 2rem);
+
+  width: 4rem;
+  height: 4rem;
+  border-style: none;
+  outline: none;
+  background: #af0171;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #e80f88;
+}

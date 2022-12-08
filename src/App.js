@@ -1,7 +1,13 @@
-import Card from "./components/UI/Card";
+import { Fragment } from "react";
+
+import Navigation from "./components/Navigation/Navigation";
 
 const App = function () {
-  return <Card>App</Card>;
+  return (
+    <Fragment>
+      <Navigation />
+    </Fragment>
+  );
 };
 
 export default App;
