@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./Navigation.module.css";
 
 import SpreadButton from "./NavButtons/SpreadButton";
+import TogglePageButton from "./NavButtons/TogglePageButton";
 
 const Navigation = function (condition) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -15,6 +16,23 @@ const Navigation = function (condition) {
   return (
     <nav className={`${styles.nav} ${isExpanded && styles["nav-expanded"]}`}>
       <SpreadButton onClick={expandHandler} isExpanded={isExpanded} />
+      <div className={styles.togglers}>
+        <TogglePageButton
+          content={"Notes"}
+          type={"note"}
+          isExpanded={isExpanded}
+        />
+        <TogglePageButton
+          content={"Tasks"}
+          type={"task"}
+          isExpanded={isExpanded}
+        />
+        <TogglePageButton
+          content={"Lists"}
+          type={"list"}
+          isExpanded={isExpanded}
+        />
+      </div>
     </nav>
   );
 };
