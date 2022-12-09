@@ -1,13 +1,3 @@
-.actions-page {
-  margin: auto;
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .title {
   font-size: 1.8rem;
   letter-spacing: 2px;

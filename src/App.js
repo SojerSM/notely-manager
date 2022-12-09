@@ -4,6 +4,7 @@ import styles from "./App.module.css";
 
 import Navigation from "./components/Navigation/Navigation";
 import ActionsPage from "./components/ActionsPage/ActionsPage";
+import NotesPage from "./components/NotesPage/NotesPage";
 
 const App = function () {
   const [displayedPage, setDisplayedPage] = useState("dashboard");
@@ -16,7 +17,10 @@ const App = function () {
   return (
     <div className={styles.app}>
       <Navigation onClick={changeDisplayedPage} />
-      <ActionsPage onClick={changeDisplayedPage} />
+      {displayedPage === "dashboard" && (
+        <ActionsPage onClick={changeDisplayedPage} />
+      )}
+      {displayedPage === "notes" && <NotesPage />}
     </div>
   );
 };
