@@ -15,7 +15,6 @@
 }
 
 .button {
-  margin-left: 3rem;
   width: 100%;
   border: none;
   outline: none;
@@ -27,4 +26,31 @@
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0.75rem 0 0.75rem 1.75rem;
+
+  transition: background-color 0.2s ease, padding 0.5s ease;
+}
+
+.button-expanded {
+  padding: 0.75rem 0 0.75rem 4rem;
+}
+
+.button:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  position: absolute;
+  left: 9rem;
+  font-size: 2rem;
+  color: #e287b9;
+  opacity: 0;
+}
+
+.content-expanded {
+  opacity: 1;
+
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
 }

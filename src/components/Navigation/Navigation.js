@@ -18,6 +18,11 @@ const Navigation = function (condition) {
       <SpreadButton onClick={expandHandler} isExpanded={isExpanded} />
       <div className={styles.togglers}>
         <TogglePageButton
+          content={"Dashboard"}
+          type={"dashboard"}
+          isExpanded={isExpanded}
+        />
+        <TogglePageButton
           content={"Notes"}
           type={"note"}
           isExpanded={isExpanded}
