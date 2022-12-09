@@ -4,7 +4,8 @@ import styles from "./Navigation.module.css";
 
 import SpreadButton from "./NavButtons/SpreadButton";
 import TogglePageButton from "./NavButtons/TogglePageButton";
-import NavigationTitle from "./NavigationTitle";
+import NavigationTitle from "./NavigationContents/NavigationTitle";
+import NavigationFooter from "./NavigationContents/NavigationFooter";
 
 const Navigation = function (condition) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -40,6 +41,7 @@ const Navigation = function (condition) {
           isExpanded={isExpanded}
         />
       </div>
+      <NavigationFooter isExpanded={isExpanded} />
     </nav>
   );
 };
