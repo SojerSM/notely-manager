@@ -9,9 +9,9 @@ const ActionsPage = function (props) {
         Organise your life in a <span>smarter</span> way.
       </div>
       <div className={styles.actions}>
-        <ActionButton title={"Notes"} />
-        <ActionButton title={"Tasks"} />
-        <ActionButton title={"Lists"} />
+        <ActionButton type={"notes"} title={"Notes"} onClick={props.onClick} />
+        <ActionButton type={"tasks"} title={"Tasks"} onClick={props.onClick} />
+        <ActionButton type={"lists"} title={"Lists"} onClick={props.onClick} />
       </div>
     </main>
   );

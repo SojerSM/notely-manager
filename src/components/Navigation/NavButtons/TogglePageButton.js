@@ -10,11 +10,16 @@ const TogglePageButton = function (props) {
     props.isExpanded && styles["content-expanded"]
   }`;
 
+  const togglePageHandler = (event) => {
+    event.preventDefault();
+    props.onClick(props.type);
+  };
+
   return (
-    <button className={btnClasses}>
+    <button className={btnClasses} onClick={togglePageHandler}>
       <svg className={styles["svg-icon"]} viewBox="0 0 20 20">
         {props.type === "dashboard" && icons.navigationDashboardIcon}
-        {props.type === "note" && icons.navigationNoteIcon}
+        {props.type === "notes" && icons.navigationNoteIcon}
         {props.type === "task" && icons.navigationTaskIcon}
         {props.type === "list" && icons.navigationListIcon}
       </svg>

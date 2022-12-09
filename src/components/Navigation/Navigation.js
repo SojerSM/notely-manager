@@ -7,7 +7,7 @@ import TogglePageButton from "./NavButtons/TogglePageButton";
 import NavigationTitle from "./NavigationContents/NavigationTitle";
 import NavigationFooter from "./NavigationContents/NavigationFooter";
 
-const Navigation = function (condition) {
+const Navigation = function (props) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const expandHandler = (event) => {
@@ -24,21 +24,25 @@ const Navigation = function (condition) {
           content={"Dashboard"}
           type={"dashboard"}
           isExpanded={isExpanded}
+          onClick={props.onClick}
         />
         <TogglePageButton
           content={"Notes"}
-          type={"note"}
+          type={"notes"}
           isExpanded={isExpanded}
+          onClick={props.onClick}
         />
         <TogglePageButton
           content={"Tasks"}
           type={"task"}
           isExpanded={isExpanded}
+          onClick={props.onClick}
         />
         <TogglePageButton
           content={"Lists"}
           type={"list"}
           isExpanded={isExpanded}
+          onClick={props.onClick}
         />
       </div>
       <NavigationFooter isExpanded={isExpanded} />
