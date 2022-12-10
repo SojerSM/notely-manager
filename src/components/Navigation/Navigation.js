@@ -21,8 +21,8 @@ const Navigation = function (props) {
       <SpreadButton onClick={expandHandler} isExpanded={isExpanded} />
       <div className={styles.togglers}>
         <TogglePageButton
-          content={"Dashboard"}
-          type={"dashboard"}
+          content={"Summary"}
+          type={"summary"}
           isExpanded={isExpanded}
           onClick={props.onClick}
         />

@@ -18,9 +18,9 @@ const TogglePageButton = function (props) {
   return (
     <button className={btnClasses} onClick={togglePageHandler}>
       <svg className={styles["svg-icon"]} viewBox="0 0 20 20">
-        {props.type === "dashboard" && icons.navigationDashboardIcon}
-        {props.type === "funds" && icons.navigationNoteIcon}
-        {props.type === "dates" && icons.navigationTaskIcon}
+        {props.type === "summary" && icons.navigationSummaryIcon}
+        {props.type === "funds" && icons.navigationFundsIcon}
+        {props.type === "dates" && icons.navigationDatesIcon}
         {props.type === "lists" && icons.navigationListIcon}
       </svg>
       <p className={contentClasses}>{props.content}</p>

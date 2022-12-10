@@ -19,7 +19,7 @@ const App = function () {
   return (
     <div className={styles.app}>
       <Navigation onClick={changeDisplayedPage} />
-      {displayedPage === "dashboard" && (
+      {displayedPage === "summary" && (
         <ActionsPage onClick={changeDisplayedPage} />
       )}
       {displayedPage === "funds" && <NotesPage />}
