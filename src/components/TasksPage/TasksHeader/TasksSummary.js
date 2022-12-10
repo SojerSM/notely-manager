@@ -2,15 +2,17 @@ import { Fragment } from "react";
 
 import styles from "./TasksSummary.module.css";
 
+import SummaryButton from "./SummaryButton";
+
 const TasksSummary = function (props) {
   return (
     <Fragment>
       <h3 className={styles.title}>Your Tasks</h3>
       <div className={styles.summary}>
-        <button>All</button>
-        <button>Important</button>
-        <button>Upcoming</button>
-        <button>Goals</button>
+        <SummaryButton title={"All"} />
+        <SummaryButton title={"Important"} />
+        <SummaryButton title={"Upcoming"} />
+        <SummaryButton title={"Goals"} />
       </div>
     </Fragment>
   );
