@@ -6,4 +6,13 @@
 
   height: 100vh;
   margin: auto;
+  opacity: 0;
+  transform: translate(0, -5rem);
+
+  transition: all 0.5s ease-out;
+}
+
+.delayed {
+  opacity: 1;
+  transform: translate(0, 0);
 }
