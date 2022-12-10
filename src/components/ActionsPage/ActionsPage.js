@@ -12,7 +12,7 @@ const ActionsPage = function (props) {
       <div className={styles.actions}>
         <ActionButton type={"funds"} title={"Funds"} onClick={props.onClick} />
         <ActionButton type={"dates"} title={"Dates"} onClick={props.onClick} />
-        <ActionButton type={"lists"} title={"Lists"} onClick={props.onClick} />
+        <ActionButton type={"tasks"} title={"Tasks"} onClick={props.onClick} />
       </div>
     </Page>
   );

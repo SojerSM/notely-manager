@@ -7,7 +7,7 @@ const NavigationFooter = function (props) {
 
   return (
     <footer className={footerClasses}>
-      <h4>©2022 Sebastian Mazur</h4>
+      <p>©2022 Sebastian Mazur</p>
     </footer>
   );
 };

@@ -12,7 +12,7 @@ const Page = function (props) {
     return () => {
       clearTimeout(timer);
     };
-  });
+  }, []);
 
   return (
     <div

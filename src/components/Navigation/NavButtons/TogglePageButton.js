@@ -21,7 +21,7 @@ const TogglePageButton = function (props) {
         {props.type === "summary" && icons.navigationSummaryIcon}
         {props.type === "funds" && icons.navigationFundsIcon}
         {props.type === "dates" && icons.navigationDatesIcon}
-        {props.type === "lists" && icons.navigationListIcon}
+        {props.type === "tasks" && icons.navigationListIcon}
       </svg>
       <p className={contentClasses}>{props.content}</p>
     </button>

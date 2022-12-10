@@ -6,10 +6,10 @@ import Navigation from "./components/Navigation/Navigation";
 import ActionsPage from "./components/ActionsPage/ActionsPage";
 import NotesPage from "./components/FundsPage/FundsPage";
 import DatesPage from "./components/DatesPage/DatesPage";
-import ListsPage from "./components/ListsPage/ListsPage";
+import TasksPage from "./components/TasksPage/TasksPage";
 
 const App = function () {
-  const [displayedPage, setDisplayedPage] = useState("dashboard");
+  const [displayedPage, setDisplayedPage] = useState("summary");
 
   const changeDisplayedPage = (title) => {
     setDisplayedPage(title);
@@ -24,7 +24,7 @@ const App = function () {
       )}
       {displayedPage === "funds" && <NotesPage />}
       {displayedPage === "dates" && <DatesPage />}
-      {displayedPage === "lists" && <ListsPage />}
+      {displayedPage === "tasks" && <TasksPage />}
     </div>
   );
 };

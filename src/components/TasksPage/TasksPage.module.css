@@ -1,0 +1,11 @@
+.page {
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.tasks {
+  width: 75%;
+  height: inherit;
+  padding: 2rem 5rem 2rem 5rem;
+}
