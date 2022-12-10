@@ -4,7 +4,9 @@ import styles from "./App.module.css";
 
 import Navigation from "./components/Navigation/Navigation";
 import ActionsPage from "./components/ActionsPage/ActionsPage";
-import NotesPage from "./components/NotesPage/NotesPage";
+import NotesPage from "./components/FundsPage/FundsPage";
+import DatesPage from "./components/DatesPage/DatesPage";
+import ListsPage from "./components/ListsPage/ListsPage";
 
 const App = function () {
   const [displayedPage, setDisplayedPage] = useState("dashboard");
@@ -20,7 +22,9 @@ const App = function () {
       {displayedPage === "dashboard" && (
         <ActionsPage onClick={changeDisplayedPage} />
       )}
-      {displayedPage === "notes" && <NotesPage />}
+      {displayedPage === "funds" && <NotesPage />}
+      {displayedPage === "dates" && <DatesPage />}
+      {displayedPage === "lists" && <ListsPage />}
     </div>
   );
 };

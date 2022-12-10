@@ -3,7 +3,7 @@ import Page from "../UI/Page";
 const NotesPage = function (props) {
   return (
     <Page>
-      <h1>NotesPage</h1>
+      <h1>Funds</h1>
     </Page>
   );
 };

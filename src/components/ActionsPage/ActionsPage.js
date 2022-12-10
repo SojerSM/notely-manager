@@ -10,8 +10,8 @@ const ActionsPage = function (props) {
         Organise your life in a <span>smarter</span> way.
       </div>
       <div className={styles.actions}>
-        <ActionButton type={"notes"} title={"Notes"} onClick={props.onClick} />
-        <ActionButton type={"tasks"} title={"Tasks"} onClick={props.onClick} />
+        <ActionButton type={"funds"} title={"Funds"} onClick={props.onClick} />
+        <ActionButton type={"dates"} title={"Dates"} onClick={props.onClick} />
         <ActionButton type={"lists"} title={"Lists"} onClick={props.onClick} />
       </div>
     </Page>

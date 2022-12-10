@@ -27,20 +27,20 @@ const Navigation = function (props) {
           onClick={props.onClick}
         />
         <TogglePageButton
-          content={"Notes"}
-          type={"notes"}
+          content={"Funds"}
+          type={"funds"}
           isExpanded={isExpanded}
           onClick={props.onClick}
         />
         <TogglePageButton
-          content={"Tasks"}
-          type={"task"}
+          content={"Dates"}
+          type={"dates"}
           isExpanded={isExpanded}
           onClick={props.onClick}
         />
         <TogglePageButton
           content={"Lists"}
-          type={"list"}
+          type={"lists"}
           isExpanded={isExpanded}
           onClick={props.onClick}
         />
