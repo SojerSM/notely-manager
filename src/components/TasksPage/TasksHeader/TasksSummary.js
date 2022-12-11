@@ -6,6 +6,7 @@ import styles from "./TasksSummary.module.css";
 import Button from "../../UI/Button";
 import Modal from "../../UI/Modal";
 import SummaryButton from "./SummaryButton";
+import NewTaskForms from "./NewTaskFom";
 
 const TasksSummary = function (props) {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -22,7 +23,11 @@ const TasksSummary = function (props) {
 
   return (
     <Fragment>
-      {isFormOpen && <Modal onConfirm={closeModalHandler}>ModalContent</Modal>}
+      {isFormOpen && (
+        <Modal onConfirm={closeModalHandler}>
+          <NewTaskForms />
+        </Modal>
+      )}
       <div className={styles.header}>
         <h3 className={styles.title}>Your Tasks</h3>
         <Button className={styles["add-button"]} onClick={addNewHandler}>

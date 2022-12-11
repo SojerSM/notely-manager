@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+
+.form-header div {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-header h4 {
+  font-size: 1.6rem;
+}
+
+.form-button {
+  font-size: 1.6rem;
+}
