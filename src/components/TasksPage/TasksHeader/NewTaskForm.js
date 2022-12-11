@@ -5,7 +5,7 @@ import ExitButton from "../../UI/Buttons/ExitButton";
 const NewTaskForm = function (props) {
   return (
     <form className={styles["form"]}>
-      <ExitButton />
+      <ExitButton onClick={props.onConfirm} />
       <div className={styles["form-header"]}>
         <h4>Create new</h4>
         <div></div>

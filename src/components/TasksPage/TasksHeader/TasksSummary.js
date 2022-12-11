@@ -20,7 +20,7 @@ const TasksSummary = function (props) {
     <Fragment>
       {isFormOpen && (
         <Modal onConfirm={toggleFormHandler}>
-          <NewTaskForm />
+          <NewTaskForm onConfirm={toggleFormHandler} />
         </Modal>
       )}
       <div className={styles.header}>
