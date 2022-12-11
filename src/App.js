@@ -15,7 +15,6 @@ const App = function () {
     setDisplayedPage(title);
     console.log(displayedPage);
   };
-
   return (
     <div className={styles.app}>
       <Navigation onClick={changeDisplayedPage} />
