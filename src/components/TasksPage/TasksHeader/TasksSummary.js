@@ -6,7 +6,7 @@ import styles from "./TasksSummary.module.css";
 import Button from "../../UI/Buttons/Button";
 import Modal from "../../UI/Modal";
 import SummaryButton from "./SummaryButton";
-import NewTaskForm from "./NewTaskForm";
+import NewTaskForm from "./NewTaskForm/NewTaskForm";
 
 const TasksSummary = function (props) {
   const [isFormOpen, setIsFormOpen] = useState(false);

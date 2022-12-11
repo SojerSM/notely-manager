@@ -1,15 +1,13 @@
 import styles from "./NewTaskForm.module.css";
 
-import ExitButton from "../../UI/Buttons/ExitButton";
+import ExitButton from "../../../UI/Buttons/ExitButton";
+import NewTaskHeader from "./NewTaskHeader";
 
 const NewTaskForm = function (props) {
   return (
     <form className={styles["form"]}>
       <ExitButton onClick={props.onConfirm} />
-      <div className={styles["form-header"]}>
-        <h4>Create new</h4>
-        <div></div>
-      </div>
+      <NewTaskHeader />
     </form>
   );
 };
