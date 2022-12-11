@@ -1,16 +1,14 @@
 import styles from "./NewTaskForm.module.css";
 
-import Button from "../../UI/Button";
+import ExitButton from "../../UI/Buttons/ExitButton";
 
 const NewTaskForm = function (props) {
   return (
     <form className={styles["form"]}>
+      <ExitButton />
       <div className={styles["form-header"]}>
         <h4>Create new</h4>
-        <div>
-          <Button className={styles["form-button"]}>Task</Button>
-          <Button className={styles["form-button"]}>Goal</Button>
-        </div>
+        <div></div>
       </div>
     </form>
   );

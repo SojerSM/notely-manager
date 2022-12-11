@@ -3,34 +3,29 @@ import { Fragment, useState } from "react";
 import * as icons from "../../../assets/icons";
 import styles from "./TasksSummary.module.css";
 
-import Button from "../../UI/Button";
+import Button from "../../UI/Buttons/Button";
 import Modal from "../../UI/Modal";
 import SummaryButton from "./SummaryButton";
-import NewTaskForms from "./NewTaskFom";
+import NewTaskForm from "./NewTaskForm";
 
 const TasksSummary = function (props) {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
-  const addNewHandler = (event) => {
+  const toggleFormHandler = (event) => {
     event.preventDefault();
-    setIsFormOpen(true);
-  };
-
-  const closeModalHandler = (event) => {
-    event.preventDefault();
-    setIsFormOpen(false);
+    setIsFormOpen(!isFormOpen);
   };
 
   return (
     <Fragment>
       {isFormOpen && (
-        <Modal onConfirm={closeModalHandler}>
-          <NewTaskForms />
+        <Modal onConfirm={toggleFormHandler}>
+          <NewTaskForm />
         </Modal>
       )}
       <div className={styles.header}>
         <h3 className={styles.title}>Your Tasks</h3>
-        <Button className={styles["add-button"]} onClick={addNewHandler}>
+        <Button className={styles["add-button"]} onClick={toggleFormHandler}>
           <svg className={styles["svg-icon"]} viewBox="0 0 20 20">
             {icons.addNewIcon}
           </svg>

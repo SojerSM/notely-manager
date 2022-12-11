@@ -1,7 +1,7 @@
 import styles from "./ActionButton.module.css";
 
 import Card from "../UI/Card";
-import Button from "../UI/Button";
+import Button from "../UI/Buttons/Button";
 
 const ActionButton = function (props) {
   const togglePageHandler = (event) => {
