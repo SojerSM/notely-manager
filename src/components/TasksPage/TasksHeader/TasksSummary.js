@@ -4,11 +4,13 @@ import * as icons from "../../../assets/icons";
 import styles from "./TasksSummary.module.css";
 
 import Button from "../../UI/Button";
+import Modal from "../../UI/Modal";
 import SummaryButton from "./SummaryButton";
 
 const TasksSummary = function (props) {
   return (
     <Fragment>
+      <Modal>ModalContent</Modal>
       <div className={styles.header}>
         <h3 className={styles.title}>Your Tasks</h3>
         <Button className={styles["add-button"]}>
