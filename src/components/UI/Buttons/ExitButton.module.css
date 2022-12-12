@@ -1,6 +1,6 @@
 .svg-icon {
   position: absolute;
-  left: 2rem;
+  right: 2rem;
   top: 2rem;
   width: 2em;
   height: 2em;
@@ -11,7 +11,7 @@
 .svg-icon:hover {
   width: 2.4rem;
   height: 2.4rem;
-  left: 1.8rem;
+  right: 1.8rem;
   top: 1.8rem;
 }
 

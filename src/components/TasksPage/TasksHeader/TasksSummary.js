@@ -4,9 +4,10 @@ import * as icons from "../../../assets/icons";
 import styles from "./TasksSummary.module.css";
 
 import Button from "../../UI/Buttons/Button";
+import ExitButton from "../../UI/Buttons/ExitButton";
 import Modal from "../../UI/Modal";
 import SummaryButton from "./SummaryButton";
-import NewTaskForm from "./NewTaskForm/NewTaskForm";
+import NewTask from "./NewTask/NewTask";
 
 const TasksSummary = function (props) {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -19,12 +20,13 @@ const TasksSummary = function (props) {
   return (
     <Fragment>
       {isFormOpen && (
-        <Modal onConfirm={toggleFormHandler}>
-          <NewTaskForm onConfirm={toggleFormHandler} />
+        <Modal onConfirm={toggleFormHandler} className={styles["modal"]}>
+          <ExitButton onClick={toggleFormHandler} />
+          <NewTask />
         </Modal>
       )}
-      <div className={styles.header}>
-        <h3 className={styles.title}>Your Tasks</h3>
+      <div className={styles["header"]}>
+        <h3 className={styles["title"]}>Your Tasks</h3>
         <Button className={styles["add-button"]} onClick={toggleFormHandler}>
           <svg className={styles["svg-icon"]} viewBox="0 0 20 20">
             {icons.addNewIcon}
@@ -32,7 +34,7 @@ const TasksSummary = function (props) {
           Add
         </Button>
       </div>
-      <div className={styles.summary}>
+      <div className={styles["summary"]}>
         <SummaryButton title={"All"} />
         <SummaryButton title={"Important"} />
         <SummaryButton title={"Upcoming"} />
