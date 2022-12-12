@@ -20,7 +20,7 @@ const TasksSummary = function (props) {
   return (
     <Fragment>
       {isFormOpen && (
-        <Modal onConfirm={toggleFormHandler} className={styles["modal"]}>
+        <Modal onCLick={toggleFormHandler} className={styles["modal"]}>
           <ExitButton onClick={toggleFormHandler} />
           <NewTask />
         </Modal>
