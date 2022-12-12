@@ -7,6 +7,6 @@
 
 .input::-webkit-calendar-picker-indicator {
   opacity: 0.5;
-  margin-left: 0.5rem;
+  margin-left: 0.6rem;
   cursor: pointer;
 }

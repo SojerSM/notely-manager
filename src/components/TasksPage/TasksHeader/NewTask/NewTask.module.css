@@ -1,4 +1,4 @@
-@import "../../../../_variables.css";
+@import "../../../../_base.css";
 
 .form {
   display: flex;
@@ -10,13 +10,19 @@
 }
 
 .form h4 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.form span {
+  margin-top: 2rem;
+  width: 100%;
+  border-top: 4px solid #4c0033;
 }
 
 .input {
-  margin: 2rem 0;
+  margin: 2rem 0 3rem 0;
   font-size: 1.4rem;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   color: var(--font-color-light);
 }
 
@@ -34,6 +40,38 @@
 
 .date-input {
   font-size: 1.4rem;
-  padding: 0.4rem 0.5rem;
+  padding: 0.6rem 0.5rem;
   color: var(--font-color-light);
+}
+
+.select-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.select-wrapper p {
+  font-size: 1.6rem;
+}
+
+.radio-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.radio-btn label {
+  font-size: 1.6rem;
+  margin-right: 1rem;
+}
+
+.radio-btn input[type="radio"] {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+  transform: scale(1.5);
+}
+
+.submit-btn {
+  margin-top: 2rem;
+  font-size: 1.6rem;
 }
