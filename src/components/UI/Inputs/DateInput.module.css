@@ -1,0 +1,12 @@
+.input {
+  background-color: #af017180;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+}
+
+.input::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}

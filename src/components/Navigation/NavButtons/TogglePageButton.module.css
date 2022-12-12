@@ -1,3 +1,5 @@
+@import "../../../_variables.css";
+
 .svg-icon {
   width: 3.5rem;
   height: 3.5rem;
@@ -44,7 +46,7 @@
   position: absolute;
   left: 9rem;
   font-size: 1.8rem;
-  color: #e287b9;
+  color: var(--font-color-light);
   opacity: 0;
 }
 

@@ -5,8 +5,7 @@ const TextInput = function (props) {
     <input
       className={`${styles["input"]} ${props.className}`}
       type="text"
-      placeholder={props.placeholder}
-      maxLength={props.maxLength}
+      {...props.input}
     />
   );
 };

@@ -1,3 +1,5 @@
+@import "../../../../_variables.css";
+
 .form {
   display: flex;
   flex-direction: column;
@@ -9,4 +11,29 @@
 
 .form h4 {
   font-size: 1.5rem;
+}
+
+.input {
+  margin: 2rem 0;
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+  color: var(--font-color-light);
+}
+
+.input::placeholder {
+  color: var(--font-color-light);
+  opacity: 0.5;
+}
+
+.categories {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.date-input {
+  font-size: 1.4rem;
+  padding: 0.4rem 0.5rem;
+  color: var(--font-color-light);
 }
