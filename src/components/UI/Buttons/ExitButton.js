@@ -9,7 +9,7 @@ const ExitButton = function (props) {
       <svg
         className={styles["svg-icon"]}
         viewBox="0 0 20 20"
-        onClick={props.onClick}
+        onClick={props.onClose}
       >
         {icons.exitIcon}
       </svg>

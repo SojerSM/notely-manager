@@ -1,6 +1,7 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useState } from "react";
 
 import styles from "./NewTask.module.css";
+import * as icons from "../../../../assets/icons";
 
 import TaskContext from "../../../../store/taskContext/task-context";
 
@@ -16,12 +17,11 @@ const NewTask = function (props) {
   const [taskContent, setTaskContent] = useState("");
   const [taskDate, setTaskDate] = useState("");
   const [taskOption, setTaskOption] = useState("work");
+  const [isImportant, setIsImportant] = useState(false);
   const [formError, setFormError] = useState({
     status: false,
     description: "",
   });
-
-  const priorityInputRef = useRef();
 
   const formConfirmHandler = (event) => {
     event.preventDefault();
@@ -37,13 +37,14 @@ const NewTask = function (props) {
     setFormError({ status: false });
     clearFormValues();
 
-    console.log(task, taskContent, taskDate, taskOption, priorityInputRef);
+    console.log(task, taskContent, taskDate, taskOption, isImportant);
   };
 
   const clearFormValues = () => {
     setTaskContent("");
     setTaskDate("");
     setTaskOption("work");
+    setIsImportant(false);
   };
 
   const textChangeHandler = (text) => {
@@ -56,6 +57,11 @@ const NewTask = function (props) {
 
   const selectHandler = (option) => {
     setTaskOption(option);
+  };
+
+  const priorityInputHandler = (event) => {
+    event.preventDefault();
+    setIsImportant(!isImportant);
   };
 
   return (
@@ -84,18 +90,26 @@ const NewTask = function (props) {
           <p>Category</p>
           <TaskSelector onChange={selectHandler} value={taskOption} />
         </div>
-        <div className={styles["radio-btn"]}>
+        <div className={styles["important-btn"]}>
           <label htmlFor={"important"}>Important</label>
-          <input
-            type={"radio"}
+          <button
             id={"important"}
-            autoComplete={"off"}
-            ref={priorityInputRef}
-          />
+            type={"button"}
+            onClick={priorityInputHandler}
+          >
+            <svg
+              className={
+                !isImportant ? styles["svg-icon"] : styles["svg-icon-active"]
+              }
+              viewBox="0 0 20 20"
+            >
+              {icons.importantIcon}
+            </svg>
+          </button>
         </div>
       </div>
       <span />
-      <Button className={styles["submit-btn"]} onSubmit={formConfirmHandler}>
+      <Button className={styles["submit-btn"]} onClick={formConfirmHandler}>
         Submit
       </Button>
       {formError.status && <NewTaskError formError={formError} />}

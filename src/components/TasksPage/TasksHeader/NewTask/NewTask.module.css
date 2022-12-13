@@ -54,24 +54,56 @@
   font-size: 1.6rem;
 }
 
-.radio-btn {
+.important-btn {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.radio-btn label {
+.important-btn label {
   font-size: 1.6rem;
-  margin-right: 1rem;
 }
 
-.radio-btn input[type="radio"] {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
-  transform: scale(1.5);
+.important-btn button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
 }
 
 .submit-btn {
   margin-top: 2rem;
   font-size: 1.6rem;
+}
+
+.svg-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #af017180;
+}
+
+.svg-icon circle {
+  stroke: #af017180;
+  stroke-width: 1;
+}
+
+.svg-icon-active {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.svg-icon-active path,
+.svg-icon-active polygon,
+.svg-icon-active rect {
+  fill: rgb(229, 229, 113);
+}
+
+.svg-icon-active circle {
+  stroke: rgb(229, 229, 113);
+  stroke-width: 1;
 }
