@@ -11,8 +11,8 @@
 .modal {
   position: fixed;
   top: 20vh;
-  left: 30%;
-  width: 40%;
+  left: 27.5%;
+  width: 45%;
   height: fit-content;
   background-color: rgba(88, 7, 54, 1);
   padding: 2rem;

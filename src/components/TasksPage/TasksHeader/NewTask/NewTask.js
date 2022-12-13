@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 
 import styles from "./NewTask.module.css";
-import * as icons from "../../../../assets/icons";
 
 import TaskContext from "../../../../store/taskContext/task-context";
 
@@ -10,6 +9,7 @@ import DateInput from "../../../UI/Inputs/DateInput";
 import TaskSelector from "./TaskSelector";
 import Button from "../../../UI/Buttons/Button";
 import NewTaskError from "./NewTaskError";
+import TaskPriorityButton from "./TaskPriorityButton";
 
 const NewTask = function (props) {
   const task = useContext(TaskContext);
@@ -59,9 +59,8 @@ const NewTask = function (props) {
     setTaskOption(option);
   };
 
-  const priorityInputHandler = (event) => {
-    event.preventDefault();
-    setIsImportant(!isImportant);
+  const priorityInputHandler = (priority) => {
+    setIsImportant(priority);
   };
 
   return (
@@ -90,23 +89,10 @@ const NewTask = function (props) {
           <p>Category</p>
           <TaskSelector onChange={selectHandler} value={taskOption} />
         </div>
-        <div className={styles["important-btn"]}>
-          <label htmlFor={"important"}>Important</label>
-          <button
-            id={"important"}
-            type={"button"}
-            onClick={priorityInputHandler}
-          >
-            <svg
-              className={
-                !isImportant ? styles["svg-icon"] : styles["svg-icon-active"]
-              }
-              viewBox="0 0 20 20"
-            >
-              {icons.importantIcon}
-            </svg>
-          </button>
-        </div>
+        <TaskPriorityButton
+          isImportant={isImportant}
+          onClick={priorityInputHandler}
+        />
       </div>
       <span />
       <Button className={styles["submit-btn"]} onClick={formConfirmHandler}>
