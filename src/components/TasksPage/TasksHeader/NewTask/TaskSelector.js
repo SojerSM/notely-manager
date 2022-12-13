@@ -10,6 +10,7 @@ const TaskSelector = function (props) {
     <select
       className={styles["selector"]}
       name={"categories"}
+      value={props.value}
       onChange={selectHandler}
     >
       <option value={"work"}>Work</option>

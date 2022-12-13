@@ -1,0 +1,27 @@
+.svg-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: rgb(210, 86, 86);
+}
+
+.svg-icon circle {
+  stroke: rgb(210, 86, 86);
+  stroke-width: 1;
+}
+
+.error {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.error p {
+  font-size: 1.4rem;
+  color: rgb(210, 86, 86);
+}
