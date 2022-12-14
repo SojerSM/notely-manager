@@ -2,17 +2,16 @@ import { useContext, useState } from "react";
 
 import styles from "./NewTask.module.css";
 
-import TaskContext from "../../../../store/taskContext/task-context";
-
 import TextInput from "../../../UI/Inputs/TextInput";
 import DateInput from "../../../UI/Inputs/DateInput";
 import TaskSelector from "./TaskSelector";
 import Button from "../../../UI/Buttons/Button";
 import NewTaskError from "./NewTaskError";
 import TaskPriorityButton from "./TaskPriorityButton";
+import TaskContext from "../../../../store/taskContext/task-context";
 
 const NewTask = function (props) {
-  const task = useContext(TaskContext);
+  const taskCtx = useContext(TaskContext);
 
   const [taskContent, setTaskContent] = useState("");
   const [taskDate, setTaskDate] = useState("");
@@ -34,16 +33,26 @@ const NewTask = function (props) {
       clearFormValues();
       return;
     }
+
+    const newTask = {
+      key: Math.random().toString(),
+      content: taskContent,
+      date: taskDate,
+      option: taskOption,
+      priority: isImportant,
+    };
+
+    taskCtx.addTask(newTask);
+
     setFormError({ status: false });
     clearFormValues();
-
-    console.log(task, taskContent, taskDate, taskOption, isImportant);
+    console.log(taskCtx.tasks);
   };
 
   const clearFormValues = () => {
     setTaskContent("");
     setTaskDate("");
-    setTaskOption("work");
+    setTaskOption("others");
     setIsImportant(false);
   };
 
