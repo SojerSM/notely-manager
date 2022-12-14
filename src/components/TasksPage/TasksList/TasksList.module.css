@@ -4,9 +4,27 @@
   gap: 1rem;
   align-items: flex-start;
   justify-content: center;
+
+  padding: 1rem;
+  max-height: 25rem;
+  overflow: auto;
+}
+
+.list::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.list::-webkit-scrollbar-track {
+  border-radius: 10px;
+  outline: 2px solid #af017190;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: #af017150;
+  border-radius: 10px;
 }
 
 .filter {
   font-size: 1.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, Fragment } from "react";
 
 import styles from "./TasksList.module.css";
 
@@ -12,21 +12,23 @@ const TasksList = function (props) {
   console.log(tasks);
 
   return (
-    <div className={styles["list"]}>
+    <Fragment>
       <h3 className={styles["filter"]}>All</h3>
-      {tasks.length > 0 &&
-        tasks.map((task) => {
-          return (
-            <TaskItem
-              key={task.key}
-              date={task.date}
-              content={task.content}
-              option={task.option}
-              priority={task.priority}
-            />
-          );
-        })}
-    </div>
+      <div className={styles["list"]}>
+        {tasks.length > 0 &&
+          tasks.map((task) => {
+            return (
+              <TaskItem
+                key={task.key}
+                date={task.date}
+                content={task.content}
+                option={task.option}
+                priority={task.priority}
+              />
+            );
+          })}
+      </div>
+    </Fragment>
   );
 };
 
