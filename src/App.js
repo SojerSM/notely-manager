@@ -13,7 +13,6 @@ const App = function () {
 
   const changeDisplayedPage = (title) => {
     setDisplayedPage(title);
-    console.log(displayedPage);
   };
   return (
     <div className={styles.app}>
