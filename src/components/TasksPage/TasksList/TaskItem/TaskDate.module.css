@@ -1,0 +1,8 @@
+.date {
+  width: 7rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.35rem;
+
+  font-size: 1.2rem;
+}

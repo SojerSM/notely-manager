@@ -38,7 +38,7 @@ const NewTask = function (props) {
     const newTask = {
       key: Math.random().toString(),
       content: taskContent,
-      date: taskDate,
+      date: new Date(taskDate),
       option: taskOption,
       priority: isImportant,
     };
