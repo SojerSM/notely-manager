@@ -37,8 +37,8 @@ const TasksSummary = function (props) {
       <div className={styles["summary"]}>
         <SummaryButton title={"All"} />
         <SummaryButton title={"Important"} />
+        <SummaryButton title={"Uncategorized"} />
         <SummaryButton title={"Upcoming"} />
-        <SummaryButton title={"Goals"} />
       </div>
     </Fragment>
   );

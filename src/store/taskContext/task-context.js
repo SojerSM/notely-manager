@@ -2,7 +2,7 @@ import React from "react";
 
 const TaskContext = React.createContext({
   tasks: [],
-  totalAmount: 0,
+  addTask: (task) => {},
 });
 
 export default TaskContext;

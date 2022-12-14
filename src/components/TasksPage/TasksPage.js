@@ -5,6 +5,7 @@ import TaskProvider from "../../store/taskContext/TaskProvider";
 import Page from "../UI/Page";
 import SidePanel from "./SidePanel/SidePanel";
 import TasksSummary from "./TasksHeader/TasksSummary";
+import TasksList from "./TasksList/TasksList";
 
 const TasksPage = function (props) {
   return (
@@ -12,7 +13,7 @@ const TasksPage = function (props) {
       <Page className={styles.page}>
         <div className={styles.tasks}>
           <TasksSummary />
-          <h2>TasksList</h2>
+          <TasksList />
         </div>
         <SidePanel />
       </Page>
