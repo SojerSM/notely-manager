@@ -18,6 +18,13 @@ const TaskProvider = function (props) {
     ]);
   };
 
+  const removeTask = (key) => {
+    const newArr = tasks.filter((task) => {
+      return task.key !== key;
+    });
+    setTasks(newArr);
+  };
+
   const getImportantTasks = tasks.filter((task) => {
     return task.priority === true;
   });
@@ -29,6 +36,7 @@ const TaskProvider = function (props) {
   const taskContext = {
     tasks: tasks,
     addTask: addTask,
+    removeTask: removeTask,
     getImportantTasks: getImportantTasks,
     getUncategorizedTasks: getUncategorizedTasks,
   };

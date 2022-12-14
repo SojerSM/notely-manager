@@ -20,6 +20,7 @@ const TasksList = function (props) {
             return (
               <TaskItem
                 key={task.key}
+                id={task.key}
                 date={task.date}
                 content={task.content}
                 option={task.option}
