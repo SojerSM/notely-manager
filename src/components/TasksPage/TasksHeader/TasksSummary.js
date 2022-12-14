@@ -1,7 +1,9 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useContext } from "react";
 
 import * as icons from "../../../assets/icons";
 import styles from "./TasksSummary.module.css";
+
+import TaskContext from "../../../store/taskContext/task-context";
 
 import Button from "../../UI/Buttons/Button";
 import ExitButton from "../../UI/Buttons/ExitButton";
@@ -11,6 +13,8 @@ import NewTask from "./NewTask/NewTask";
 
 const TasksSummary = function (props) {
   const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const { tasks } = useContext(TaskContext);
 
   const toggleFormHandler = (event) => {
     event.preventDefault();
@@ -35,10 +39,10 @@ const TasksSummary = function (props) {
         </Button>
       </div>
       <div className={styles["summary"]}>
-        <SummaryButton title={"All"} />
-        <SummaryButton title={"Important"} />
-        <SummaryButton title={"Uncategorized"} />
-        <SummaryButton title={"Upcoming"} />
+        <SummaryButton title={"All"} amount={tasks.length} />
+        <SummaryButton title={"Important"} amount={0} />
+        <SummaryButton title={"Uncategorized"} amount={0} />
+        <SummaryButton title={"Upcoming"} amount={0} />
       </div>
     </Fragment>
   );

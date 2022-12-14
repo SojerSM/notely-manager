@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import styles from "./App.module.css";
 
+import TaskProvider from "./store/taskContext/TaskProvider";
+
 import Navigation from "./components/Navigation/Navigation";
 import ActionsPage from "./components/ActionsPage/ActionsPage";
 import NotesPage from "./components/FundsPage/FundsPage";
@@ -14,16 +16,19 @@ const App = function () {
   const changeDisplayedPage = (title) => {
     setDisplayedPage(title);
   };
+
   return (
-    <div className={styles.app}>
-      <Navigation onClick={changeDisplayedPage} />
-      {displayedPage === "summary" && (
-        <ActionsPage onClick={changeDisplayedPage} />
-      )}
-      {displayedPage === "funds" && <NotesPage />}
-      {displayedPage === "dates" && <DatesPage />}
-      {displayedPage === "tasks" && <TasksPage />}
-    </div>
+    <TaskProvider>
+      <div className={styles.app}>
+        <Navigation onClick={changeDisplayedPage} />
+        {displayedPage === "summary" && (
+          <ActionsPage onClick={changeDisplayedPage} />
+        )}
+        {displayedPage === "funds" && <NotesPage />}
+        {displayedPage === "dates" && <DatesPage />}
+        {displayedPage === "tasks" && <TasksPage />}
+      </div>
+    </TaskProvider>
   );
 };
 

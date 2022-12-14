@@ -23,6 +23,8 @@ const TaskProvider = function (props) {
     addTask: addTask,
   };
 
+  console.log(taskContext.tasks);
+
   return (
     <TaskContext.Provider value={taskContext}>
       {props.children}
