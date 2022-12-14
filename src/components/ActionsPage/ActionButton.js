@@ -11,7 +11,7 @@ const ActionButton = function (props) {
 
   return (
     <Card className={styles.wrapper}>
-      <p>0</p>
+      <p>{props.amount}</p>
       <Button className={styles.button} onClick={togglePageHandler}>
         {props.title}
       </Button>
