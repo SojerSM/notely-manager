@@ -11,6 +11,10 @@
   width: 100%;
 }
 
+.task:hover {
+  background: none;
+}
+
 .content {
   position: absolute;
   left: 12rem;

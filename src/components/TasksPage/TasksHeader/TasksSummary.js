@@ -40,13 +40,10 @@ const TasksSummary = function (props) {
       </div>
       <div className={styles["summary"]}>
         <SummaryButton title={"All"} amount={tasksCtx.tasks.length} />
-        <SummaryButton
-          title={"Important"}
-          amount={tasksCtx.getImportantTasks.length}
-        />
+        <SummaryButton title={"Important"} amount={tasksCtx.important.length} />
         <SummaryButton
           title={"Uncategorized"}
-          amount={tasksCtx.getUncategorizedTasks.length}
+          amount={tasksCtx.uncategorized.length}
         />
         <SummaryButton title={"Upcoming"} amount={0} />
       </div>

@@ -1,9 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import TaskContext from "./task-context";
 
 const TaskProvider = function (props) {
   const [tasks, setTasks] = useState([]);
+  const [important, setImportant] = useState([]);
+  const [uncategorized, setUncategorized] = useState([]);
+
+  useEffect(() => {
+    const importantTasks = tasks.filter((task) => {
+      return task.priority === true;
+    });
+    const uncategorizedTasks = tasks.filter((task) => {
+      return task.option === "others";
+    });
+    setImportant(importantTasks);
+    setUncategorized(uncategorizedTasks);
+  }, [tasks]);
 
   const addTask = (task) => {
     setTasks((prevState) => [
@@ -25,23 +38,13 @@ const TaskProvider = function (props) {
     setTasks(newArr);
   };
 
-  const getImportantTasks = tasks.filter((task) => {
-    return task.priority === true;
-  });
-
-  const getUncategorizedTasks = tasks.filter((task) => {
-    return task.option === "others";
-  });
-
   const taskContext = {
     tasks: tasks,
+    important: important,
+    uncategorized: uncategorized,
     addTask: addTask,
     removeTask: removeTask,
-    getImportantTasks: getImportantTasks,
-    getUncategorizedTasks: getUncategorizedTasks,
   };
-
-  console.log(taskContext.tasks);
 
   return (
     <TaskContext.Provider value={taskContext}>

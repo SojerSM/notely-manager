@@ -5,8 +5,6 @@ const TaskDate = function (props) {
   const month = props.date.toLocaleString("en-US", { month: "long" });
   const day = props.date.toLocaleString("en-US", { day: "2-digit" });
 
-  console.log(day.charAt(0));
-
   return (
     <div className={styles["date"]}>
       <span>{+day.charAt(0) === 0 ? day.slice(1) : day}</span>
