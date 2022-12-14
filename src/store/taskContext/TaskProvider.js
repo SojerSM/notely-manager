@@ -18,9 +18,19 @@ const TaskProvider = function (props) {
     ]);
   };
 
+  const getImportantTasks = tasks.filter((task) => {
+    return task.priority === true;
+  });
+
+  const getUncategorizedTasks = tasks.filter((task) => {
+    return task.option === "others";
+  });
+
   const taskContext = {
     tasks: tasks,
     addTask: addTask,
+    getImportantTasks: getImportantTasks,
+    getUncategorizedTasks: getUncategorizedTasks,
   };
 
   console.log(taskContext.tasks);

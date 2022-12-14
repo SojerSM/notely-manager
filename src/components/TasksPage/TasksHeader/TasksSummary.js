@@ -14,7 +14,7 @@ import NewTask from "./NewTask/NewTask";
 const TasksSummary = function (props) {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
-  const { tasks } = useContext(TaskContext);
+  const tasksCtx = useContext(TaskContext);
 
   const toggleFormHandler = (event) => {
     event.preventDefault();
@@ -39,9 +39,15 @@ const TasksSummary = function (props) {
         </Button>
       </div>
       <div className={styles["summary"]}>
-        <SummaryButton title={"All"} amount={tasks.length} />
-        <SummaryButton title={"Important"} amount={0} />
-        <SummaryButton title={"Uncategorized"} amount={0} />
+        <SummaryButton title={"All"} amount={tasksCtx.tasks.length} />
+        <SummaryButton
+          title={"Important"}
+          amount={tasksCtx.getImportantTasks.length}
+        />
+        <SummaryButton
+          title={"Uncategorized"}
+          amount={tasksCtx.getUncategorizedTasks.length}
+        />
         <SummaryButton title={"Upcoming"} amount={0} />
       </div>
     </Fragment>
