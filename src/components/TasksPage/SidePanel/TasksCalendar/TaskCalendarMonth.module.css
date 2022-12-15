@@ -1,0 +1,42 @@
+.month-wrapper {
+  width: 100%;
+  padding: 1rem;
+
+  background-color: rgba(57, 18, 44, 1);
+  border-radius: 0 0 25px 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.month-wrapper button {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+.month-content {
+  margin: 0 2rem;
+  font-size: 1.2rem;
+}
+
+.svg-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: rgba(235, 60, 157, 1);
+}
+
+.svg-icon circle {
+  stroke: rgba(235, 60, 157, 1);
+  stroke-width: 1;
+}
