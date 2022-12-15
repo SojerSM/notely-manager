@@ -84,6 +84,7 @@ const NewTask = function (props) {
         onChange={textChangeHandler}
         value={taskContent}
       />
+      <p className={styles["optional"]}>Specify it (optional)</p>
       <div className={styles["categories"]}>
         <DateInput
           className={styles["date-input"]}
@@ -103,7 +104,6 @@ const NewTask = function (props) {
           onClick={priorityInputHandler}
         />
       </div>
-      <span />
       <Button className={styles["submit-btn"]} onClick={formConfirmHandler}>
         Submit
       </Button>

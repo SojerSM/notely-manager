@@ -13,12 +13,6 @@
   font-size: 1.8rem;
 }
 
-.form span {
-  margin-top: 2rem;
-  width: 100%;
-  border-top: 4px solid #4c0033;
-}
-
 .input {
   margin: 2rem 0 3rem 0;
   font-size: 1.4rem;
@@ -31,11 +25,22 @@
   opacity: 0.5;
 }
 
+.optional {
+  font-size: 1.8rem;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
 .categories {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  background-color: #4c0033;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+  padding: 1.8rem 1rem 1.8rem 1.8rem;
 }
 
 .date-input {
@@ -55,6 +60,6 @@
 }
 
 .submit-btn {
-  margin-top: 2rem;
-  font-size: 1.6rem;
+  margin-top: 3rem;
+  font-size: 1.8rem;
 }
