@@ -6,6 +6,7 @@ const TaskProvider = function (props) {
   const [tasks, setTasks] = useState([]);
   const [important, setImportant] = useState([]);
   const [uncategorized, setUncategorized] = useState([]);
+  const [indefinite, setIndefinite] = useState([]);
   const [displayed, setDisplayed] = useState("all");
 
   useEffect(() => {
@@ -15,8 +16,12 @@ const TaskProvider = function (props) {
     const uncategorizedTasks = tasks.filter((task) => {
       return task.option === "others";
     });
+    const indefiniteTasks = tasks.filter((task) => {
+      return task.date === "";
+    });
     setImportant(importantTasks);
     setUncategorized(uncategorizedTasks);
+    setIndefinite(indefiniteTasks);
   }, [tasks]);
 
   const addTask = (task) => {
@@ -47,13 +52,14 @@ const TaskProvider = function (props) {
     tasks: tasks,
     important: important,
     uncategorized: uncategorized,
+    indefinite: indefinite,
     displayed: displayed,
     addTask: addTask,
     removeTask: removeTask,
     changeDisplayedList: changeDisplayedList,
   };
 
-  console.log("Displayed ", displayed);
+  console.log(tasks);
 
   return (
     <TaskContext.Provider value={taskContext}>

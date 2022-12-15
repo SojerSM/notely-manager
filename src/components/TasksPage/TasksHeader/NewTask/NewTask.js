@@ -26,10 +26,10 @@ const NewTask = function (props) {
   const formConfirmHandler = (event) => {
     event.preventDefault();
 
-    if (taskContent.trim().length === 0 || taskDate === "") {
+    if (taskContent.trim().length === 0) {
       setFormError({
         status: true,
-        description: "Enter correct description and date.",
+        description: "Enter correct description (not empty)",
       });
       clearFormValues();
       return;
@@ -38,7 +38,7 @@ const NewTask = function (props) {
     const newTask = {
       key: Math.random().toString(),
       content: taskContent,
-      date: new Date(taskDate),
+      date: taskDate && new Date(taskDate),
       option: taskOption,
       priority: isImportant,
     };

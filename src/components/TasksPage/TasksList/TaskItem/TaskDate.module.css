@@ -6,3 +6,7 @@
 
   font-size: 1.2rem;
 }
+
+.no-date {
+  opacity: 0.5;
+}

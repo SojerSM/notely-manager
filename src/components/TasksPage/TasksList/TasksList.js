@@ -14,6 +14,8 @@ const TasksList = function (props) {
   if (tasksCtx.displayed === "all") currList = tasksCtx.tasks;
   if (tasksCtx.displayed === "important") currList = tasksCtx.important;
   if (tasksCtx.displayed === "uncategorized") currList = tasksCtx.uncategorized;
+  if (tasksCtx.displayed === "indefinite") currList = tasksCtx.indefinite;
+
   return (
     <Fragment>
       <h3 className={styles["filter"]}>All</h3>

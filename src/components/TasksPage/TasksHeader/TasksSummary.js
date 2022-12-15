@@ -57,7 +57,12 @@ const TasksSummary = function (props) {
           amount={tasksCtx.uncategorized.length}
           tasksCtx={tasksCtx}
         />
-        <SummaryButton title={"Upcoming"} amount={0} />
+        <SummaryButton
+          title={"Indefinite"}
+          id={"indefinite"}
+          amount={tasksCtx.indefinite.length}
+          tasksCtx={tasksCtx}
+        />
       </div>
     </Fragment>
   );
