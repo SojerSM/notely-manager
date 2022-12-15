@@ -58,9 +58,9 @@ const TasksSummary = function (props) {
           tasksCtx={tasksCtx}
         />
         <SummaryButton
-          title={"Indefinite"}
-          id={"indefinite"}
-          amount={tasksCtx.indefinite.length}
+          title={"No Date"}
+          id={"no-date"}
+          amount={tasksCtx.noDate.length}
           tasksCtx={tasksCtx}
         />
       </div>

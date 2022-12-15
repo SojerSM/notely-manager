@@ -14,7 +14,7 @@ const TasksList = function (props) {
   if (tasksCtx.displayed === "all") currList = tasksCtx.tasks;
   if (tasksCtx.displayed === "important") currList = tasksCtx.important;
   if (tasksCtx.displayed === "uncategorized") currList = tasksCtx.uncategorized;
-  if (tasksCtx.displayed === "indefinite") currList = tasksCtx.indefinite;
+  if (tasksCtx.displayed === "no-date") currList = tasksCtx.noDate;
 
   return (
     <Fragment>

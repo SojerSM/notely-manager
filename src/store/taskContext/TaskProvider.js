@@ -6,7 +6,7 @@ const TaskProvider = function (props) {
   const [tasks, setTasks] = useState([]);
   const [important, setImportant] = useState([]);
   const [uncategorized, setUncategorized] = useState([]);
-  const [indefinite, setIndefinite] = useState([]);
+  const [noDate, setNoDate] = useState([]);
   const [displayed, setDisplayed] = useState("all");
 
   useEffect(() => {
@@ -16,12 +16,12 @@ const TaskProvider = function (props) {
     const uncategorizedTasks = tasks.filter((task) => {
       return task.option === "others";
     });
-    const indefiniteTasks = tasks.filter((task) => {
+    const noDateTasks = tasks.filter((task) => {
       return task.date === "";
     });
     setImportant(importantTasks);
     setUncategorized(uncategorizedTasks);
-    setIndefinite(indefiniteTasks);
+    setNoDate(noDateTasks);
   }, [tasks]);
 
   const addTask = (task) => {
@@ -52,7 +52,7 @@ const TaskProvider = function (props) {
     tasks: tasks,
     important: important,
     uncategorized: uncategorized,
-    indefinite: indefinite,
+    noDate: noDate,
     displayed: displayed,
     addTask: addTask,
     removeTask: removeTask,

@@ -4,7 +4,7 @@ const TaskContext = React.createContext({
   tasks: [],
   important: [],
   uncategorized: [],
-  indefinite: [],
+  noDate: [],
   displayed: [],
   addTask: (task) => {},
   removeTask: (key) => {},
