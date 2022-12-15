@@ -16,7 +16,7 @@ const NewTask = function (props) {
 
   const [taskContent, setTaskContent] = useState("");
   const [taskDate, setTaskDate] = useState("");
-  const [taskOption, setTaskOption] = useState("work");
+  const [taskOption, setTaskOption] = useState("others");
   const [isImportant, setIsImportant] = useState(false);
   const [formError, setFormError] = useState({
     status: false,

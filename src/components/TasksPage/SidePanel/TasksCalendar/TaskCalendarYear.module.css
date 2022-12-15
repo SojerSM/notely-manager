@@ -1,0 +1,43 @@
+.year-wrapper {
+  width: 100%;
+  padding: 2rem 1rem;
+
+  background-color: #4c0033;
+  border-radius: 25px 25px 0 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.year-wrapper button {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+.year-content {
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+  margin: 0 2rem;
+}
+
+.svg-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: rgba(235, 60, 157, 1);
+}
+
+.svg-icon circle {
+  stroke: rgba(235, 60, 157, 1);
+  stroke-width: 1;
+}

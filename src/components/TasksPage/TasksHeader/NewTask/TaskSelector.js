@@ -13,11 +13,11 @@ const TaskSelector = function (props) {
       value={props.value}
       onChange={selectHandler}
     >
+      <option value={"others"}>Others</option>
       <option value={"work"}>Work</option>
       <option value={"learning"}>Learning</option>
       <option value={"self-care"}>Self care</option>
       <option value={"people"}>People</option>
-      <option value={"others"}>Others</option>
     </select>
   );
 };
