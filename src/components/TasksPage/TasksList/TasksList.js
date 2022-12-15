@@ -16,9 +16,13 @@ const TasksList = function (props) {
   if (tasksCtx.displayed === "uncategorized") currList = tasksCtx.uncategorized;
   if (tasksCtx.displayed === "no-date") currList = tasksCtx.noDate;
 
+  const filterLabel = `${tasksCtx.displayed
+    .charAt(0)
+    .toUpperCase()}${tasksCtx.displayed.slice(1).replace("-", " ")} `;
+
   return (
     <Fragment>
-      <h3 className={styles["filter"]}>All</h3>
+      <h3 className={styles["filter"]}>{filterLabel}</h3>
       <div className={styles["list"]}>
         {currList.length > 0 ? (
           currList.map((task) => {

@@ -1,0 +1,29 @@
+@import "../../../../../_base.css";
+
+.wrapper {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 14%;
+}
+
+.day {
+  outline: 2px solid #af017190;
+  margin: 0;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  height: 3rem;
+  font-size: 1.4rem;
+  color: var(--font-color-light);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.25s ease;
+}
+
+.day:hover {
+  background-color: #af017190;
+}

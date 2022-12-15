@@ -59,8 +59,6 @@ const TaskProvider = function (props) {
     changeDisplayedList: changeDisplayedList,
   };
 
-  console.log(tasks);
-
   return (
     <TaskContext.Provider value={taskContext}>
       {props.children}
