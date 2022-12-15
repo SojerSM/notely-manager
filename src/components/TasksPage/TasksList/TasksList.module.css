@@ -28,3 +28,10 @@
   font-size: 1.8rem;
   margin: 0 0 1rem 1rem;
 }
+
+.msg-on-empty {
+  margin-top: 5rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+}

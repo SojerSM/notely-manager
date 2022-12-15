@@ -7,16 +7,19 @@ import TaskContext from "../../../store/taskContext/task-context";
 import TaskItem from "./TaskItem/TaskItem";
 
 const TasksList = function (props) {
-  const { tasks } = useContext(TaskContext);
+  const tasksCtx = useContext(TaskContext);
 
-  console.log(tasks);
+  let currList;
 
+  if (tasksCtx.displayed === "all") currList = tasksCtx.tasks;
+  if (tasksCtx.displayed === "important") currList = tasksCtx.important;
+  if (tasksCtx.displayed === "uncategorized") currList = tasksCtx.uncategorized;
   return (
     <Fragment>
       <h3 className={styles["filter"]}>All</h3>
       <div className={styles["list"]}>
-        {tasks.length > 0 &&
-          tasks.map((task) => {
+        {currList.length > 0 ? (
+          currList.map((task) => {
             return (
               <TaskItem
                 key={task.key}
@@ -27,7 +30,10 @@ const TasksList = function (props) {
                 priority={task.priority}
               />
             );
-          })}
+          })
+        ) : (
+          <h3 className={styles["msg-on-empty"]}>No tasks found.</h3>
+        )}
       </div>
     </Fragment>
   );

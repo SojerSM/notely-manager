@@ -6,6 +6,7 @@ const TaskProvider = function (props) {
   const [tasks, setTasks] = useState([]);
   const [important, setImportant] = useState([]);
   const [uncategorized, setUncategorized] = useState([]);
+  const [displayed, setDisplayed] = useState("all");
 
   useEffect(() => {
     const importantTasks = tasks.filter((task) => {
@@ -38,13 +39,21 @@ const TaskProvider = function (props) {
     setTasks(newArr);
   };
 
+  const changeDisplayedList = (type) => {
+    setDisplayed(type);
+  };
+
   const taskContext = {
     tasks: tasks,
     important: important,
     uncategorized: uncategorized,
+    displayed: displayed,
     addTask: addTask,
     removeTask: removeTask,
+    changeDisplayedList: changeDisplayedList,
   };
+
+  console.log("Displayed ", displayed);
 
   return (
     <TaskContext.Provider value={taskContext}>

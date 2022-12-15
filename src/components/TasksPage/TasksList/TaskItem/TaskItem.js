@@ -23,7 +23,7 @@ const TaskItem = function (props) {
   return (
     <Card className={styles["task"]}>
       <TaskDate date={props.date} />
-      <p className={styles["content"]}>{makeUpperCase(props.content)}</p>
+      <p className={styles["content"]}>{makeUpperCase(props.content.trim())}</p>
       <div className={styles["content-details"]}>
         <div className={styles["option"]}>
           <p>{makeUpperCase(props.option)}</p>

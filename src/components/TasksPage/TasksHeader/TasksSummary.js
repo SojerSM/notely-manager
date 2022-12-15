@@ -39,11 +39,23 @@ const TasksSummary = function (props) {
         </Button>
       </div>
       <div className={styles["summary"]}>
-        <SummaryButton title={"All"} amount={tasksCtx.tasks.length} />
-        <SummaryButton title={"Important"} amount={tasksCtx.important.length} />
+        <SummaryButton
+          title={"All"}
+          id={"all"}
+          amount={tasksCtx.tasks.length}
+          tasksCtx={tasksCtx}
+        />
+        <SummaryButton
+          title={"Important"}
+          id={"important"}
+          amount={tasksCtx.important.length}
+          tasksCtx={tasksCtx}
+        />
         <SummaryButton
           title={"Uncategorized"}
+          id={"uncategorized"}
           amount={tasksCtx.uncategorized.length}
+          tasksCtx={tasksCtx}
         />
         <SummaryButton title={"Upcoming"} amount={0} />
       </div>
