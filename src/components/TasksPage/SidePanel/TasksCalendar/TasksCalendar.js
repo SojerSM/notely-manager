@@ -11,8 +11,10 @@ const TasksCalendar = function (props) {
   const [year, setYear] = useState(currDate.getFullYear());
   const [month, setMonth] = useState(currDate.getMonth() + 1);
 
-  const daysInMonth = new Date(year, currDate.getMonth() + 1, 0).getDate();
-  const formattedMonth = currDate.toLocaleString("en-US", { month: "long" });
+  const daysInMonth = new Date(year, month, 0).getDate();
+  const formattedMonth = new Date(year, month - 1).toLocaleString("en-US", {
+    month: "long",
+  });
 
   const yearChangeHandler = (direction) => {
     direction === "backward" && setYear(year - 1);
@@ -27,15 +29,21 @@ const TasksCalendar = function (props) {
   const date = {
     year,
     month,
+    formattedMonth,
     daysInMonth,
   };
 
   console.log(formattedMonth);
+  console.log(daysInMonth);
 
   return (
     <div className={styles["calendar"]}>
       <TaskCalendarYear year={year} onYearChange={yearChangeHandler} />
-      <TaskCalendarMonth month={month} onMonthChange={monthChangeHandler} />
+      <TaskCalendarMonth
+        month={month}
+        formattedMonth={formattedMonth}
+        onMonthChange={monthChangeHandler}
+      />
       <TaskCalendarDaysList date={date} />
     </div>
   );

@@ -18,9 +18,7 @@ const TaskCalendarDaysList = function (props) {
     });
 
     setDays(filledDaysArr);
-  }, [props.date]);
-
-  console.log(days);
+  }, [props.date.month, props.date.year, props.date.daysInMonth]);
 
   return (
     <div className={styles["days-list"]}>

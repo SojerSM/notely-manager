@@ -21,6 +21,8 @@
 }
 
 .month-content {
+  width: 6rem;
+  text-align: center;
   margin: 0 2rem;
   font-size: 1.2rem;
 }

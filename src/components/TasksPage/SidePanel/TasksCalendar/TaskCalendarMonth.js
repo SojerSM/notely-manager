@@ -19,7 +19,9 @@ const TaskCalendarMonth = function (props) {
           {icons.singleArrowLeft}
         </svg>
       </button>
-      <p className={styles["month-content"]}>{props.month}</p>
+      <div className={styles["month-content"]}>
+        <p>{props.formattedMonth}</p>
+      </div>
       <button onClick={monthForwardHandler}>
         <svg className={styles["svg-icon"]} viewBox="0 0 20 20">
           {icons.singleArrowRight}
