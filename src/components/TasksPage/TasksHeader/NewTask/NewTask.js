@@ -89,7 +89,7 @@ const NewTask = function (props) {
         <DateInput
           className={styles["date-input"]}
           input={{
-            min: "2020-01-01",
+            min: "2019-01-01",
             max: "2029-12-31",
           }}
           onChange={dateChangeHandler}

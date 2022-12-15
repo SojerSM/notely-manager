@@ -24,7 +24,9 @@ const TaskCalendarDaysList = function (props) {
 
   return (
     <div className={styles["days-list"]}>
-      <TaskCalendarDayItem />
+      {days.map((day) => {
+        return <TaskCalendarDayItem key={day.dayID} day={day.dayID} />;
+      })}
     </div>
   );
 };
