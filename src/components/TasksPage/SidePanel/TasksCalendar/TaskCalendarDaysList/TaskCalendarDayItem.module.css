@@ -4,7 +4,7 @@
   outline: none;
   border: none;
   background: none;
-  cursor: pointer;
+
   width: 12%;
   padding: 0;
   margin: 0 0.25rem;
@@ -17,12 +17,18 @@
   height: 3rem;
   font-size: 1.4rem;
   color: var(--font-color-light);
+  cursor: pointer;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   transition: all 0.25s ease;
+}
+
+.unactive {
+  cursor: default;
+  background-color: #af017190;
 }
 
 .day h5 {
