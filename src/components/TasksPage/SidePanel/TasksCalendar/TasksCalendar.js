@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TaskCalendarDaysList from "./TaskCalendarDaysList/TaskCalendarDaysList";
 import TaskCalendarMonth from "./TaskCalendarMonth";
 import TaskCalendarYear from "./TaskCalendarYear";
@@ -15,6 +15,17 @@ const TasksCalendar = function (props) {
   const formattedMonth = new Date(year, month - 1).toLocaleString("en-US", {
     month: "long",
   });
+
+  useEffect(() => {
+    if (month < 1) {
+      setMonth(12);
+      setYear(year - 1);
+    }
+    if (month > 12) {
+      setMonth(1);
+      setYear(year + 1);
+    }
+  }, [month, year]);
 
   const yearChangeHandler = (direction) => {
     direction === "backward" && setYear(year - 1);
@@ -33,17 +44,12 @@ const TasksCalendar = function (props) {
     daysInMonth,
   };
 
-  console.log(formattedMonth);
-  console.log(daysInMonth);
+  console.log(month, year);
 
   return (
     <div className={styles["calendar"]}>
       <TaskCalendarYear year={year} onYearChange={yearChangeHandler} />
-      <TaskCalendarMonth
-        month={month}
-        formattedMonth={formattedMonth}
-        onMonthChange={monthChangeHandler}
-      />
+      <TaskCalendarMonth date={date} onMonthChange={monthChangeHandler} />
       <TaskCalendarDaysList date={date} />
     </div>
   );

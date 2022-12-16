@@ -13,7 +13,7 @@ const TaskCalendarDaysList = function (props) {
     const filledDaysArr = daysArr.map((day, index) => {
       return {
         dayID: index + 1,
-        date: new Date(props.date.year, props.date.month, index + 1),
+        date: new Date(props.date.year, props.date.month - 1, index + 1),
       };
     });
 
@@ -23,7 +23,13 @@ const TaskCalendarDaysList = function (props) {
   return (
     <div className={styles["days-list"]}>
       {days.map((day) => {
-        return <TaskCalendarDayItem key={day.dayID} day={day.dayID} />;
+        return (
+          <TaskCalendarDayItem
+            key={day.dayID}
+            day={day.dayID}
+            date={day.date}
+          />
+        );
       })}
     </div>
   );
