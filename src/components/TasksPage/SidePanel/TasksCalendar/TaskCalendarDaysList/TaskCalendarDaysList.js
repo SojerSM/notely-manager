@@ -19,11 +19,19 @@ const TaskCalendarDaysList = function ({ date }) {
 
     const firstDayOfMonth = filledDaysArr[0].date.getDay();
 
+    /* Blank items before current month clickable days items */
     const previousMonthDays = new Array(
       firstDayOfMonth === 0 ? 6 : firstDayOfMonth - 1
     ).fill(null);
 
-    const finalArr = previousMonthDays.concat(filledDaysArr);
+    let finalArr = previousMonthDays.concat(filledDaysArr);
+
+    /* Blank items after current month clickable days items */
+    const remainingBlankDays = new Array(
+      finalArr.length > 35 ? 42 - finalArr.length : 35 - finalArr.length
+    ).fill(null);
+
+    finalArr = finalArr.concat(remainingBlankDays);
 
     setDays(finalArr);
   }, [date.month, date.year, date.daysInMonth]);
