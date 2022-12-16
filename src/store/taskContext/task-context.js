@@ -8,6 +8,7 @@ const TaskContext = React.createContext({
   displayed: [],
   filteredByDate: [],
   displayingByDate: false,
+  currDisplayedDate: "",
   addTask: (task) => {},
   removeTask: (key) => {},
   changeDisplayedList: (type) => {},

@@ -8,6 +8,7 @@ const TaskProvider = function (props) {
   const [uncategorized, setUncategorized] = useState([]);
   const [noDate, setNoDate] = useState([]);
   const [filteredByDate, setFilteredByDate] = useState([]);
+  const [currDisplayedDate, setCurrDisplayedDate] = useState("");
   const [displayed, setDisplayed] = useState("all");
   const [displayingByDate, setDisplayingByDate] = useState(false);
 
@@ -50,9 +51,10 @@ const TaskProvider = function (props) {
     setDisplayed(type);
   };
 
-  const turnOnDisplayingByDate = (arr) => {
+  const turnOnDisplayingByDate = (arr, date) => {
     setDisplayingByDate(true);
     setFilteredByDate(arr);
+    setCurrDisplayedDate(date.toString());
     console.log(filteredByDate);
   };
 
@@ -68,6 +70,7 @@ const TaskProvider = function (props) {
     displayed,
     filteredByDate,
     displayingByDate,
+    currDisplayedDate,
     addTask,
     removeTask,
     changeDisplayedList,

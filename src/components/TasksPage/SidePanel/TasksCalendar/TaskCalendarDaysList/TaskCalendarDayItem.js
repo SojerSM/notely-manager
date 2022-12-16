@@ -24,7 +24,7 @@ const TaskCalendarDayItem = function (props) {
     event.preventDefault();
     if (!props.date) return;
 
-    taskCtx.turnOnDisplayingByDate(matchingTasks);
+    taskCtx.turnOnDisplayingByDate(matchingTasks, props.date);
   };
 
   const panelFilledClass = `${

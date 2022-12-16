@@ -9,25 +9,25 @@ import TaskItem from "./TaskItem/TaskItem";
 const TasksList = function (props) {
   const tasksCtx = useContext(TaskContext);
 
-  let currList;
+  let currList, filterLabel;
 
   if (tasksCtx.displayingByDate) {
+    filterLabel = `${tasksCtx.currDisplayedDate}`;
+
     currList = tasksCtx.filteredByDate;
-    console.log(tasksCtx.displayingByDate);
   }
 
   if (!tasksCtx.displayingByDate) {
-    console.log(tasksCtx.displayingByDate);
+    filterLabel = `${tasksCtx.displayed
+      .charAt(0)
+      .toUpperCase()}${tasksCtx.displayed.slice(1).replace("-", " ")} `;
+
     tasksCtx.displayed === "all" && (currList = tasksCtx.tasks);
     tasksCtx.displayed === "important" && (currList = tasksCtx.important);
     tasksCtx.displayed === "uncategorized" &&
       (currList = tasksCtx.uncategorized);
     tasksCtx.displayed === "no-date" && (currList = tasksCtx.noDate);
   }
-
-  const filterLabel = `${tasksCtx.displayed
-    .charAt(0)
-    .toUpperCase()}${tasksCtx.displayed.slice(1).replace("-", " ")} `;
 
   return (
     <Fragment>
