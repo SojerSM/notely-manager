@@ -11,10 +11,12 @@ const TaskCalendarDayItem = function (props) {
   useEffect(() => {
     if (!props.date) return;
 
-    // Plus one hour because every task date is received with default hour 01:00
+    /* Every task is creating with date hour of 1:00 or 2:00 depends on time of the year,
+      so inside filter it's evaluated in kinda imperative way, but it works */
     const tasks = taskCtx.tasks.filter((task) => {
       return task.date
-        ? task.date.getTime() === props.date.getTime() + 3600000
+        ? task.date.getTime() === props.date.getTime() + 3600000 ||
+            task.date.getTime() === props.date.getTime() + 7200000
         : null;
     });
     setMatchingTasks(tasks);

@@ -12,7 +12,13 @@ const TasksList = function (props) {
   let currList, filterLabel;
 
   if (tasksCtx.displayingByDate) {
-    filterLabel = `${tasksCtx.currDisplayedDate}`;
+    const currDate = new Date(tasksCtx.currDisplayedDate);
+    const year = currDate.getFullYear();
+    const month = currDate.toLocaleDateString("en-US", { month: "long" });
+    const day = currDate.toLocaleString("en-US", { day: "2-digit" });
+    filterLabel = `${
+      +day.charAt(0) === 0 ? day.slice(1) : day
+    } ${month} ${year}`;
 
     currList = tasksCtx.filteredByDate;
   }
