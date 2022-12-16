@@ -11,10 +11,19 @@ const TasksList = function (props) {
 
   let currList;
 
-  if (tasksCtx.displayed === "all") currList = tasksCtx.tasks;
-  if (tasksCtx.displayed === "important") currList = tasksCtx.important;
-  if (tasksCtx.displayed === "uncategorized") currList = tasksCtx.uncategorized;
-  if (tasksCtx.displayed === "no-date") currList = tasksCtx.noDate;
+  if (tasksCtx.displayingByDate) {
+    currList = tasksCtx.filteredByDate;
+    console.log(tasksCtx.displayingByDate);
+  }
+
+  if (!tasksCtx.displayingByDate) {
+    console.log(tasksCtx.displayingByDate);
+    tasksCtx.displayed === "all" && (currList = tasksCtx.tasks);
+    tasksCtx.displayed === "important" && (currList = tasksCtx.important);
+    tasksCtx.displayed === "uncategorized" &&
+      (currList = tasksCtx.uncategorized);
+    tasksCtx.displayed === "no-date" && (currList = tasksCtx.noDate);
+  }
 
   const filterLabel = `${tasksCtx.displayed
     .charAt(0)

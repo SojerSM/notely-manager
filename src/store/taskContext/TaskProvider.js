@@ -7,7 +7,9 @@ const TaskProvider = function (props) {
   const [important, setImportant] = useState([]);
   const [uncategorized, setUncategorized] = useState([]);
   const [noDate, setNoDate] = useState([]);
+  const [filteredByDate, setFilteredByDate] = useState([]);
   const [displayed, setDisplayed] = useState("all");
+  const [displayingByDate, setDisplayingByDate] = useState(false);
 
   useEffect(() => {
     const importantTasks = tasks.filter((task) => {
@@ -48,15 +50,29 @@ const TaskProvider = function (props) {
     setDisplayed(type);
   };
 
+  const turnOnDisplayingByDate = (arr) => {
+    setDisplayingByDate(true);
+    setFilteredByDate(arr);
+    console.log(filteredByDate);
+  };
+
+  const turnOffDisplayingByDate = () => {
+    setDisplayingByDate(false);
+  };
+
   const taskContext = {
-    tasks: tasks,
-    important: important,
-    uncategorized: uncategorized,
-    noDate: noDate,
-    displayed: displayed,
-    addTask: addTask,
-    removeTask: removeTask,
-    changeDisplayedList: changeDisplayedList,
+    tasks,
+    important,
+    uncategorized,
+    noDate,
+    displayed,
+    filteredByDate,
+    displayingByDate,
+    addTask,
+    removeTask,
+    changeDisplayedList,
+    turnOnDisplayingByDate,
+    turnOffDisplayingByDate,
   };
 
   return (

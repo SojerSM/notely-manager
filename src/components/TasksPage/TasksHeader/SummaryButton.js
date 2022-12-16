@@ -3,6 +3,7 @@ import styles from "./SummaryButton.module.css";
 const SummaryButton = function (props) {
   const changeSummaryHandler = (event) => {
     event.preventDefault();
+    props.tasksCtx.turnOffDisplayingByDate();
     props.tasksCtx.changeDisplayedList(props.id);
   };
 

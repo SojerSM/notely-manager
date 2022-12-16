@@ -6,9 +6,13 @@ const TaskContext = React.createContext({
   uncategorized: [],
   noDate: [],
   displayed: [],
+  filteredByDate: [],
+  displayingByDate: false,
   addTask: (task) => {},
   removeTask: (key) => {},
   changeDisplayedList: (type) => {},
+  turnOnDisplayingByDate: (arr) => {},
+  turnOffDisplayingByDate: () => {},
 });
 
 export default TaskContext;
