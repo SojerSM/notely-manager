@@ -8,4 +8,16 @@
   width: 72.5%;
   height: 100%;
   padding: 2rem 5rem 2rem 5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.main-tracker {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex: 1 1 auto;
 }
