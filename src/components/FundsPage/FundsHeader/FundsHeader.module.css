@@ -27,8 +27,8 @@
 }
 
 .form-modal {
-  left: 32.5%;
-  width: 35%;
+  left: 32.5% !important;
+  width: 35% !important;
 }
 
 .date {

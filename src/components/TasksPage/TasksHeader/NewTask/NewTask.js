@@ -29,7 +29,7 @@ const NewTask = function (props) {
     if (taskContent.trim().length === 0) {
       setFormError({
         status: true,
-        description: "Enter correct description (not empty)",
+        description: "Enter correct description (not empty).",
       });
       clearFormValues();
       return;

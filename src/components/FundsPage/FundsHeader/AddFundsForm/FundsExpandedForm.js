@@ -9,6 +9,7 @@ import TextInput from "../../../UI/Inputs/TextInput";
 import DateInput from "../../../UI/Inputs/DateInput";
 import IncomeSelector from "./IncomeSelector";
 import ExpenseSelector from "./ExpenseSelector";
+import AddFundsError from "./AddFundsError";
 
 const FundsExpandedForm = function (props) {
   const fundCtx = useContext(FundContext);
@@ -16,9 +17,22 @@ const FundsExpandedForm = function (props) {
   const [fundContent, setFundContent] = useState("");
   const [fundDate, setFundDate] = useState("");
   const [fundOption, setFundOption] = useState("others");
+  const [formError, setFormError] = useState({
+    status: false,
+    description: "",
+  });
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
+
+    if (fundContent.trim().length === 0 || fundDate === "") {
+      setFormError({
+        status: true,
+        description: "Enter correct description and date.",
+      });
+      clearFormValues();
+      return;
+    }
 
     const newFund = {
       key: Math.random().toString(),
@@ -29,8 +43,12 @@ const FundsExpandedForm = function (props) {
     };
 
     fundCtx.addFund(newFund);
-    console.log(fundCtx);
 
+    setFormError({ status: false });
+    clearFormValues();
+  };
+
+  const clearFormValues = () => {
     setFundContent("");
     setFundDate("");
     setFundOption("others");
@@ -90,6 +108,7 @@ const FundsExpandedForm = function (props) {
       <Button className={styles["submit-btn"]} onClick={formSubmitHandler}>
         Submit
       </Button>
+      {formError.status && <AddFundsError formError={formError} />}
     </form>
   );
 };
