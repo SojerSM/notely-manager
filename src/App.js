@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./App.module.css";
 
 import TaskProvider from "./store/taskContext/TaskProvider";
+import FundProvider from "./store/fundContext/FundProvider";
 
 import Navigation from "./components/Navigation/Navigation";
 import ActionsPage from "./components/ActionsPage/ActionsPage";
@@ -19,15 +20,17 @@ const App = function () {
 
   return (
     <TaskProvider>
-      <div className={styles.app}>
-        <Navigation onClick={changeDisplayedPage} />
-        {displayedPage === "summary" && (
-          <ActionsPage onClick={changeDisplayedPage} />
-        )}
-        {displayedPage === "funds" && <NotesPage />}
-        {displayedPage === "dates" && <DatesPage />}
-        {displayedPage === "tasks" && <TasksPage />}
-      </div>
+      <FundProvider>
+        <div className={styles.app}>
+          <Navigation onClick={changeDisplayedPage} />
+          {displayedPage === "summary" && (
+            <ActionsPage onClick={changeDisplayedPage} />
+          )}
+          {displayedPage === "funds" && <NotesPage />}
+          {displayedPage === "dates" && <DatesPage />}
+          {displayedPage === "tasks" && <TasksPage />}
+        </div>
+      </FundProvider>
     </TaskProvider>
   );
 };

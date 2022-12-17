@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import styles from "./FundsExpandedForm.module.css";
+
+import FundContext from "../../../../store/fundContext/fund-context";
 
 import Button from "../../../UI/Buttons/Button";
 import TextInput from "../../../UI/Inputs/TextInput";
@@ -9,16 +11,26 @@ import IncomeSelector from "./IncomeSelector";
 import ExpenseSelector from "./ExpenseSelector";
 
 const FundsExpandedForm = function (props) {
+  const fundCtx = useContext(FundContext);
+
   const [fundContent, setFundContent] = useState("");
   const [fundDate, setFundDate] = useState("");
   const [fundOption, setFundOption] = useState("others");
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    console.log(fundContent);
-    console.log(fundDate);
-    console.log(fundOption);
-    console.log(props.active);
+
+    const newFund = {
+      key: Math.random().toString(),
+      content: fundContent,
+      date: new Date(fundDate),
+      option: fundOption,
+      active: props.active,
+    };
+
+    fundCtx.addFund(newFund);
+    console.log(fundCtx);
+
     setFundContent("");
     setFundDate("");
     setFundOption("others");
