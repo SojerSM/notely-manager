@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./AddFundsForm.module.css";
 
 import Button from "../../../UI/Buttons/Button";
+import FundsExpandedForm from "./FundsExpandedForm";
 
 const AddFundsForm = function (props) {
   const [isFormExpanded, setIsFormExpanded] = useState(false);
@@ -24,13 +25,8 @@ const AddFundsForm = function (props) {
         <Button onClick={formExpandHandler} id={"expense"}>
           <p>Expense</p>
         </Button>
-        <Button onClick={formExpandHandler} id={"saving"}>
-          <p>Saving</p>
-        </Button>
       </div>
-      {isFormExpanded && activeForm === "income" && <div>Income</div>}
-      {isFormExpanded && activeForm === "expense" && <div>Expense</div>}
-      {isFormExpanded && activeForm === "saving" && <div>Saving</div>}
+      {isFormExpanded && <FundsExpandedForm active={activeForm} />}
     </div>
   );
 };

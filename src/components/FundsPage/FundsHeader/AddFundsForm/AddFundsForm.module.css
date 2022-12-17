@@ -12,9 +12,9 @@
 .options {
   display: flex;
   flex-direction: row;
-  margin: 2rem 0;
+  margin: 2rem 0 1rem 0;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .options p {
