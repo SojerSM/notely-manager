@@ -1,3 +1,5 @@
 :root {
   --font-color-light: #e287b9;
+  --card-border-radius: 1.5rem;
+  --btn-border-radius: 1.25rem;
 }

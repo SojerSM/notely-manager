@@ -5,7 +5,7 @@ import * as icons from "../../../../assets/icons";
 
 import TaskContext from "../../../../store/taskContext/task-context";
 
-import Card from "../../../UI/Card";
+import Card from "../../../UI/Cards/Card";
 import TaskDate from "./TaskDate";
 
 const TaskItem = function (props) {

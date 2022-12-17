@@ -1,6 +1,6 @@
 import styles from "./ActionButton.module.css";
 
-import Card from "../UI/Card";
+import Card from "../UI/Cards/Card";
 import Button from "../UI/Buttons/Button";
 
 const ActionButton = function (props) {

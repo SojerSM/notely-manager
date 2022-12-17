@@ -1,6 +1,8 @@
+@import "../../../_base.css";
+
 .card {
   outline: 2px solid #af017190;
-  border-radius: 25px;
+  border-radius: var(--card-border-radius);
   padding: 1rem;
 
   transition: all 0.25s ease;
