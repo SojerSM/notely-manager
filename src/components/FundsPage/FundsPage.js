@@ -1,9 +1,13 @@
+import styles from "./FundsPage.module.css";
+
 import Page from "../UI/Page";
+import SummaryPanel from "./SummaryPanel/SummaryPanel";
 
 const NotesPage = function (props) {
   return (
-    <Page>
-      <h1>FundsPage</h1>
+    <Page className={styles["page"]}>
+      <div className={styles["tracker"]}>Tracker</div>
+      <SummaryPanel />
     </Page>
   );
 };

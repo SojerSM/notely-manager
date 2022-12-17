@@ -7,8 +7,8 @@ import TasksList from "./TasksList/TasksList";
 
 const TasksPage = function (props) {
   return (
-    <Page className={styles.page}>
-      <div className={styles.tasks}>
+    <Page className={styles["page"]}>
+      <div className={styles["tasks"]}>
         <TasksSummary />
         <TasksList />
       </div>
