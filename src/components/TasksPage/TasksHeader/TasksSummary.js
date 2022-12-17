@@ -1,11 +1,10 @@
 import { Fragment, useState, useContext } from "react";
 
-import * as icons from "../../../assets/icons";
 import styles from "./TasksSummary.module.css";
 
 import TaskContext from "../../../store/taskContext/task-context";
 
-import Button from "../../UI/Buttons/Button";
+import AddButton from "../../UI/Buttons/AddButton";
 import ExitButton from "../../UI/Buttons/ExitButton";
 import Modal from "../../UI/Modal";
 import SummaryButton from "./SummaryButton";
@@ -31,12 +30,7 @@ const TasksSummary = function (props) {
       )}
       <div className={styles["header"]}>
         <h3 className={styles["title"]}>Your Tasks</h3>
-        <Button className={styles["add-button"]} onClick={toggleFormHandler}>
-          <svg className={styles["svg-icon"]} viewBox="0 0 20 20">
-            {icons.addNewIcon}
-          </svg>
-          Add
-        </Button>
+        <AddButton onClick={toggleFormHandler} />
       </div>
       <div className={styles["summary"]}>
         <SummaryButton

@@ -1,0 +1,23 @@
+.add-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.svg-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4c0033;
+}
+
+.svg-icon circle {
+  stroke: #4c0033;
+  stroke-width: 1;
+}
