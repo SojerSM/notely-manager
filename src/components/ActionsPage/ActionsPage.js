@@ -6,6 +6,7 @@ import TaskContext from "../../store/taskContext/task-context";
 
 import Page from "../UI/Page";
 import ActionButton from "./ActionButton";
+import Highlight from "../UI/Highlight";
 
 const ActionsPage = function (props) {
   const { tasks } = useContext(TaskContext);
@@ -13,7 +14,7 @@ const ActionsPage = function (props) {
   return (
     <Page>
       <div className={styles.title}>
-        Organise your life in a <span>smarter</span> way.
+        Organise your life in a <Highlight>smarter</Highlight> way.
       </div>
       <div className={styles.actions}>
         <ActionButton

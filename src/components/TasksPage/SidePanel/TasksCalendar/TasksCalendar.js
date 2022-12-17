@@ -44,8 +44,6 @@ const TasksCalendar = function (props) {
     daysInMonth,
   };
 
-  console.log(month, year);
-
   return (
     <div className={styles["calendar"]}>
       <TaskCalendarYear year={year} onYearChange={yearChangeHandler} />

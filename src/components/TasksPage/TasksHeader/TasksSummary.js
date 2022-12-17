@@ -7,6 +7,7 @@ import TaskContext from "../../../store/taskContext/task-context";
 import AddButton from "../../UI/Buttons/AddButton";
 import ExitButton from "../../UI/Buttons/ExitButton";
 import Modal from "../../UI/Modal";
+import Highlight from "../../UI/Highlight";
 import SummaryButton from "./SummaryButton";
 import NewTask from "./NewTask/NewTask";
 
@@ -29,7 +30,9 @@ const TasksSummary = function (props) {
         </Modal>
       )}
       <div className={styles["header"]}>
-        <h3 className={styles["title"]}>Your Tasks</h3>
+        <h3 className={styles["title"]}>
+          Your <Highlight>Tasks</Highlight>
+        </h3>
         <AddButton onClick={toggleFormHandler} />
       </div>
       <div className={styles["summary"]}>

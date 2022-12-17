@@ -7,7 +7,7 @@
   display: flex;
   gap: 2rem;
   flex-direction: column;
-  flex: 0 1 30rem;
+  flex: 0 1 42.5%;
 }
 
 .left-section {
@@ -24,6 +24,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.form-modal {
+  left: 32.5%;
+  width: 35%;
 }
 
 .date {
