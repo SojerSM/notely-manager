@@ -28,7 +28,18 @@ const TaskItem = function (props) {
         <div className={styles["option"]}>
           <p>{makeUpperCase(props.option)}</p>
         </div>
-        <div>{props.priority ? "Important" : "Not important"}</div>
+        <div>
+          <svg
+            className={`${
+              !props.priority
+                ? styles["svg-icon"]
+                : styles["svg-icon-important"]
+            }`}
+            viewBox="0 0 20 20"
+          >
+            {icons.importantIcon}
+          </svg>
+        </div>
         <button className={styles["delete-button"]} onClick={deleteHandler}>
           <svg className={styles["svg-icon"]} viewBox="0 0 20 20">
             {icons.deleteIcon}
