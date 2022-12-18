@@ -29,6 +29,12 @@ const FundsList = function (props) {
             .filter((fund) => {
               return fund.type === "income";
             })
+            .filter((fund) => {
+              return (
+                fund.date.getFullYear() === fundCtx.currYear &&
+                fund.date.getMonth() === +fundCtx.currMonth
+              );
+            })
             .map((item) => {
               return (
                 <FundItem
@@ -45,6 +51,12 @@ const FundsList = function (props) {
           fundCtx.funds
             .filter((fund) => {
               return fund.type === "expense";
+            })
+            .filter((fund) => {
+              return (
+                fund.date.getFullYear() === fundCtx.currYear &&
+                fund.date.getMonth() === +fundCtx.currMonth
+              );
             })
             .map((item) => {
               return (

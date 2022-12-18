@@ -4,6 +4,8 @@ import FundContext from "./fund-context";
 
 const FundProvider = function (props) {
   const [funds, setFunds] = useState([]);
+  const [currMonth, setCurrMonth] = useState(new Date().getMonth());
+  const [currYear, setCurrYear] = useState(new Date().getFullYear());
 
   const addFund = (fund) => {
     setFunds((prevState) => [
@@ -26,13 +28,25 @@ const FundProvider = function (props) {
     setFunds(newFunds);
   };
 
-  const fundContext = {
-    funds,
-    addFund,
-    removeFund,
+  const changeMonth = (month) => {
+    setCurrMonth(month);
   };
 
-  console.log(funds);
+  const changeYear = (year) => {
+    setCurrYear(year);
+  };
+
+  const fundContext = {
+    funds,
+    currMonth,
+    currYear,
+    addFund,
+    removeFund,
+    changeMonth,
+    changeYear,
+  };
+
+  console.log(currMonth, currYear);
 
   return (
     <FundContext.Provider value={fundContext}>
