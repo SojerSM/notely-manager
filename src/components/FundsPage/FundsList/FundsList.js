@@ -31,7 +31,7 @@ const FundsList = function (props) {
             })
             .filter((fund) => {
               return (
-                fund.date.getFullYear() === fundCtx.currYear &&
+                fund.date.getFullYear() === +fundCtx.currYear &&
                 fund.date.getMonth() === +fundCtx.currMonth
               );
             })
@@ -54,7 +54,7 @@ const FundsList = function (props) {
             })
             .filter((fund) => {
               return (
-                fund.date.getFullYear() === fundCtx.currYear &&
+                fund.date.getFullYear() === +fundCtx.currYear &&
                 fund.date.getMonth() === +fundCtx.currMonth
               );
             })

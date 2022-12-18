@@ -1,3 +1,25 @@
 .wrapper {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.wrapper p {
+  font-size: 1.4rem;
+  margin-right: 0.6rem;
+}
+
+.selector {
+  background: #af017180;
+  color: var(--font-color-light);
+  padding: 0.6rem;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+
+  font-size: 1.2rem;
+}
+
+.selector option {
+  background: #4c0033;
 }

@@ -12,7 +12,7 @@ const FundsCalendar = function (props) {
   const fundCtx = useContext(FundContext);
 
   const changeYearHandler = (year) => {
-    fundCtx.changeYear(+year);
+    fundCtx.changeYear(year);
   };
 
   const changeMonthHandler = (month) => {
@@ -21,8 +21,19 @@ const FundsCalendar = function (props) {
 
   return (
     <CardFilled className={styles["date"]}>
-      <FundsYearSelector onChange={changeYearHandler} />
-      <FundsMonthSelector onChange={changeMonthHandler} />
+      <div className={styles["header"]}>
+        <h4>Filtering by date</h4>
+      </div>
+      <div className={styles["selectors"]}>
+        <FundsYearSelector
+          onChange={changeYearHandler}
+          value={fundCtx.currYear}
+        />
+        <FundsMonthSelector
+          onChange={changeMonthHandler}
+          value={fundCtx.currMonth}
+        />
+      </div>
     </CardFilled>
   );
 };
