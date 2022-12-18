@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import styles from "./FundsList.module.css";
 
+import FundContext from "../../../store/fundContext/fund-context";
+
 import CardFilled from "../../UI/Cards/CardFilled";
 import FundsListToggler from "./FundsListToggler";
+import FundItem from "./FundItem/FundItem";
 
 const FundsList = function (props) {
+  const fundCtx = useContext(FundContext);
+
   const [displayedList, setDisplayedList] = useState("incomes");
 
   const changeDisplayedList = (value) => {
@@ -13,12 +18,37 @@ const FundsList = function (props) {
   };
 
   return (
-    <CardFilled className={styles["list"]}>
+    <CardFilled className={styles["list-wrapper"]}>
       <FundsListToggler
         displayedList={displayedList}
         onChange={changeDisplayedList}
       />
-      <div>{displayedList}</div>
+      <div className={styles["list"]}>
+        {displayedList === "incomes" &&
+          fundCtx.incomes.map((item) => {
+            return (
+              <FundItem
+                key={item.key}
+                id={item.key}
+                content={item.content}
+                date={item.date}
+                option={item.option}
+              />
+            );
+          })}
+        {displayedList === "expenses" &&
+          fundCtx.expenses.map((item) => {
+            return (
+              <FundItem
+                key={item.key}
+                id={item.key}
+                content={item.content}
+                date={item.date}
+                option={item.option}
+              />
+            );
+          })}
+      </div>
     </CardFilled>
   );
 };

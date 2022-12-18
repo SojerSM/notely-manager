@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { capitalizeFirstLetter } from "../../../../helpers/helpers";
 
 import styles from "./TaskItem.module.css";
 import * as icons from "../../../../assets/icons";
@@ -11,10 +12,6 @@ import TaskDate from "./TaskDate";
 const TaskItem = function (props) {
   const { removeTask } = useContext(TaskContext);
 
-  const makeUpperCase = (text) => {
-    return `${text.charAt(0).toUpperCase()}${text.slice(1)}`;
-  };
-
   const deleteHandler = (event) => {
     event.preventDefault();
     removeTask(props.id);
@@ -23,10 +20,12 @@ const TaskItem = function (props) {
   return (
     <Card className={styles["task"]}>
       <TaskDate date={props.date} />
-      <p className={styles["content"]}>{makeUpperCase(props.content.trim())}</p>
+      <p className={styles["content"]}>
+        {capitalizeFirstLetter(props.content.trim())}
+      </p>
       <div className={styles["content-details"]}>
         <div className={styles["option"]}>
-          <p>{makeUpperCase(props.option)}</p>
+          <p>{capitalizeFirstLetter(props.option)}</p>
         </div>
         <div>
           <svg

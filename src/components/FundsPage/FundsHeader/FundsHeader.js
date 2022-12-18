@@ -28,7 +28,7 @@ const FundsHeader = function () {
       <div className={styles["header"]}>
         <div className={styles["add-section"]}>
           <h3 className={styles["title"]}>
-            Your <Highlight>Finances</Highlight>
+            Your <Highlight>Funds</Highlight>
           </h3>
           <AddButton onClick={toggleFormHandler} />
         </div>

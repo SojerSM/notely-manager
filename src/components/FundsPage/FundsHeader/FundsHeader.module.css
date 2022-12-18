@@ -7,7 +7,7 @@
   display: flex;
   gap: 2rem;
   flex-direction: column;
-  flex: 0 1 45%;
+  flex: 0 1 40%;
 }
 
 .left-section {

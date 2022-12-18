@@ -1,0 +1,77 @@
+.fund-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.content {
+  position: absolute;
+  left: 5.5rem;
+  max-width: 50%;
+  font-size: 1.2rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.content-details {
+  width: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+
+  width: 7rem;
+  margin: -0.5rem;
+  padding: 0.5rem;
+  background-color: #af017180;
+  border-radius: 15px;
+}
+
+.delete-button {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.svg-icon {
+  margin: -0.5rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: var(--font-color-light);
+}
+
+.svg-icon circle {
+  stroke: var(--font-color-light);
+  stroke-width: 1;
+}
+
+.svg-icon-important {
+  margin: -0.5rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.svg-icon-important path,
+.svg-icon-important polygon,
+.svg-icon-important rect {
+  fill: rgb(229, 229, 113);
+}
+
+.svg-icon-important circle {
+  stroke: rgb(229, 229, 113);
+  stroke-width: 1;
+}

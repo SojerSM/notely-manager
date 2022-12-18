@@ -36,7 +36,7 @@ const FundsExpandedForm = function (props) {
 
     const newFund = {
       key: Math.random().toString(),
-      content: fundContent,
+      content: fundContent.trim(),
       date: new Date(fundDate),
       option: fundOption,
       active: props.active,
@@ -72,7 +72,7 @@ const FundsExpandedForm = function (props) {
         className={styles["input"]}
         input={{
           placeholder: `Describe your ${props.active}...`,
-          maxLength: 60,
+          maxLength: 40,
         }}
         onChange={textChangeHandler}
         value={fundContent}

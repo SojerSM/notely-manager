@@ -1,0 +1,23 @@
+.date {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #4c0033;
+  border: none;
+  border-radius: 1rem;
+  outline: 2px solid #af017190;
+  width: 4.25rem;
+  padding: 0.5rem 0;
+}
+
+.day-month {
+  font-size: 0.8rem;
+}
+
+.year {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
