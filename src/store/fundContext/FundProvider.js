@@ -1,11 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import FundContext from "./fund-context";
 
+const getInitialValue = () => {
+  const initialValue = localStorage.getItem("funds");
+  return initialValue ? JSON.parse(initialValue) : [];
+};
+
 const FundProvider = function (props) {
-  const [funds, setFunds] = useState([]);
+  const [funds, setFunds] = useState(getInitialValue);
   const [currMonth, setCurrMonth] = useState(new Date().getMonth());
   const [currYear, setCurrYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    console.log(funds);
+    localStorage.setItem("funds", JSON.stringify(funds));
+  }, [funds]);
 
   const addFund = (fund) => {
     setFunds((prevState) => [

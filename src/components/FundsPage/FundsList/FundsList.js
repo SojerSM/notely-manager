@@ -31,8 +31,8 @@ const FundsList = function (props) {
             })
             .filter((fund) => {
               return (
-                fund.date.getFullYear() === +fundCtx.currYear &&
-                fund.date.getMonth() === +fundCtx.currMonth
+                new Date(fund.date).getFullYear() === +fundCtx.currYear &&
+                new Date(fund.date).getMonth() === +fundCtx.currMonth
               );
             })
             .map((item) => {
@@ -41,7 +41,7 @@ const FundsList = function (props) {
                   key={item.key}
                   id={item.key}
                   content={item.content}
-                  date={item.date}
+                  date={new Date(item.date)}
                   amount={item.amount}
                   option={item.option}
                 />
@@ -64,7 +64,7 @@ const FundsList = function (props) {
                   key={item.key}
                   id={item.key}
                   content={item.content}
-                  date={item.date}
+                  date={new Date(item.date)}
                   amount={item.amount}
                   option={item.option}
                 />
