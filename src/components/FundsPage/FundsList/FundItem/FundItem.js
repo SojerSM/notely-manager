@@ -16,9 +16,13 @@ const FundItem = function (props) {
       <p className={styles[["content"]]}>
         {capitalizeFirstLetter(props.content)}
       </p>
+      <p className={styles["option"]}>{capitalizeFirstLetter(props.option)}</p>
       <div className={styles["content-details"]}>
-        <div className={styles["option"]}>
-          <p>{capitalizeFirstLetter(props.option)}</p>
+        <div className={styles["amount"]}>
+          <p>
+            {props.amount.toFixed(2)}
+            <span className={styles["currency"]}>$</span>
+          </p>
         </div>
         <button className={styles["delete-button"]} onClick={deleteHandler}>
           <svg className={styles["svg-icon"]} viewBox="0 0 20 20">

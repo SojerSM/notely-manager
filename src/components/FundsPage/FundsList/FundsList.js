@@ -32,6 +32,7 @@ const FundsList = function (props) {
                 id={item.key}
                 content={item.content}
                 date={item.date}
+                amount={item.amount}
                 option={item.option}
               />
             );
@@ -44,6 +45,7 @@ const FundsList = function (props) {
                 id={item.key}
                 content={item.content}
                 date={item.date}
+                amount={item.amount}
                 option={item.option}
               />
             );

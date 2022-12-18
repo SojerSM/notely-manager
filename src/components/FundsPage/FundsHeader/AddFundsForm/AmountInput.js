@@ -16,6 +16,7 @@ const AmountInput = function (props) {
         id={"amount"}
         type={"number"}
         min={"0.01"}
+        max={"99999.99"}
         step={"0.01"}
         value={props.value}
       ></input>

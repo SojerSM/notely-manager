@@ -14,6 +14,7 @@ const FundProvider = function (props) {
           key: fund.key,
           content: fund.content,
           date: fund.date,
+          amount: fund.amount,
           option: fund.option,
         },
       ]);
@@ -25,6 +26,7 @@ const FundProvider = function (props) {
           key: fund.key,
           content: fund.content,
           date: fund.date,
+          amount: fund.amount,
           option: fund.option,
         },
       ]);

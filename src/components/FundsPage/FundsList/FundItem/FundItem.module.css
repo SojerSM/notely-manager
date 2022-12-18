@@ -3,18 +3,27 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 1.5rem;
 }
 
 .content {
   position: absolute;
   left: 5.5rem;
+  top: 0.5rem;
   max-width: 50%;
   font-size: 1.2rem;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.option {
+  position: absolute;
+  left: 5.5rem;
+  top: 2rem;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  opacity: 0.6;
 }
 
 .content-details {
@@ -24,15 +33,26 @@
   align-items: center;
 }
 
-.option {
+.amount {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
 
   width: 7rem;
+  height: 100%;
   margin: -0.5rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   background-color: #af017180;
-  border-radius: 15px;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+}
+
+.amount p {
+  font-weight: bolder;
+}
+
+.currency {
+  opacity: 0.5;
 }
 
 .delete-button {

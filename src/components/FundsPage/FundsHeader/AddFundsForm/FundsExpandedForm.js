@@ -35,12 +35,21 @@ const FundsExpandedForm = function (props) {
       clearFormValues();
       return;
     }
+    if (+fundAmount > 99999.99) {
+      setFormError({
+        status: true,
+        description: "Enter correct amount (max 99 999.99 $).",
+      });
+      clearFormValues();
+      return;
+    }
 
     const newFund = {
       key: Math.random().toString(),
       content: fundContent.trim(),
       date: new Date(fundDate),
       option: fundOption,
+      amount: +fundAmount,
       active: props.active,
     };
 
@@ -70,7 +79,7 @@ const FundsExpandedForm = function (props) {
   };
 
   const amountHandler = (amount) => {
-    setFundAmount(+amount);
+    setFundAmount(amount);
   };
 
   return (
