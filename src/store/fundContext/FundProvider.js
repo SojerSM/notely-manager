@@ -33,11 +33,26 @@ const FundProvider = function (props) {
     }
   };
 
+  const removeFund = (key) => {
+    const newIncomes = incomes.filter((fund) => {
+      return fund.key !== key;
+    });
+    const newExpenses = expenses.filter((fund) => {
+      return fund.key !== key;
+    });
+    setIncomes(newIncomes);
+    setExpenses(newExpenses);
+  };
+
   const fundContext = {
     incomes,
     expenses,
     addFund,
+    removeFund,
   };
+
+  console.log(expenses);
+  console.log(incomes);
 
   return (
     <FundContext.Provider value={fundContext}>

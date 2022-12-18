@@ -1,13 +1,17 @@
+import { useContext } from "react";
 import { capitalizeFirstLetter } from "../../../../helpers/helpers";
 
 import styles from "./FundItem.module.css";
 import * as icons from "../../../../assets/icons";
 
+import FundContext from "../../../../store/fundContext/fund-context";
 import FundItemDate from "./FundItemDate";
 
 const FundItem = function (props) {
+  const fundCtx = useContext(FundContext);
   const deleteHandler = (event) => {
     event.preventDefault();
+    fundCtx.removeFund(props.id);
   };
 
   return (

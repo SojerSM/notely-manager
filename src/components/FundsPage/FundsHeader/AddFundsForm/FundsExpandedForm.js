@@ -18,7 +18,7 @@ const FundsExpandedForm = function (props) {
   const [fundContent, setFundContent] = useState("");
   const [fundDate, setFundDate] = useState("");
   const [fundOption, setFundOption] = useState("others");
-  const [fundAmount, setFundAmount] = useState();
+  const [fundAmount, setFundAmount] = useState("");
   const [formError, setFormError] = useState({
     status: false,
     description: "",
@@ -35,7 +35,7 @@ const FundsExpandedForm = function (props) {
       clearFormValues();
       return;
     }
-    if (+fundAmount > 99999.99) {
+    if (+fundAmount > 99999.99 || +fundAmount < 0.01) {
       setFormError({
         status: true,
         description: "Enter correct amount (max 99 999.99 $).",
