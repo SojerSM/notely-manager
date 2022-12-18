@@ -10,6 +10,7 @@ import DateInput from "../../../UI/Inputs/DateInput";
 import IncomeSelector from "./IncomeSelector";
 import ExpenseSelector from "./ExpenseSelector";
 import AddFundsError from "./AddFundsError";
+import AmountInput from "./AmountInput";
 
 const FundsExpandedForm = function (props) {
   const fundCtx = useContext(FundContext);
@@ -17,6 +18,7 @@ const FundsExpandedForm = function (props) {
   const [fundContent, setFundContent] = useState("");
   const [fundDate, setFundDate] = useState("");
   const [fundOption, setFundOption] = useState("others");
+  const [fundAmount, setFundAmount] = useState();
   const [formError, setFormError] = useState({
     status: false,
     description: "",
@@ -52,6 +54,7 @@ const FundsExpandedForm = function (props) {
     setFundContent("");
     setFundDate("");
     setFundOption("others");
+    setFundAmount("");
   };
 
   const textChangeHandler = (text) => {
@@ -64,6 +67,10 @@ const FundsExpandedForm = function (props) {
 
   const selectHandler = (option) => {
     setFundOption(option);
+  };
+
+  const amountHandler = (amount) => {
+    setFundAmount(+amount);
   };
 
   return (
@@ -103,6 +110,10 @@ const FundsExpandedForm = function (props) {
               active={props.active}
             />
           )}
+        </div>
+        <div className={styles["amount-wrapper"]}>
+          <p>Amount</p>
+          <AmountInput onChange={amountHandler} value={fundAmount} />
         </div>
       </div>
       <Button className={styles["submit-btn"]} onClick={formSubmitHandler}>

@@ -31,16 +31,17 @@
   color: var(--font-color-light);
 }
 
-.select-wrapper {
+.select-wrapper,
+.amount-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.select-wrapper p {
+.select-wrapper p,
+.amount-wrapper p {
   font-size: 1.6rem;
 }
-
 .submit-btn {
   margin-top: 3rem;
   font-size: 1.8rem;
