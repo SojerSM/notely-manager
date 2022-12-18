@@ -8,6 +8,7 @@ import Modal from "../../UI/Modal";
 import ExitButton from "../../UI/Buttons/ExitButton";
 import Highlight from "../../UI/Highlight";
 import AddFundsForm from "./AddFundsForm/AddFundsForm";
+import FundsCalendar from "./FundsCalendar.js/FundsCalendar";
 
 const FundsHeader = function () {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -32,7 +33,7 @@ const FundsHeader = function () {
           </h3>
           <AddButton onClick={toggleFormHandler} />
         </div>
-        <CardFilled className={styles["date"]}>Year/month</CardFilled>
+        <FundsCalendar />
         <CardFilled className={styles["pinned-goals"]}>Pinned goal</CardFilled>
         <CardFilled className={styles["general"]}>General info</CardFilled>
       </div>
