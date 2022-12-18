@@ -23,7 +23,6 @@ const FundsMonthSelector = function (props) {
 
   return (
     <div className={styles["wrapper"]}>
-      <p>Month</p>
       <select
         className={styles["selector"]}
         name={"fund-month"}

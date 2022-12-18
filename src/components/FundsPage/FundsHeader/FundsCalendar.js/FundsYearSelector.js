@@ -21,7 +21,6 @@ const FundsYearSelector = function (props) {
 
   return (
     <div className={styles["wrapper"]}>
-      <p>Year</p>
       <select
         className={styles["selector"]}
         name={"fund-year"}
