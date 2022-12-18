@@ -1,8 +1,7 @@
 import React from "react";
 
 const FundContext = React.createContext({
-  incomes: [],
-  expenses: [],
+  funds: [],
   addFund: (fund) => {},
   removeFund: (key) => {},
 });

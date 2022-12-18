@@ -25,31 +25,39 @@ const FundsList = function (props) {
       />
       <div className={styles["list"]}>
         {displayedList === "incomes" &&
-          fundCtx.incomes.map((item) => {
-            return (
-              <FundItem
-                key={item.key}
-                id={item.key}
-                content={item.content}
-                date={item.date}
-                amount={item.amount}
-                option={item.option}
-              />
-            );
-          })}
+          fundCtx.funds
+            .filter((fund) => {
+              return fund.type === "income";
+            })
+            .map((item) => {
+              return (
+                <FundItem
+                  key={item.key}
+                  id={item.key}
+                  content={item.content}
+                  date={item.date}
+                  amount={item.amount}
+                  option={item.option}
+                />
+              );
+            })}
         {displayedList === "expenses" &&
-          fundCtx.expenses.map((item) => {
-            return (
-              <FundItem
-                key={item.key}
-                id={item.key}
-                content={item.content}
-                date={item.date}
-                amount={item.amount}
-                option={item.option}
-              />
-            );
-          })}
+          fundCtx.funds
+            .filter((fund) => {
+              return fund.type === "expense";
+            })
+            .map((item) => {
+              return (
+                <FundItem
+                  key={item.key}
+                  id={item.key}
+                  content={item.content}
+                  date={item.date}
+                  amount={item.amount}
+                  option={item.option}
+                />
+              );
+            })}
       </div>
     </CardFilled>
   );

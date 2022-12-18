@@ -3,56 +3,36 @@ import { useState } from "react";
 import FundContext from "./fund-context";
 
 const FundProvider = function (props) {
-  const [incomes, setIncomes] = useState([]);
-  const [expenses, setExpenses] = useState([]);
+  const [funds, setFunds] = useState([]);
 
   const addFund = (fund) => {
-    if (fund.active === "income") {
-      setIncomes((prevState) => [
-        ...prevState,
-        {
-          key: fund.key,
-          content: fund.content,
-          date: fund.date,
-          amount: fund.amount,
-          option: fund.option,
-        },
-      ]);
-    }
-    if (fund.active === "expense") {
-      setExpenses((prevState) => [
-        ...prevState,
-        {
-          key: fund.key,
-          content: fund.content,
-          date: fund.date,
-          amount: fund.amount,
-          option: fund.option,
-        },
-      ]);
-    }
+    setFunds((prevState) => [
+      ...prevState,
+      {
+        key: fund.key,
+        content: fund.content,
+        date: fund.date,
+        amount: fund.amount,
+        option: fund.option,
+        type: fund.active,
+      },
+    ]);
   };
 
   const removeFund = (key) => {
-    const newIncomes = incomes.filter((fund) => {
+    const newFunds = funds.filter((fund) => {
       return fund.key !== key;
     });
-    const newExpenses = expenses.filter((fund) => {
-      return fund.key !== key;
-    });
-    setIncomes(newIncomes);
-    setExpenses(newExpenses);
+    setFunds(newFunds);
   };
 
   const fundContext = {
-    incomes,
-    expenses,
+    funds,
     addFund,
     removeFund,
   };
 
-  console.log(expenses);
-  console.log(incomes);
+  console.log(funds);
 
   return (
     <FundContext.Provider value={fundContext}>
