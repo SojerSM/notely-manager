@@ -68,8 +68,6 @@ const FundProvider = function (props) {
     changeYear,
   };
 
-  console.log(currMonth, currYear, currMonthFunds);
-
   return (
     <FundContext.Provider value={fundContext}>
       {props.children}
