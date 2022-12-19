@@ -6,9 +6,15 @@ import FundContext from "../../../../store/fundContext/fund-context";
 
 import CardFilled from "../../../UI/Cards/CardFilled";
 import GeneralFundItem from "./GeneralFundItem";
+import GeneralFundSummary from "./GeneralFundSummary";
 
 const GeneralFundData = function (props) {
   const fundCtx = useContext(FundContext);
+
+  const activeMonth = new Date(
+    fundCtx.currYear,
+    fundCtx.currMonth
+  ).toLocaleString("en-US", { month: "long" });
 
   const incomes = fundCtx.currMonthFunds.filter((fund) => {
     return fund.type === "income";
@@ -50,6 +56,7 @@ const GeneralFundData = function (props) {
     return { incomeBar, expenseBar };
   };
 
+  const monthBalance = incomesAmount - expensesAmount;
   const barFills = getBarFills();
 
   return (
@@ -70,6 +77,7 @@ const GeneralFundData = function (props) {
           amount={expensesAmount}
           barFillWidth={barFills.expenseBar}
         />
+        <GeneralFundSummary balance={monthBalance} month={activeMonth} />
       </div>
     </CardFilled>
   );

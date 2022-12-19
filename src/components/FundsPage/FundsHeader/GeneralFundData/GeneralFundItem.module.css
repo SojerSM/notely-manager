@@ -21,18 +21,18 @@
 }
 
 .amount {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bolder;
 }
 
 .text {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   margin-bottom: 0.15rem;
 }
 
 .total-worth {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .bar {

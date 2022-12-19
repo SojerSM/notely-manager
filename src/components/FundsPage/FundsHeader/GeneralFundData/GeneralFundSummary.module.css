@@ -1,0 +1,25 @@
+@import "../../../../_base.css";
+
+.summary {
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: fit-content;
+  gap: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.amount {
+  font-size: 1.8rem;
+}
+
+.amount span {
+  color: var(--font-color-light);
+}
