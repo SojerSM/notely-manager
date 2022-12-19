@@ -4,7 +4,7 @@ import styles from "./GeneralFundItem.module.css";
 
 const GeneralFundItem = function (props) {
   const text = `${capitalizeFirstLetter(props.type)}${
-    props.funds.length > 1 ? "s" : ""
+    props.funds.length !== 1 ? "s" : ""
   } of total`;
 
   return (

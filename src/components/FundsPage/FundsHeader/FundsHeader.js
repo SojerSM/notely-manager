@@ -34,9 +34,13 @@ const FundsHeader = function () {
           </h3>
           <AddButton onClick={toggleFormHandler} />
         </div>
-        <FundsCalendar />
-        <CardFilled className={styles["pinned-goals"]}>Pinned goal</CardFilled>
-        <GeneralFundData />
+        <div className={styles["overviews"]}>
+          <FundsCalendar />
+          <CardFilled className={styles["pinned-goals"]}>
+            Pinned goal
+          </CardFilled>
+          <GeneralFundData />
+        </div>
       </div>
     </Fragment>
   );
