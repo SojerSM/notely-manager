@@ -25,15 +25,9 @@ const FundsList = function (props) {
       />
       <div className={styles["list"]}>
         {displayedList === "incomes" &&
-          fundCtx.funds
+          fundCtx.currMonthFunds
             .filter((fund) => {
               return fund.type === "income";
-            })
-            .filter((fund) => {
-              return (
-                new Date(fund.date).getFullYear() === +fundCtx.currYear &&
-                new Date(fund.date).getMonth() === +fundCtx.currMonth
-              );
             })
             .map((item) => {
               return (
@@ -48,15 +42,9 @@ const FundsList = function (props) {
               );
             })}
         {displayedList === "expenses" &&
-          fundCtx.funds
+          fundCtx.currMonthFunds
             .filter((fund) => {
               return fund.type === "expense";
-            })
-            .filter((fund) => {
-              return (
-                fund.date.getFullYear() === +fundCtx.currYear &&
-                fund.date.getMonth() === +fundCtx.currMonth
-              );
             })
             .map((item) => {
               return (

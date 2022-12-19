@@ -1,6 +1,7 @@
 .data-item {
   display: flex;
   flex-direction: column;
+  gap: 0.2rem;
   width: 100%;
 }
 
@@ -12,14 +13,22 @@
   gap: 0.25rem;
 }
 
+.amount-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
 .amount {
   font-size: 1.4rem;
   font-weight: bolder;
 }
 
 .text {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
+  margin-bottom: 0.15rem;
 }
 
 .total-worth {
@@ -29,5 +38,13 @@
 .bar {
   width: 100%;
   height: 1rem;
-  outline: 2px solid red;
+  outline: 2px solid rgba(235, 60, 157, 1);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  width: 50%;
+  background-color: rgba(235, 60, 157, 1);
 }

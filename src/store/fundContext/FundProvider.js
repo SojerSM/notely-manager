@@ -9,13 +9,24 @@ const getInitialValue = () => {
 
 const FundProvider = function (props) {
   const [funds, setFunds] = useState(getInitialValue);
+  const [currMonthFunds, setCurrMonthFunds] = useState([]);
   const [currMonth, setCurrMonth] = useState(new Date().getMonth());
   const [currYear, setCurrYear] = useState(new Date().getFullYear());
 
   useEffect(() => {
-    console.log(funds);
     localStorage.setItem("funds", JSON.stringify(funds));
   }, [funds]);
+
+  useEffect(() => {
+    setCurrMonthFunds(
+      funds.filter((fund) => {
+        return (
+          new Date(fund.date).getMonth() === +currMonth &&
+          new Date(fund.date).getFullYear() === +currYear
+        );
+      })
+    );
+  }, [currMonth, currYear, funds]);
 
   const addFund = (fund) => {
     setFunds((prevState) => [
@@ -48,6 +59,7 @@ const FundProvider = function (props) {
 
   const fundContext = {
     funds,
+    currMonthFunds,
     currMonth,
     currYear,
     addFund,
@@ -56,7 +68,7 @@ const FundProvider = function (props) {
     changeYear,
   };
 
-  console.log(currMonth, currYear);
+  console.log(currMonth, currYear, currMonthFunds);
 
   return (
     <FundContext.Provider value={fundContext}>
