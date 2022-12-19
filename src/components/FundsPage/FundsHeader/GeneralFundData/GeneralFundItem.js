@@ -17,7 +17,10 @@ const GeneralFundItem = function (props) {
         <h5 className={styles["total-worth"]}>{`${props.amount}$`}</h5>
       </div>
       <div className={styles["bar"]}>
-        <div className={styles["fill"]}></div>
+        <div
+          className={styles["fill"]}
+          style={{ width: props.barFillWidth }}
+        ></div>
       </div>
     </div>
   );

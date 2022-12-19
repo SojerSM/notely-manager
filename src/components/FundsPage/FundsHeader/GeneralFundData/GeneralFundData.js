@@ -33,6 +33,25 @@ const GeneralFundData = function (props) {
   const incomesAmount = getAmount(incomes);
   const expensesAmount = getAmount(expenses);
 
+  const getBarFills = () => {
+    let incomeBar, expenseBar;
+    if (incomesAmount > expensesAmount) {
+      incomeBar = "100%";
+      expenseBar = Math.round((expensesAmount / incomesAmount) * 100) + "%";
+    }
+    if (incomesAmount < expensesAmount) {
+      expenseBar = "100%";
+      incomeBar = Math.round((incomesAmount / expensesAmount) * 100) + "%";
+    }
+    if (incomesAmount === 0 && expensesAmount === 0) {
+      expenseBar = "0%";
+      incomeBar = "0%";
+    }
+    return { incomeBar, expenseBar };
+  };
+
+  const barFills = getBarFills();
+
   return (
     <CardFilled className={styles["general"]}>
       <div className={styles["header"]}>
@@ -43,11 +62,13 @@ const GeneralFundData = function (props) {
           type={"income"}
           funds={incomes}
           amount={incomesAmount}
+          barFillWidth={barFills.incomeBar}
         />
         <GeneralFundItem
           type={"expense"}
           funds={expenses}
           amount={expensesAmount}
+          barFillWidth={barFills.expenseBar}
         />
       </div>
     </CardFilled>

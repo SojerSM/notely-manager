@@ -45,6 +45,11 @@
 
 .fill {
   height: 100%;
-  width: 50%;
+  width: 10%;
   background-color: rgba(235, 60, 157, 1);
+
+  transition: all 0.3s ease;
+
+  display: flex;
+  align-items: center;
 }
