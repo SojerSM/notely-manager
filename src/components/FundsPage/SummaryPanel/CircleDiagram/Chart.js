@@ -60,8 +60,8 @@ const Chart = function (props) {
 
     let percentage =
       value > avgMonthExpensesValue
-        ? (value / avgMonthExpensesValue) * 100
-        : (avgMonthExpensesValue / value) * 100;
+        ? (value / avgMonthExpensesValue) * 100 - 100
+        : (avgMonthExpensesValue / value) * 100 - 100;
 
     return value > avgMonthExpensesValue ? (
       <div className={styles["content"]}>
