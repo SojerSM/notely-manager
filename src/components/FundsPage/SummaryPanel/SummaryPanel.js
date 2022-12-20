@@ -2,7 +2,7 @@ import styles from "./SummaryPanel.module.css";
 
 import Panel from "../../UI/Panel";
 import YearSummary from "./YearSummary/YearSummary";
-import CircleDiagram from "./CircleDiagram/PieChart";
+import CircleDiagram from "./CircleDiagram/CircleDiagram";
 
 const SummaryPanel = function (props) {
   return (

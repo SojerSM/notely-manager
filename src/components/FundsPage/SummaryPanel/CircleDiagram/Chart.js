@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { PieChart } from "react-minimal-pie-chart";
 
-// import styles from "./PieChart.module.css";
+import styles from "./Chart.module.css";
 
 import FundContext from "../../../../store/fundContext/fund-context";
 
-const CircleDiagram = function (props) {
+const Chart = function (props) {
   const { currMonthFunds } = useContext(FundContext);
 
   const getTotalValue = () => {
@@ -55,28 +55,29 @@ const CircleDiagram = function (props) {
   const othersValue = getValueOfType("others");
 
   return (
-    <div>
+    <div className={styles["chart"]}>
       <PieChart
         data={[
           { title: "Fixed", value: fixedValue, color: "#C13C37" },
           { title: "Bills", value: billsValue, color: "#E38627" },
           { title: "Grocery", value: groceryValue, color: "#6A2135" },
-          { title: "Transport", value: transportValue, color: "red" },
-          { title: "Clothes", value: clothesValue, color: "yellow" },
+          { title: "Transport", value: transportValue, color: "#6ba89e" },
+          { title: "Clothes", value: clothesValue, color: "#6e6353" },
           { title: "Medicines", value: medicinesValue, color: "brown" },
-          { title: "Meetings", value: meetingsValue, color: "blue" },
+          { title: "Meetings", value: meetingsValue, color: "#533309" },
           { title: "Events", value: eventsValue, color: "green" },
-          { title: "Others", value: othersValue, color: "gray" },
+          { title: "Others", value: othersValue, color: "#c28b89" },
         ]}
         totalValue={chartTotal}
         lineWidth={25}
-        startAngle={267}
+        startAngle={260}
         animate={true}
         animationDuration={1000}
-        radius={40}
+        radius={30}
+        center={[50, 40]}
       />
     </div>
   );
 };
 
-export default CircleDiagram;
+export default Chart;
