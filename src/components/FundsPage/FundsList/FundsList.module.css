@@ -13,6 +13,23 @@
   flex-direction: column;
   gap: 1rem;
   width: 100%;
+  max-height: 48.5rem;
 
   padding: 1rem 2rem;
+  overflow: auto;
+}
+
+.list::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.list::-webkit-scrollbar-track {
+  border-radius: 10px;
+  margin: 4rem 0;
+  outline: 2px solid #af017190;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: #af017150;
+  border-radius: 10px;
 }

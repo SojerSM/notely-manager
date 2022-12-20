@@ -62,7 +62,7 @@ const GeneralFundData = function (props) {
   return (
     <CardFilled className={styles["general"]}>
       <div className={styles["header"]}>
-        <h4>General Overview</h4>
+        <h4>Cashflow in {activeMonth}</h4>
       </div>
       <div className={styles["overview"]}>
         <GeneralFundItem

@@ -4,7 +4,6 @@ import Page from "../UI/Page";
 import SummaryPanel from "./SummaryPanel/SummaryPanel";
 import FundsHeader from "./FundsHeader/FundsHeader";
 import FundsList from "./FundsList/FundsList";
-import FundsFooter from "./FundsFooter/FundsFooter";
 
 const NotesPage = function (props) {
   return (
@@ -14,7 +13,6 @@ const NotesPage = function (props) {
           <FundsHeader />
           <FundsList />
         </div>
-        <FundsFooter />
       </div>
       <SummaryPanel />
     </Page>

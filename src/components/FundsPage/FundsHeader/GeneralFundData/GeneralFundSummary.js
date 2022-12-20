@@ -9,8 +9,7 @@ const GeneralFundSummary = function (props) {
   return (
     <Card className={styles["summary"]}>
       <div className={styles["content"]}>
-        <p className={styles["month"]}>{props.month}</p>
-        <p>balance:</p>
+        <p>Balance:</p>
       </div>
       <h5 className={styles["amount"]} style={{ color: balanceColor }}>
         {props.balance}

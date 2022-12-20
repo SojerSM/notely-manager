@@ -1,0 +1,29 @@
+.overview {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: rgba(57, 18, 44, 1);
+  width: 100%;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.header h5 {
+  font-size: 1.2rem;
+}
+
+.data {
+  background-color: rgba(88, 7, 54, 1);
+  padding: 1rem 2rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

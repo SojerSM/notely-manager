@@ -3,7 +3,6 @@ import { Fragment, useState } from "react";
 import styles from "./FundsHeader.module.css";
 
 import AddButton from "../../UI/Buttons/AddButton";
-import CardFilled from "../../UI/Cards/CardFilled";
 import Modal from "../../UI/Modal";
 import ExitButton from "../../UI/Buttons/ExitButton";
 import Highlight from "../../UI/Highlight";
@@ -36,9 +35,6 @@ const FundsHeader = function () {
         </div>
         <div className={styles["overviews"]}>
           <FundsCalendar />
-          <CardFilled className={styles["pinned-goals"]}>
-            Pinned goal
-          </CardFilled>
           <GeneralFundData />
         </div>
       </div>
