@@ -1,10 +1,12 @@
 import { useContext } from "react";
 
 import styles from "./YearSummary.module.css";
+import * as icons from "../../../../assets/icons";
 
 import FundContext from "../../../../store/fundContext/fund-context";
 
 import CardFilled from "../../../UI/Cards/CardFilled";
+import YearSummaryItem from "./YearSummaryItem";
 
 const YearSummary = function (props) {
   const fundCtx = useContext(FundContext);
@@ -37,18 +39,9 @@ const YearSummary = function (props) {
         <h5>{fundCtx.currYear} overview</h5>
       </div>
       <div className={styles["data"]}>
-        <div>
-          <p>Incomes</p>
-          <h6>{totalIncomes}$</h6>
-        </div>
-        <div>
-          <p>Expenses</p>
-          <h6>{totalExpenses}$</h6>
-        </div>
-        <div>
-          <p>Balance</p>
-          <h6>{balance}$</h6>
-        </div>
+        <YearSummaryItem value={totalIncomes} icon={icons.incomesIcon} />
+        <YearSummaryItem value={totalExpenses} icon={icons.expensesIcon} />
+        <YearSummaryItem value={balance} icon={icons.balanceIcon} />
       </div>
     </CardFilled>
   );
