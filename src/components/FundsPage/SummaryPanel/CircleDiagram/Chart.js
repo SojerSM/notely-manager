@@ -6,7 +6,7 @@ import styles from "./Chart.module.css";
 import FundContext from "../../../../store/fundContext/fund-context";
 
 const Chart = function (props) {
-  const { currMonthFunds } = useContext(FundContext);
+  const { currMonthFunds, avgMonthExpensesValue } = useContext(FundContext);
 
   const filtered = currMonthFunds.filter((fund) => {
     return fund.type === "expense";
@@ -40,6 +40,40 @@ const Chart = function (props) {
     return value.reduce((acc, curr) => {
       return acc + curr;
     });
+  };
+
+  const getContent = () => {
+    if (filtered.length === 0)
+      return (
+        <div className={styles["content"]}>
+          <p>no data</p>
+        </div>
+      );
+
+    let value = filtered
+      .map((fund) => {
+        return fund.amount;
+      })
+      .reduce((acc, curr) => {
+        return acc + curr;
+      });
+
+    let percentage =
+      value > avgMonthExpensesValue
+        ? (value / avgMonthExpensesValue) * 100
+        : (avgMonthExpensesValue / value) * 100;
+
+    return value > avgMonthExpensesValue ? (
+      <div className={styles["content"]}>
+        <p>above average</p>
+        <p className={styles["percentage"]}>by {percentage.toFixed(2)}%</p>
+      </div>
+    ) : (
+      <div className={styles["content"]}>
+        <p>below average</p>
+        <p className={styles["percentage"]}>by {percentage.toFixed(2)}%</p>
+      </div>
+    );
   };
 
   const chartTotal = getTotalValue();
@@ -78,11 +112,7 @@ const Chart = function (props) {
           center={[50, 32]}
         />
       )}
-      {filtered.length === 0 ? (
-        <p className={styles["alt-text"]}>No data.</p>
-      ) : (
-        <p className={styles["content"]}>Data</p>
-      )}
+      {getContent()}
     </div>
   );
 };

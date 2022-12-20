@@ -101,6 +101,8 @@ const FundProvider = function (props) {
     currYearFunds,
     currMonth,
     currYear,
+    avgMonthIncomesValue,
+    avgMonthExpensesValue,
     addFund,
     removeFund,
     changeMonth,
