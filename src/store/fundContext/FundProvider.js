@@ -10,6 +10,7 @@ const getInitialValue = () => {
 const FundProvider = function (props) {
   const [funds, setFunds] = useState(getInitialValue);
   const [currMonthFunds, setCurrMonthFunds] = useState([]);
+  const [currYearFunds, setCurrYearFunds] = useState([]);
   const [currMonth, setCurrMonth] = useState(new Date().getMonth());
   const [currYear, setCurrYear] = useState(new Date().getFullYear());
 
@@ -24,6 +25,11 @@ const FundProvider = function (props) {
           new Date(fund.date).getMonth() === +currMonth &&
           new Date(fund.date).getFullYear() === +currYear
         );
+      })
+    );
+    setCurrYearFunds(
+      funds.filter((fund) => {
+        return new Date(fund.date).getFullYear() === +currYear;
       })
     );
   }, [currMonth, currYear, funds]);
@@ -60,6 +66,7 @@ const FundProvider = function (props) {
   const fundContext = {
     funds,
     currMonthFunds,
+    currYearFunds,
     currMonth,
     currYear,
     addFund,
