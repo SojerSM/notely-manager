@@ -20,7 +20,7 @@ const YearSummary = function (props) {
         return +fund.amount;
       });
 
-    if (total.length < 1) return 0;
+    if (total.length < 1) return (0).toFixed(2);
 
     total = total.reduce((acc, curr) => {
       return acc + curr;
@@ -31,7 +31,7 @@ const YearSummary = function (props) {
 
   const totalIncomes = getTotalValue("income");
   const totalExpenses = getTotalValue("expense");
-  const balance = totalIncomes - totalExpenses;
+  const balance = (totalIncomes - totalExpenses).toFixed(2);
 
   return (
     <CardFilled className={styles["overview"]}>
