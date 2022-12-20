@@ -12,7 +12,7 @@ const GeneralFundSummary = function (props) {
         <p>Balance:</p>
       </div>
       <h5 className={styles["amount"]} style={{ color: balanceColor }}>
-        {props.balance}
+        {props.balance.toFixed(2)}
         <span>$</span>
       </h5>
     </Card>

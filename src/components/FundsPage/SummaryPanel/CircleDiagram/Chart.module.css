@@ -1,3 +1,19 @@
 .chart {
+  position: relative;
   background-color: rgba(88, 7, 54, 1);
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.alt-text {
+  font-size: 1.3rem;
+  margin-top: 8rem;
+}
+
+.content {
+  position: absolute;
+  top: 10rem;
+  font-size: 1.2rem;
 }

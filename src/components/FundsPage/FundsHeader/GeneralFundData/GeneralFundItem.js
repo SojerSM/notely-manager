@@ -14,7 +14,9 @@ const GeneralFundItem = function (props) {
           <p className={styles["amount"]}>{props.funds.length}</p>
           <p className={styles["text"]}>{text}</p>
         </div>
-        <h5 className={styles["total-worth"]}>{`${props.amount}$`}</h5>
+        <h5 className={styles["total-worth"]}>{`${props.amount.toFixed(
+          2
+        )}$`}</h5>
       </div>
       <div className={styles["bar"]}>
         <div
