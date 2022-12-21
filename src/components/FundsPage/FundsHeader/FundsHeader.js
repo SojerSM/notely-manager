@@ -6,9 +6,11 @@ import AddButton from "../../UI/Buttons/AddButton";
 import Modal from "../../UI/Modal";
 import ExitButton from "../../UI/Buttons/ExitButton";
 import Highlight from "../../UI/Highlight";
+
 import AddFundsForm from "./AddFundsForm/AddFundsForm";
 import FundsCalendar from "./FundsCalendar.js/FundsCalendar";
 import GeneralFundData from "./GeneralFundData/GeneralFundData";
+import MonthlyAverage from "./MonthlyAverage/MonthlyAverage";
 
 const FundsHeader = function () {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -35,6 +37,7 @@ const FundsHeader = function () {
         </div>
         <div className={styles["overviews"]}>
           <FundsCalendar />
+          <MonthlyAverage />
           <GeneralFundData />
         </div>
       </div>

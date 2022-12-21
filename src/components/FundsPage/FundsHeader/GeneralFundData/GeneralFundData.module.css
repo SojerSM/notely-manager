@@ -7,18 +7,6 @@
   padding: 0;
 }
 
-.header {
-  background-color: rgba(57, 18, 44, 1);
-  width: 100%;
-  padding: 0.75rem 1rem;
-  display: flex;
-  justify-content: center;
-}
-
-.header h4 {
-  font-size: 1.4rem;
-}
-
 .overview {
   padding: 1.5rem 2rem;
   display: flex;

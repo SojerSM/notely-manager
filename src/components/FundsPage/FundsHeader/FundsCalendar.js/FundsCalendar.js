@@ -5,6 +5,7 @@ import styles from "./FundsCalendar.module.css";
 import FundContext from "../../../../store/fundContext/fund-context";
 
 import CardFilled from "../../../UI/Cards/CardFilled";
+import FundCardHeader from "../../../UI/FundCardHeader";
 import FundsYearSelector from "./FundsYearSelector";
 import FundsMonthSelector from "./FundsMonthSelector";
 
@@ -21,9 +22,7 @@ const FundsCalendar = function (props) {
 
   return (
     <CardFilled className={styles["date"]}>
-      <div className={styles["header"]}>
-        <h4>Filtering by date</h4>
-      </div>
+      <FundCardHeader>{"Filtering by date"}</FundCardHeader>
       <div className={styles["selectors"]}>
         <FundsYearSelector
           onChange={changeYearHandler}

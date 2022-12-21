@@ -15,7 +15,7 @@
 .content {
   position: absolute;
   margin: auto;
-  top: 10rem;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, 0);
   font-size: 1.2rem;

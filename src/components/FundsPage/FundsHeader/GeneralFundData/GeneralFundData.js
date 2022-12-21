@@ -4,6 +4,8 @@ import styles from "./GeneralFundData.module.css";
 
 import FundContext from "../../../../store/fundContext/fund-context";
 
+import FundCardHeader from "../../../UI/FundCardHeader";
+
 import CardFilled from "../../../UI/Cards/CardFilled";
 import GeneralFundItem from "./GeneralFundItem";
 import GeneralFundSummary from "./GeneralFundSummary";
@@ -61,9 +63,7 @@ const GeneralFundData = function (props) {
 
   return (
     <CardFilled className={styles["general"]}>
-      <div className={styles["header"]}>
-        <h4>Cashflow in {activeMonth}</h4>
-      </div>
+      <FundCardHeader>{`Cashflow in ${activeMonth}`}</FundCardHeader>
       <div className={styles["overview"]}>
         <GeneralFundItem
           type={"income"}

@@ -5,6 +5,7 @@ import * as icons from "../../../../assets/icons";
 
 import FundContext from "../../../../store/fundContext/fund-context";
 
+import FundCardHeader from "../../../UI/FundCardHeader";
 import CardFilled from "../../../UI/Cards/CardFilled";
 import YearSummaryItem from "./YearSummaryItem";
 
@@ -35,9 +36,7 @@ const YearSummary = function (props) {
 
   return (
     <CardFilled className={styles["overview"]}>
-      <div className={styles["header"]}>
-        <h5>{fundCtx.currYear} overview</h5>
-      </div>
+      <FundCardHeader>{`${fundCtx.currYear} overview`}</FundCardHeader>
       <div className={styles["data"]}>
         <YearSummaryItem value={totalIncomes} icon={icons.incomesIcon} />
         <YearSummaryItem value={totalExpenses} icon={icons.expensesIcon} />

@@ -6,6 +6,7 @@ import FundContext from "../../../../store/fundContext/fund-context";
 
 import Chart from "./Chart";
 import CardFilled from "../../../UI/Cards/CardFilled";
+import FundCardHeader from "../../../UI/FundCardHeader";
 
 const CircleDiagram = function (props) {
   const { currMonth, currYear } = useContext(FundContext);
@@ -16,9 +17,7 @@ const CircleDiagram = function (props) {
 
   return (
     <CardFilled className={styles["diagram"]}>
-      <div className={styles["header"]}>
-        <h5>Expenses in {activeMonth}</h5>
-      </div>
+      <FundCardHeader>{`Expenses in ${activeMonth}`}</FundCardHeader>
       <Chart />
     </CardFilled>
   );
