@@ -1,5 +1,7 @@
+@import "../../styles/_dark-theme.css";
+
 .header {
-  background-color: rgba(57, 18, 44, 1);
+  background-color: var(--dark__card-header);
   width: 100%;
   padding: 0.75rem 1rem;
   display: flex;

@@ -1,8 +1,9 @@
-@import "../../../_base.css";
+@import "../../../styles/_dark-theme.css";
+@import "../../../styles/_global-units.css";
 
 .card {
-  outline: 2px solid #af017190;
-  border-radius: var(--card-border-radius);
+  outline: 2px solid var(--dark__cards);
+  border-radius: var(--card__border-radius);
   padding: 1rem;
 
   transition: all 0.25s ease;
@@ -12,5 +13,5 @@
 }
 
 .card:hover {
-  background-color: #af017190;
+  background-color: var(--dark__card);
 }

@@ -1,4 +1,4 @@
-@import "../../../_base.css";
+@import "../../../styles/_global-units.css";
 
 .button {
   background-color: rgba(235, 60, 157, 1);
@@ -10,7 +10,7 @@
 
   border: none;
   outline: none;
-  border-radius: var(--btn-border-radius);
+  border-radius: var(--button__border-radius);
   cursor: pointer;
   color: #4c0033;
 

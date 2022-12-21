@@ -1,7 +1,8 @@
-@import "../../../_base.css";
+@import "../../../styles/_dark-theme.css";
 
 .card {
-  background-color: #af017150;
+  background-color: var(--dark__card);
+  box-shadow: var(--dark__card-box-shadow);
   border-radius: var(--card-border-radius);
   padding: 1rem;
 

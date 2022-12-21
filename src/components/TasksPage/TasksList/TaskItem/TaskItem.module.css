@@ -1,4 +1,4 @@
-@import "../../../../_base.css";
+@import "../../../../styles/_dark-theme.css";
 
 .task {
   position: relative;
@@ -55,11 +55,11 @@
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: var(--font-color-light);
+  fill: var(--dark__font-light);
 }
 
 .svg-icon circle {
-  stroke: var(--font-color-light);
+  stroke: var(--dark__font-light);
   stroke-width: 1;
 }
 

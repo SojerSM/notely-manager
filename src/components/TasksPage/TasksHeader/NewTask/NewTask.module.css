@@ -1,4 +1,4 @@
-@import "../../../../_base.css";
+@import "../../../../styles/_dark-theme.css";
 
 .form {
   display: flex;
@@ -17,11 +17,11 @@
   margin: 2rem 0 3rem 0;
   font-size: 1.4rem;
   padding: 0.75rem 1rem;
-  color: var(--font-color-light);
+  color: var(--dark__font-light);
 }
 
 .input::placeholder {
-  color: var(--font-color-light);
+  color: var(--dark__font-light);
   opacity: 0.5;
 }
 
@@ -46,7 +46,7 @@
 .date-input {
   font-size: 1.4rem;
   padding: 0.6rem 0.5rem;
-  color: var(--font-color-light);
+  color: var(--dark__font-light);
 }
 
 .select-wrapper {

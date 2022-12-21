@@ -1,4 +1,4 @@
-@import "../../../_base.css";
+@import "../../../styles/_dark-theme.css";
 
 .svg-icon {
   width: 3.5rem;
@@ -46,7 +46,7 @@
   position: absolute;
   left: 9rem;
   font-size: 1.8rem;
-  color: var(--font-color-light);
+  color: var(--dark__font-light);
   opacity: 0;
 }
 

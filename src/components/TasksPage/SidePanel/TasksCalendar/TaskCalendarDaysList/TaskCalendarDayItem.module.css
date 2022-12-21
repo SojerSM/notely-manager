@@ -1,4 +1,4 @@
-@import "../../../../../_base.css";
+@import "../../../../../styles/_dark-theme.css";
 
 .wrapper {
   height: 3rem;
@@ -15,7 +15,7 @@
 
   height: 100%;
   font-size: 1.4rem;
-  color: var(--font-color-light);
+  color: var(--dark__font-light);
   cursor: pointer;
 
   display: flex;

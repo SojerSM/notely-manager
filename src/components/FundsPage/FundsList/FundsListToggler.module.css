@@ -1,4 +1,4 @@
-@import "../../../_base.css";
+@import "../../../styles/_dark-theme.css";
 
 .toggler {
   background-color: rgba(57, 18, 44, 1);
@@ -13,7 +13,7 @@
 
 .title {
   font-size: 1.6rem;
-  color: var(--font-color-light);
+  color: var(--dark__font-light);
   opacity: 0.5;
 
   transition: all 0.3s ease;
