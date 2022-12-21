@@ -17,7 +17,9 @@ const CircleDiagram = function (props) {
 
   return (
     <CardFilled className={styles["diagram"]}>
-      <FundCardHeader>{`Expenses in ${activeMonth}`}</FundCardHeader>
+      <FundCardHeader
+        className={styles["header"]}
+      >{`Expenses in ${activeMonth}`}</FundCardHeader>
       <Chart />
     </CardFilled>
   );

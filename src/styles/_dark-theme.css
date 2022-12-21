@@ -1,12 +1,13 @@
 :root {
   --dark__font-light: #dddddd;
   --dark__font-light-smoked: #dddddd75;
+  --dark__font-title: #e6e6e6;
 
   --dark__gray-light: #3e3e42;
   --dark__gray-dark: #1f1f1f;
   --dark__gray-medium-dark: #242424;
   --dark__gray-medium-light: #2d2d30;
-  --dark__gray-forms: #4e4e50;
+  --dark__gray-forms: #5c5c5c;
 
   --dark__red-error: #e43f5a;
 

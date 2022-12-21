@@ -1,7 +1,8 @@
 @import "../../../styles/_dark-theme.css";
+@import "../../../styles/_global-units.css";
 
 .toggler {
-  background-color: rgba(57, 18, 44, 1);
+  background-color: var(--dark__gray-dark);
   width: 100%;
   padding: 1rem;
 
@@ -25,9 +26,9 @@
 
 .switch-btn {
   background: none;
-  outline: 2px solid rgba(235, 60, 157, 1);
+  outline: 2px solid var(--dark__red-error);
   border: none;
-  border-radius: 20px;
+  border-radius: var(--form__border-radius);
 
   width: 5rem;
   height: 100%;
@@ -36,7 +37,7 @@
 }
 
 .slider {
-  background-color: rgba(235, 60, 157, 1);
+  background-color: var(--dark__red-error);
   height: 100%;
   width: 2.5rem;
   border-radius: inherit;
@@ -46,5 +47,5 @@
 }
 
 .slider-right {
-  transform: translate(2.15rem, 0);
+  transform: translate(2.2rem, 0);
 }

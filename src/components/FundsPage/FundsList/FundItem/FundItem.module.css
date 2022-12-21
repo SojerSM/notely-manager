@@ -1,9 +1,12 @@
+@import "../../../../styles/_dark-theme.css";
+
 .fund-item {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
+  color: var(--dark__font-light);
 }
 
 .content {
@@ -42,17 +45,13 @@
   height: 100%;
   margin: -0.5rem;
   padding: 0.5rem 1rem;
-  background-color: #af017180;
+  background-color: var(--dark__red-error);
   border-radius: 1rem;
   font-size: 1.1rem;
 }
 
 .amount p {
   font-weight: bolder;
-}
-
-.currency {
-  opacity: 0.5;
 }
 
 .delete-button {
@@ -71,27 +70,10 @@
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: var(--font-color-light);
+  fill: var(--dark__red-error);
 }
 
 .svg-icon circle {
-  stroke: var(--font-color-light);
-  stroke-width: 1;
-}
-
-.svg-icon-important {
-  margin: -0.5rem;
-  width: 2rem;
-  height: 2rem;
-}
-
-.svg-icon-important path,
-.svg-icon-important polygon,
-.svg-icon-important rect {
-  fill: rgb(229, 229, 113);
-}
-
-.svg-icon-important circle {
-  stroke: rgb(229, 229, 113);
+  stroke: var(--dark__red-error);
   stroke-width: 1;
 }

@@ -1,5 +1,9 @@
+@import "../../../styles/_dark-theme.css";
+@import "../../../styles/_global-units.css";
+
 .title {
-  font-size: 2rem;
+  font-size: var(--font__page-title);
+  color: var(--dark__font-title);
 }
 
 .header {

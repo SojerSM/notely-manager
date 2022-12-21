@@ -1,3 +1,6 @@
+@import "../../../../styles/_dark-theme.css";
+@import "../../../../styles/_global-units.css";
+
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -5,21 +8,21 @@
 }
 
 .wrapper p {
-  font-size: 1.4rem;
+  font-size: var(--font__medium-size);
   margin-right: 0.6rem;
 }
 
 .selector {
-  background: #af017180;
-  color: var(--font-color-light);
+  background: var(--dark__gray-forms);
+  color: var(--dark__font-light);
   padding: 0.6rem;
   outline: none;
   border: none;
-  border-radius: 15px;
+  border-radius: var(--form__border-radius);
 
   font-size: 1.2rem;
 }
 
 .selector option {
-  background: #4c0033;
+  background: var(--dark__gray-medium-light);
 }

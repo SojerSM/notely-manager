@@ -1,3 +1,5 @@
+@import "../../../../styles/_dark-theme.css";
+
 .diagram {
   width: 100%;
   padding: 0 !important;
@@ -6,4 +8,8 @@
   flex-direction: column;
   margin-top: 2rem;
   flex: 0 1 65%;
+}
+
+.header {
+  background-color: var(--dark__gray-light);
 }

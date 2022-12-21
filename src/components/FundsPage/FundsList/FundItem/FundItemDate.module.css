@@ -1,3 +1,6 @@
+@import "../../../../styles/_dark-theme.css";
+@import "../../../../styles/_global-units.css";
+
 .date {
   display: flex;
   flex-direction: column;
@@ -5,12 +8,13 @@
   align-items: center;
   justify-content: center;
 
-  background-color: #4c0033;
+  background-color: var(--dark__gray-medium-dark);
   border: none;
   border-radius: 1rem;
-  outline: 2px solid #af017190;
+  outline: 2px solid var(--dark__gray-forms);
   width: 4.25rem;
   padding: 0.5rem 0;
+  color: var(--dark__font-light);
 }
 
 .day-month {

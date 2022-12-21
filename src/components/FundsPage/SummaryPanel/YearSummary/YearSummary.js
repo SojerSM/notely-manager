@@ -36,7 +36,9 @@ const YearSummary = function (props) {
 
   return (
     <CardFilled className={styles["overview"]}>
-      <FundCardHeader>{`${fundCtx.currYear} overview`}</FundCardHeader>
+      <FundCardHeader
+        className={styles["header"]}
+      >{`${fundCtx.currYear} overview`}</FundCardHeader>
       <div className={styles["data"]}>
         <YearSummaryItem value={totalIncomes} icon={icons.incomesIcon} />
         <YearSummaryItem value={totalExpenses} icon={icons.expensesIcon} />

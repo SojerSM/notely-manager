@@ -4,7 +4,7 @@ import Card from "../../../UI/Cards/Card";
 
 const GeneralFundSummary = function (props) {
   const balanceColor =
-    props.balance < 0 ? "rgb(210, 86, 86)" : "var(--font-color-light)";
+    props.balance < 0 ? "rgb(210, 86, 86)" : "var(--dark__font-light)";
 
   return (
     <Card className={styles["summary"]}>

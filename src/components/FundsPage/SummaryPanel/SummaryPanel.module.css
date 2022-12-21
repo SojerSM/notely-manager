@@ -1,9 +1,12 @@
+@import "../../../styles/_global-units.css";
+
 .panel {
   display: flex;
   flex-direction: column;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: var(--font__page-title);
   margin-bottom: 2rem;
+  color: var(--dark__font-light);
 }

@@ -1,3 +1,5 @@
+@import "../../../../styles/_dark-theme.css";
+
 .overview {
   width: 100%;
   padding: 0 !important;
@@ -5,10 +7,11 @@
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
+  color: var(--dark__font-light);
 }
 
 .data {
-  background-color: rgba(88, 7, 54, 1);
+  background-color: var(--dark__gray-medium-light);
   padding: 1rem 2rem;
   display: flex;
   height: 100%;
@@ -16,4 +19,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.header {
+  background-color: var(--dark__gray-light);
 }
