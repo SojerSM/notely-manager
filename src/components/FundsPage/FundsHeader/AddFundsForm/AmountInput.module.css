@@ -1,14 +1,15 @@
 @import "../../../../styles/_dark-theme.css";
+@import "../../../../styles/_global-units.css";
 
 .input {
   width: 6rem;
   height: 100%;
-  font-size: 1.4rem;
-  background-color: #af017180;
-  color: var(--font-color-light);
+  font-size: var(--font__medium-size);
+  background-color: var(--dark__gray-forms);
+  color: var(--dark__font-light);
   border: none;
   outline: none;
-  border-radius: 1rem;
+  border-radius: var(--form__border-radius);
   padding-left: 0.5rem;
   margin-left: 1rem;
 }

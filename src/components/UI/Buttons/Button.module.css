@@ -1,12 +1,7 @@
 @import "../../../styles/_global-units.css";
 
 .button {
-  background-color: rgba(235, 60, 157, 1);
-  background-image: linear-gradient(
-    120deg,
-    rgba(235, 60, 157, 1) 0%,
-    rgba(216, 12, 126, 1) 100%
-  );
+  background-color: #e43f5a;
 
   border: none;
   outline: none;

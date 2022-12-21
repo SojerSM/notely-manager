@@ -1,4 +1,4 @@
-import styles from "./IncomeSelector.module.css";
+import styles from "./ExpenseSelector.module.css";
 
 const FundsSelector = function (props) {
   const selectHandler = (event) => {

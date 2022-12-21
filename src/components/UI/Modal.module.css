@@ -1,3 +1,6 @@
+@import "../../styles/_dark-theme.css";
+@import "../../styles/_global-units.css";
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -14,9 +17,9 @@
   left: 27.5%;
   width: 45%;
   height: fit-content;
-  background-color: rgba(88, 7, 54, 1);
+  background-color: var(--dark__gray-medium-light);
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: var(--card__border-radius);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 15;
   animation: slide-down 300ms ease-out forwards;

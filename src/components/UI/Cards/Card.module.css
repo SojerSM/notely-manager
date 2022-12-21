@@ -2,7 +2,7 @@
 @import "../../../styles/_global-units.css";
 
 .card {
-  outline: 2px solid var(--dark__cards);
+  outline: 2px solid var(--dark__gray-light);
   border-radius: var(--card__border-radius);
   padding: 1rem;
 
@@ -13,5 +13,5 @@
 }
 
 .card:hover {
-  background-color: var(--dark__card);
+  background-color: var(--dark__gray-light);
 }
