@@ -34,6 +34,7 @@ const Chart = function (props) {
         return fund.option === type;
       })
       .map((fund) => {
+        if (fund.type === "income") return 0;
         return fund.amount;
       });
 
