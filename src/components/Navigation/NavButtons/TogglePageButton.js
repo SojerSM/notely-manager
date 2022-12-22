@@ -20,7 +20,6 @@ const TogglePageButton = function (props) {
       <svg className={styles["svg-icon"]} viewBox="0 0 20 20">
         {props.type === "summary" && icons.navigationSummaryIcon}
         {props.type === "funds" && icons.navigationFundsIcon}
-        {props.type === "dates" && icons.navigationDatesIcon}
         {props.type === "tasks" && icons.navigationListIcon}
       </svg>
       <p className={contentClasses}>{props.content}</p>

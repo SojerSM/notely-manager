@@ -24,12 +24,6 @@ const ActionsPage = function (props) {
           onClick={props.onClick}
         />
         <ActionButton
-          type={"dates"}
-          title={"Dates"}
-          amount={0}
-          onClick={props.onClick}
-        />
-        <ActionButton
           type={"tasks"}
           title={"Tasks"}
           amount={tasks.length}

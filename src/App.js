@@ -8,7 +8,6 @@ import FundProvider from "./store/fundContext/FundProvider";
 import Navigation from "./components/Navigation/Navigation";
 import ActionsPage from "./components/ActionsPage/ActionsPage";
 import NotesPage from "./components/FundsPage/FundsPage";
-import DatesPage from "./components/DatesPage/DatesPage";
 import TasksPage from "./components/TasksPage/TasksPage";
 
 const App = function () {
@@ -27,7 +26,6 @@ const App = function () {
             <ActionsPage onClick={changeDisplayedPage} />
           )}
           {displayedPage === "funds" && <NotesPage />}
-          {displayedPage === "dates" && <DatesPage />}
           {displayedPage === "tasks" && <TasksPage />}
         </div>
       </FundProvider>

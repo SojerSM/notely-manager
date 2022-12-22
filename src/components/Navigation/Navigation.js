@@ -33,12 +33,6 @@ const Navigation = function (props) {
           onClick={props.onClick}
         />
         <TogglePageButton
-          content={"Dates"}
-          type={"dates"}
-          isExpanded={isExpanded}
-          onClick={props.onClick}
-        />
-        <TogglePageButton
           content={"Tasks"}
           type={"tasks"}
           isExpanded={isExpanded}
