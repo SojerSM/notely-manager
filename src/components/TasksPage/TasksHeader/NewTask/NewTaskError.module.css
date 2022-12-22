@@ -1,3 +1,6 @@
+@import "../../../../styles/_dark-theme.css";
+@import "../../../../styles/_global-units.css";
+
 .svg-icon {
   width: 2rem;
   height: 2rem;
@@ -6,11 +9,11 @@
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: rgb(210, 86, 86);
+  fill: var(--dark__red-error);
 }
 
 .svg-icon circle {
-  stroke: rgb(210, 86, 86);
+  stroke: var(--dark__red-error);
   stroke-width: 1;
 }
 
@@ -22,6 +25,6 @@
 }
 
 .error p {
-  font-size: 1.4rem;
-  color: rgb(210, 86, 86);
+  font-size: var(--font__medium-size);
+  color: var(--dark__red-error);
 }

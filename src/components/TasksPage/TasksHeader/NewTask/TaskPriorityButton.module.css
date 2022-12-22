@@ -6,11 +6,11 @@
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: #af017180;
+  fill: var(--dark__gray-forms);
 }
 
 .svg-icon circle {
-  stroke: #af017180;
+  stroke: var(--dark__gray-forms);
   stroke-width: 1;
 }
 
@@ -22,11 +22,11 @@
 .svg-icon-active path,
 .svg-icon-active polygon,
 .svg-icon-active rect {
-  fill: rgb(229, 229, 113);
+  fill: var(--dark__yellow);
 }
 
 .svg-icon-active circle {
-  stroke: rgb(229, 229, 113);
+  stroke: var(--dark__yellow);
   stroke-width: 1;
 }
 

@@ -1,4 +1,5 @@
 @import "../../../../styles/_dark-theme.css";
+@import "../../../../styles/_global-units.css";
 
 .form {
   display: flex;
@@ -7,6 +8,7 @@
   align-items: center;
 
   margin-top: 1rem;
+  color: var(--dark__font-light);
 }
 
 .form h4 {
@@ -15,7 +17,7 @@
 
 .input {
   margin: 2rem 0 3rem 0;
-  font-size: 1.4rem;
+  font-size: var(--font__medium-size);
   padding: 0.75rem 1rem;
   color: var(--dark__font-light);
 }
@@ -26,9 +28,9 @@
 }
 
 .optional {
-  font-size: 1.8rem;
+  font-size: var(--font__large-size);
   font-weight: bold;
-  opacity: 0.5;
+  color: var(--dark__font-light-smoked);
 }
 
 .categories {
@@ -37,14 +39,14 @@
   flex-direction: row;
   justify-content: space-between;
 
-  background-color: #4c0033;
-  border-radius: 20px;
+  background-color: var(--dark__gray-medium-dark);
+  border-radius: var(--card__border-radius);
   margin-top: 1.5rem;
   padding: 1.8rem 1rem 1.8rem 1.8rem;
 }
 
 .date-input {
-  font-size: 1.4rem;
+  font-size: var(--font__medium-size);
   padding: 0.6rem 0.5rem;
   color: var(--dark__font-light);
 }
@@ -61,5 +63,5 @@
 
 .submit-btn {
   margin-top: 3rem;
-  font-size: 1.8rem;
+  font-size: var(--font__large-size);
 }

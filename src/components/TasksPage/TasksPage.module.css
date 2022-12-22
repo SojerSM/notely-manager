@@ -1,7 +1,10 @@
+@import "../../styles/_dark-theme.css";
+
 .page {
   flex-direction: row;
   flex-grow: 1;
   justify-content: space-between;
+  color: var(--dark__font-light);
 }
 
 .tasks {

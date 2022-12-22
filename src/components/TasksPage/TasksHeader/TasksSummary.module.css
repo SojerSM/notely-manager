@@ -1,3 +1,6 @@
+@import "../../../styles/_dark-theme.css";
+@import "../../../styles/_global-units.css";
+
 .modal {
   display: flex;
   flex-direction: column;
@@ -13,14 +16,15 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: var(--font__page-title);
+  color: var(--dark__font-title);
 }
 
 .summary {
-  background-color: #af017150;
+  background-color: var(--dark__gray-light);
   margin: 1.5rem 0 3rem 0;
   padding: 1rem 3rem;
-  border-radius: 25px;
+  border-radius: var(--card__border-radius);
 
   display: flex;
   justify-content: space-around;
