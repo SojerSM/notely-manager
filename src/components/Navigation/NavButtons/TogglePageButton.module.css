@@ -9,11 +9,11 @@
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: var(--dark__gray-forms);
+  fill: var(--dark__UI-icon);
 }
 
 .svg-icon circle {
-  stroke: var(--dark__gray-forms);
+  stroke: var(--dark__UI-icon);
   stroke-width: 1;
 }
 

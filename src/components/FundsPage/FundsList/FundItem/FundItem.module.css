@@ -69,10 +69,10 @@
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: var(--dark__red-error);
+  fill: var(--dark__UI-icon);
 }
 
 .svg-icon circle {
-  stroke: var(--dark__red-error);
+  stroke: var(--dark__UI-icon);
   stroke-width: 1;
 }

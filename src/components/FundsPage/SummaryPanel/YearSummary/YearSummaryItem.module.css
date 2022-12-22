@@ -1,3 +1,6 @@
+@import "../../../../styles/_dark-theme.css";
+@import "../../../../styles/_global-units.css";
+
 .svg-icon {
   width: 2.5rem;
   height: 2.5rem;
@@ -6,7 +9,7 @@
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: rgba(235, 60, 157, 1);
+  fill: var(--dark__UI-icon);
 }
 
 .svg-icon circle {
@@ -24,4 +27,11 @@
 
 .wrapper h6 {
   font-size: 1.1rem;
+}
+
+.wrapper p {
+  margin-top: -1rem;
+  text-transform: uppercase;
+  font-size: var(--font__small-size);
+  color: var(--dark__font-light-smoked);
 }

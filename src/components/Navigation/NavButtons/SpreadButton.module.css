@@ -46,5 +46,5 @@
 }
 
 .button:hover {
-  background: rgb(131, 131, 131);
+  background: var(--dark__UI-icon);
 }

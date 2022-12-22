@@ -7,6 +7,7 @@ const YearSummaryItem = function (props) {
         {props.icon}
       </svg>
       <h6>{props.value}$</h6>
+      <p>{props.description}</p>
     </div>
   );
 };

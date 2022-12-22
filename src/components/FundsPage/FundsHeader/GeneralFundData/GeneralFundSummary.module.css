@@ -7,11 +7,11 @@
   justify-content: flex-end;
   width: fit-content;
   gap: 1rem;
-  outline: 2px solid var(--dark__red-error);
+  outline: 2px solid var(--dark__gray-forms);
 }
 
 .summary:hover {
-  background: var(--dark__red-error);
+  background: var(--dark__gray-forms);
 }
 
 .content {

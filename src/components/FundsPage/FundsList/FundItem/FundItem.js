@@ -36,10 +36,7 @@ const FundItem = function (props) {
           className={styles["amount"]}
           style={{ background: amountBcgColor }}
         >
-          <p>
-            {props.amount.toFixed(2)}
-            <span className={styles["currency"]}>$</span>
-          </p>
+          <p>{props.amount.toFixed(2)}$</p>
         </div>
         <button className={styles["delete-button"]} onClick={deleteHandler}>
           <svg className={styles["svg-icon"]} viewBox="0 0 20 20">

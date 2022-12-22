@@ -4,7 +4,7 @@ import Card from "../../../UI/Cards/Card";
 
 const GeneralFundSummary = function (props) {
   const balanceColor =
-    props.balance < 0 ? "rgb(210, 86, 86)" : "var(--dark__font-light)";
+    props.balance < 0 ? "var(--dark__UI-red)" : "var(--dark__font-light)";
 
   return (
     <Card className={styles["summary"]}>
@@ -12,8 +12,7 @@ const GeneralFundSummary = function (props) {
         <p>Balance:</p>
       </div>
       <h5 className={styles["amount"]} style={{ color: balanceColor }}>
-        {props.balance.toFixed(2)}
-        <span>$</span>
+        {props.balance.toFixed(2)}$
       </h5>
     </Card>
   );

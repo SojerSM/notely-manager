@@ -40,9 +40,21 @@ const YearSummary = function (props) {
         className={styles["header"]}
       >{`${fundCtx.currYear} overview`}</FundCardHeader>
       <div className={styles["data"]}>
-        <YearSummaryItem value={totalIncomes} icon={icons.incomesIcon} />
-        <YearSummaryItem value={totalExpenses} icon={icons.expensesIcon} />
-        <YearSummaryItem value={balance} icon={icons.balanceIcon} />
+        <YearSummaryItem
+          value={totalIncomes}
+          icon={icons.incomesIcon}
+          description={"earned"}
+        />
+        <YearSummaryItem
+          value={totalExpenses}
+          icon={icons.expensesIcon}
+          description={"spent"}
+        />
+        <YearSummaryItem
+          value={balance}
+          icon={icons.balanceIcon}
+          description={"saved"}
+        />
       </div>
     </CardFilled>
   );
