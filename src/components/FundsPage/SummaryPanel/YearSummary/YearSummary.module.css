@@ -22,5 +22,5 @@
 }
 
 .header {
-  background-color: var(--dark__gray-light);
+  background-color: var(--dark__gray-light) !important;
 }

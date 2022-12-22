@@ -1,11 +1,18 @@
+@import "../../../styles/_dark-theme.css";
+
+.svg-icon {
+  width: 100%;
+  height: 100%;
+}
+
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: #4c0033;
+  fill: var(--dark__gray-medium-light);
 }
 
 .svg-icon circle {
-  stroke: #4c0033;
+  stroke: var(--dark__gray-medium-light);
   stroke-width: 1;
 }
 
@@ -27,7 +34,7 @@
   height: 4rem;
   border-style: none;
   outline: none;
-  background: #af0171;
+  background: var(--dark__gray-forms);
   border-radius: 50%;
 
   display: flex;
@@ -39,5 +46,5 @@
 }
 
 .button:hover {
-  background: #e80f88;
+  background: rgb(131, 131, 131);
 }
