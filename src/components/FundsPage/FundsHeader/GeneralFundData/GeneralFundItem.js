@@ -7,6 +7,15 @@ const GeneralFundItem = function (props) {
     props.funds.length !== 1 ? "s" : ""
   } of total`;
 
+  const getBarColor = () => {
+    let color;
+    if (props.type === "income") color = "var(--dark__UI-blue)";
+    if (props.type === "expense") color = "var(--dark__UI-red)";
+    return color;
+  };
+
+  const barColor = getBarColor();
+
   return (
     <div className={styles["data-item"]}>
       <div className={styles["numbers"]}>
@@ -18,10 +27,13 @@ const GeneralFundItem = function (props) {
           2
         )}$`}</h5>
       </div>
-      <div className={styles["bar"]}>
+      <div
+        className={styles["bar"]}
+        style={{ outline: `2px solid ${barColor}` }}
+      >
         <div
           className={styles["fill"]}
-          style={{ width: props.barFillWidth }}
+          style={{ width: props.barFillWidth, backgroundColor: barColor }}
         ></div>
       </div>
     </div>

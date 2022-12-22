@@ -56,6 +56,7 @@ const FundsList = function (props) {
                   date={new Date(item.date)}
                   amount={item.amount}
                   option={item.option}
+                  type={item.type}
                 />
               );
             })}
