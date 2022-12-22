@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   min-width: 12rem;
+  color: var(--dark__font-light);
 }
 
 .wrapper p {

@@ -1,13 +1,14 @@
 @import "../../../styles/_global-units.css";
+@import "../../../styles/_dark-theme.css";
 
 .button {
-  background-color: #e43f5a;
+  background-color: var(--dark__UI-green);
 
   border: none;
   outline: none;
   border-radius: var(--button__border-radius);
   cursor: pointer;
-  color: #4c0033;
+  color: var(--dark__font-light);
 
   padding: 0.5rem 1.5rem;
   font-weight: bolder;

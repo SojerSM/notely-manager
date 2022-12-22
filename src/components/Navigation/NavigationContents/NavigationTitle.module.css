@@ -1,8 +1,11 @@
+@import "../../../styles/_dark-theme.css";
+
 .title {
   position: absolute;
   font-size: 3.2rem;
   top: 3rem;
   left: 4.5rem;
+  color: var(--dark__font-light);
 
   opacity: 0;
 }
@@ -10,7 +13,7 @@
 .title span {
   font-size: 4rem;
   font-weight: bolder;
-  color: rgb(148, 36, 117);
+  color: #cc8050;
 
   margin-left: 0.25rem;
 }

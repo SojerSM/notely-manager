@@ -1,4 +1,5 @@
 @import "../../../../styles/_dark-theme.css";
+@import "../../../../styles/_global-units.css";
 
 .task {
   position: relative;
@@ -7,6 +8,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  outline: 2px solid var(--dark__gray-forms);
 
   width: 100%;
 }
@@ -35,8 +37,8 @@
   width: 6rem;
   margin: -0.5rem;
   padding: 0.5rem;
-  background-color: #af017180;
-  border-radius: 15px;
+  background-color: var(--dark__UI-red);
+  border-radius: var(--button__border-radius);
 }
 
 .delete-button {

@@ -1,6 +1,11 @@
 .highlighted {
   font-size: 2rem;
-  background-color: #942475;
+  background-color: rgba(163, 205, 60, 1);
+  background-image: linear-gradient(
+    115deg,
+    rgba(163, 205, 60, 1) 0%,
+    rgba(223, 122, 60, 1) 100%
+  );
   padding: 0.25rem 1rem;
   border-radius: 1.5rem 0 1.5rem 0;
 }
