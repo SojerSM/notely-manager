@@ -133,6 +133,7 @@ const Chart = function (props) {
           .map((expense) => {
             return (
               <ChartLabel
+                key={Math.random().toString()}
                 value={expense.value}
                 color={expense.color}
                 title={expense.title}

@@ -63,9 +63,6 @@ const FundProvider = function (props) {
     setAvgMonthExpensesValue(calcMonthlyAvg(monthlyExpenses));
   }, [currYearFunds, currYear]);
 
-  console.log(avgMonthIncomesValue);
-  console.log(avgMonthExpensesValue);
-
   const addFund = (fund) => {
     setFunds((prevState) => [
       ...prevState,
