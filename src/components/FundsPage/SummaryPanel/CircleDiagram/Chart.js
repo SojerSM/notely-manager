@@ -5,6 +5,8 @@ import styles from "./Chart.module.css";
 
 import FundContext from "../../../../store/fundContext/fund-context";
 
+import ChartLabel from "./ChartLabel";
+
 const Chart = function (props) {
   const { currMonthFunds, avgMonthExpensesValue } = useContext(FundContext);
 
@@ -78,31 +80,41 @@ const Chart = function (props) {
 
   const chartTotal = getTotalValue();
 
-  const billsValue = getValueOfType("bills");
-  const fixedValue = getValueOfType("fixed");
-  const groceryValue = getValueOfType("grocery");
-  const transportValue = getValueOfType("transport");
-  const clothesValue = getValueOfType("clothes");
-  const medicinesValue = getValueOfType("medicines");
-  const meetingsValue = getValueOfType("meetings");
-  const eventsValue = getValueOfType("events");
-  const othersValue = getValueOfType("others");
+  const expenses = [
+    { value: getValueOfType("fixed"), title: "Fixed", color: "#FF4848" },
+    { value: getValueOfType("bills"), title: "Bills", color: "#E13D7A" },
+    {
+      value: getValueOfType("grocery"),
+      title: "Grocery",
+      color: "#FFFA43",
+    },
+    {
+      value: getValueOfType("transport"),
+      title: "Transport",
+      color: "#8D9A50",
+    },
+    { value: getValueOfType("clothes"), title: "Clothes", color: "#7F4D3E" },
+    {
+      value: getValueOfType("medicines"),
+      title: "Medicines",
+      color: "#7EB57B",
+    },
+    { value: getValueOfType("meetings"), title: "Meetings", color: "#4A804A" },
+    { value: getValueOfType("events"), title: "Events", color: "#B8BD85" },
+    { value: getValueOfType("others"), title: "Others", color: "#F1F4CC" },
+  ];
 
   return (
     <div className={styles["chart"]}>
       {filtered.length > 0 && (
         <PieChart
-          data={[
-            { title: "Fixed", value: fixedValue, color: "#C13C37" },
-            { title: "Bills", value: billsValue, color: "#E38627" },
-            { title: "Grocery", value: groceryValue, color: "#6A2135" },
-            { title: "Transport", value: transportValue, color: "#6ba89e" },
-            { title: "Clothes", value: clothesValue, color: "#6e6353" },
-            { title: "Medicines", value: medicinesValue, color: "brown" },
-            { title: "Meetings", value: meetingsValue, color: "#533309" },
-            { title: "Events", value: eventsValue, color: "green" },
-            { title: "Others", value: othersValue, color: "#c28b89" },
-          ]}
+          data={expenses.map((expense) => {
+            return {
+              title: expense.title,
+              value: expense.value,
+              color: expense.color,
+            };
+          })}
           totalValue={chartTotal}
           lineWidth={28}
           startAngle={260}
@@ -113,6 +125,22 @@ const Chart = function (props) {
         />
       )}
       {getContent()}
+      <div className={styles["labels"]}>
+        {expenses
+          .filter((expense) => {
+            return expense.value > 0;
+          })
+          .map((expense) => {
+            return (
+              <ChartLabel
+                value={expense.value}
+                color={expense.color}
+                title={expense.title}
+                total={chartTotal}
+              />
+            );
+          })}
+      </div>
     </div>
   );
 };

@@ -24,3 +24,15 @@
   align-items: center;
   justify-content: center;
 }
+
+.labels {
+  width: 100%;
+  position: absolute;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  left: 2rem;
+  top: 68%;
+}
