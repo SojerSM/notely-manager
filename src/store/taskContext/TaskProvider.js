@@ -13,6 +13,10 @@ const TaskProvider = function (props) {
   const [displayingByDate, setDisplayingByDate] = useState(false);
 
   useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  useEffect(() => {
     const importantTasks = tasks.filter((task) => {
       return task.priority === true;
     });

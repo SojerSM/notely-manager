@@ -1,14 +1,10 @@
 import { useState, useEffect } from "react";
+import { getInitialValue } from "../../helpers/helpers";
 
 import FundContext from "./fund-context";
 
-const getInitialValue = () => {
-  const initialValue = localStorage.getItem("funds");
-  return initialValue ? JSON.parse(initialValue) : [];
-};
-
 const FundProvider = function (props) {
-  const [funds, setFunds] = useState(getInitialValue);
+  const [funds, setFunds] = useState(getInitialValue("funds"));
   const [currMonthFunds, setCurrMonthFunds] = useState([]);
   const [currYearFunds, setCurrYearFunds] = useState([]);
   const [avgMonthIncomesValue, setAvgMonthIncomesValue] = useState();
