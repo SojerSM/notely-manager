@@ -13,7 +13,7 @@
 .title span {
   font-size: 4rem;
   font-weight: bolder;
-  color: #cc8050;
+  color: var(--dark__UI-green);
 
   margin-left: 0.25rem;
 }

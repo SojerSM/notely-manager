@@ -87,18 +87,18 @@ const Chart = function (props) {
     {
       value: getValueOfType("grocery"),
       title: "Grocery",
-      color: "#FFFA43",
+      color: "#C13C37",
     },
     {
       value: getValueOfType("transport"),
       title: "Transport",
-      color: "#8D9A50",
+      color: "#97a072",
     },
     { value: getValueOfType("clothes"), title: "Clothes", color: "#7F4D3E" },
     {
       value: getValueOfType("medicines"),
       title: "Medicines",
-      color: "#7EB57B",
+      color: "#E38627",
     },
     { value: getValueOfType("meetings"), title: "Meetings", color: "#4A804A" },
     { value: getValueOfType("events"), title: "Events", color: "#B8BD85" },

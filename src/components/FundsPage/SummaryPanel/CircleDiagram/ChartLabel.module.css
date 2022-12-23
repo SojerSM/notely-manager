@@ -10,11 +10,11 @@
   margin-bottom: 0.5rem;
 
   color: var(--dark__font-light);
-  font-size: 1rem;
+  font-size: var(--font__small-size);
 }
 
 .marker {
-  width: 1.25rem;
+  width: 1.1rem;
   border-radius: 50%;
 }
 
@@ -26,5 +26,5 @@
 
 .percentage span {
   margin-left: 0.15rem;
-  color: rgb(74, 128, 74);
+  color: var(--dark__font-light-smoked);
 }
