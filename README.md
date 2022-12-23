@@ -3,8 +3,9 @@
 ## Table of contents
 
 - [General info](#general-info)
-
-* [Screenshots](#screenshots)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Setup](#setup)
 
 ## General info
 
@@ -16,5 +17,24 @@ At the other hand, 'tasks' section offers the list of goals, divided into catego
 
 ## Screenshots
 
-![Funds page view](./src/assets/view_1.jpg);
-![Tasks page view](./src/assets/view_2.jpg);
+![Funds page view](./src/assets/view_1.jpg)
+![Tasks page view](./src/assets/view_2.jpg)
+
+## Technologies
+
+Project is created with:
+
+- React 18 (hooks, context API, portals)
+- ES6+ code standard
+- CSS modules
+
+The data is stored in localStorage, there're also pre-defined arrays of objects that are loaded the first time the page is opened on the device, so no need to add incomes, expenses and tasks by yourself.
+
+## Setup
+
+For now there's now live web demo of this app, so the only way to test it is to clone repository and install it locally using npm or yarn:
+
+```
+$ npm install
+$ npm start
+```
