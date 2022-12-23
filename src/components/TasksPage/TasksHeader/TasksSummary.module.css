@@ -25,6 +25,7 @@
   margin: 1.5rem 0 3rem 0;
   padding: 1rem 3rem;
   border-radius: var(--card__border-radius);
+  box-shadow: var(--dark__card-box-shadow);
 
   display: flex;
   justify-content: space-around;

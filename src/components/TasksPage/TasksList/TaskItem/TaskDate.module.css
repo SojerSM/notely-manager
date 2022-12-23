@@ -1,3 +1,5 @@
+@import "../../../../styles/_dark-theme.css";
+
 .date {
   width: 7rem;
   display: flex;
@@ -7,6 +9,11 @@
   font-size: 1.2rem;
 }
 
+.done {
+  color: var(--dark__font-light-smoked);
+  text-decoration: line-through;
+}
+
 .no-date {
-  opacity: 0.5;
+  color: var(--dark__font-light-smoked);
 }

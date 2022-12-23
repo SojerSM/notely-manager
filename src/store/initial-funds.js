@@ -1215,7 +1215,7 @@ export const defaultFunds = [
   },
   {
     key: Math.random().toString(),
-    content: "visit the docotr",
+    content: "visit the doctor",
     date: new Date(2022, 0, 26),
     amount: 150,
     option: "others",

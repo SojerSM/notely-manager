@@ -14,6 +14,7 @@ const TaskContext = React.createContext({
   changeDisplayedList: (type) => {},
   turnOnDisplayingByDate: (arr) => {},
   turnOffDisplayingByDate: () => {},
+  toggleDone: (key) => {},
 });
 
 export default TaskContext;

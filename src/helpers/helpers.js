@@ -3,6 +3,6 @@ export const capitalizeFirstLetter = (text) => {
 };
 
 export const getInitialValue = (list, defaultArr) => {
-  const initialValue = localStorage.getItem("funds");
+  const initialValue = localStorage.getItem(list);
   return initialValue ? JSON.parse(initialValue) : defaultArr;
 };

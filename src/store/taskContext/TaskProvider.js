@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { getInitialValue } from "../../helpers/helpers";
+import { defaultTasks } from "../initial-tasks";
 
 import TaskContext from "./task-context";
 
 const TaskProvider = function (props) {
-  const [tasks, setTasks] = useState(getInitialValue("tasks", []));
+  const [tasks, setTasks] = useState(getInitialValue("tasks", defaultTasks));
   const [important, setImportant] = useState([]);
   const [uncategorized, setUncategorized] = useState([]);
   const [noDate, setNoDate] = useState([]);
@@ -41,8 +42,20 @@ const TaskProvider = function (props) {
         date: task.date,
         option: task.option,
         priority: task.priority,
+        done: false,
       },
     ]);
+  };
+
+  const toggleDone = (key) => {
+    setTasks(
+      tasks.map((task) => {
+        if (task.key === key) {
+          task.done = !task.done;
+        }
+        return task;
+      })
+    );
   };
 
   const removeTask = (key) => {
@@ -60,7 +73,6 @@ const TaskProvider = function (props) {
     setDisplayingByDate(true);
     setFilteredByDate(arr);
     setCurrDisplayedDate(date.toString());
-    console.log(filteredByDate);
   };
 
   const turnOffDisplayingByDate = () => {
@@ -81,9 +93,10 @@ const TaskProvider = function (props) {
     changeDisplayedList,
     turnOnDisplayingByDate,
     turnOffDisplayingByDate,
+    toggleDone,
   };
 
-  console.log(localStorage.funds);
+  console.log(tasks);
 
   return (
     <TaskContext.Provider value={taskContext}>

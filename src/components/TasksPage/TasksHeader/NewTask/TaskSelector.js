@@ -17,7 +17,8 @@ const TaskSelector = function (props) {
       <option value={"work"}>Work</option>
       <option value={"learning"}>Learning</option>
       <option value={"self-care"}>Self care</option>
-      <option value={"people"}>People</option>
+      <option value={"payments"}>Payments</option>
+      <option value={"events"}>Events</option>
     </select>
   );
 };

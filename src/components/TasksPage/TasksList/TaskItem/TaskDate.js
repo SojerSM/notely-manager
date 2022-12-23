@@ -6,17 +6,15 @@ const TaskDate = function (props) {
   let year, month, day;
 
   if (props.date) {
-    year = props.date.getFullYear();
-    month = props.date.toLocaleString("en-US", { month: "long" });
-    day = props.date.toLocaleString("en-US", { day: "2-digit" });
+    year = new Date(props.date).getFullYear();
+    month = new Date(props.date).toLocaleString("en-US", { month: "long" });
+    day = new Date(props.date).toLocaleString("en-US", { day: "2-digit" });
   }
-
-  console.log(year);
 
   return (
     <Fragment>
       {props.date ? (
-        <div className={styles["date"]}>
+        <div className={`${styles["date"]} ${props.done && styles["done"]}`}>
           <span>{+day.charAt(0) === 0 ? day.slice(1) : day}</span>
           <span>{month.slice(0, 3)}</span>
           <span>{year}</span>

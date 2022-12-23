@@ -28,12 +28,13 @@
 
 .list::-webkit-scrollbar-track {
   border-radius: 10px;
+  background-color: var(--dark__gray-medium-light);
   margin: 4rem 0;
-  outline: 2px solid var(--dark__gray-medium-light);
+  outline: 2px solid var(--dark__gray-medium-dark);
 }
 
 .list::-webkit-scrollbar-thumb {
-  background: var(--dark__gray-medium-light);
+  background: var(--dark__gray-light);
   border-radius: 10px;
 }
 

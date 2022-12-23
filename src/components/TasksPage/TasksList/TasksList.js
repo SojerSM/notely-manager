@@ -45,10 +45,11 @@ const TasksList = function (props) {
               <TaskItem
                 key={task.key}
                 id={task.key}
-                date={new Date(task.date)}
+                date={task.date}
                 content={task.content}
                 option={task.option}
                 priority={task.priority}
+                done={task.done}
               />
             );
           })

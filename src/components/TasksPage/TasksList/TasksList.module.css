@@ -1,12 +1,14 @@
+@import "../../../styles/_dark-theme.css";
+@import "../../../styles/_global-units.css";
+
 .list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: flex-start;
-  justify-content: center;
 
   padding: 1rem;
-  max-height: 30rem;
+  max-height: 32rem;
   overflow: auto;
 }
 
@@ -16,16 +18,16 @@
 
 .list::-webkit-scrollbar-track {
   border-radius: 10px;
-  outline: 2px solid #af017190;
+  outline: 2px solid var(--dark__gray-medium-dark);
 }
 
 .list::-webkit-scrollbar-thumb {
-  background: #af017150;
+  background: var(--dark__gray-light);
   border-radius: 10px;
 }
 
 .filter {
-  font-size: 1.8rem;
+  font-size: var(--font__large-size);
   margin: 0 0 1rem 1rem;
 }
 
