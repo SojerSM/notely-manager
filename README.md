@@ -15,6 +15,8 @@ It allows users to take control of their finances with tracking every income and
 
 On the other hand, 'tasks' section offers the list of goals, divided into categories, with a functionality of sorting elements by priority level, having no category and no date. Interactive calendar on the right helps the user to locate tasks in time. Every element may be set as 'done', and these can be deleted as a whole.
 
+Live demo: https://exquisite-lokum-1f39f2.netlify.app/
+
 ## Screenshots
 
 ![Funds page view](./src/assets/view_1.jpg)
@@ -32,7 +34,7 @@ The data is stored in localStorage, there're also pre-defined arrays of objects 
 
 ## Setup
 
-For now there's now live web demo of this app, so the only way to test it is to clone repository and install it locally using npm or yarn:
+To run this project, clone repository and install it locally using npm or yarn:
 
 ```
 $ npm install
