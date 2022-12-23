@@ -7,7 +7,7 @@ const NavigationTitle = function (props) {
 
   return (
     <h2 className={titleClasses}>
-      Note<span>ly</span>
+      Strict<span>ly</span>
     </h2>
   );
 };
