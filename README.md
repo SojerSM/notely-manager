@@ -15,7 +15,7 @@ It allows users to take control of their finances with tracking every income and
 
 On the other hand, 'tasks' section offers the list of goals, divided into categories, with a functionality of sorting elements by priority level, having no category and no date. Interactive calendar on the right helps the user to locate tasks in time. Every element may be set as 'done', and these can be deleted as a whole.
 
-Live demo: https://exquisite-lokum-1f39f2.netlify.app/
+Live demo: https://superb-madeleine-70fa75.netlify.app
 
 ## Screenshots
 
