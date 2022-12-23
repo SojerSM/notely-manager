@@ -11,6 +11,8 @@ const TaskDate = function (props) {
     day = props.date.toLocaleString("en-US", { day: "2-digit" });
   }
 
+  console.log(year);
+
   return (
     <Fragment>
       {props.date ? (

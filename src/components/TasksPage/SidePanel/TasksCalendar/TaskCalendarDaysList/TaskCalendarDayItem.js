@@ -15,8 +15,8 @@ const TaskCalendarDayItem = function (props) {
       so inside filter it's evaluated in kinda imperative way, but it works */
     const tasks = taskCtx.tasks.filter((task) => {
       return task.date
-        ? task.date.getTime() === props.date.getTime() + 3600000 ||
-            task.date.getTime() === props.date.getTime() + 7200000
+        ? new Date(task.date).getTime() === props.date.getTime() + 3600000 ||
+            new Date(task.date).getTime() === props.date.getTime() + 7200000
         : null;
     });
     setMatchingTasks(tasks);

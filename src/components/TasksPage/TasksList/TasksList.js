@@ -45,7 +45,7 @@ const TasksList = function (props) {
               <TaskItem
                 key={task.key}
                 id={task.key}
-                date={task.date}
+                date={new Date(task.date)}
                 content={task.content}
                 option={task.option}
                 priority={task.priority}
