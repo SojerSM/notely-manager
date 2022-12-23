@@ -3,6 +3,7 @@ import { useContext } from "react";
 import styles from "./ActionsPage.module.css";
 
 import TaskContext from "../../store/taskContext/task-context";
+import FundContext from "../../store/fundContext/fund-context";
 
 import Page from "../UI/Page";
 import ActionButton from "./ActionButton";
@@ -10,6 +11,7 @@ import Highlight from "../UI/Highlight";
 
 const ActionsPage = function (props) {
   const { tasks } = useContext(TaskContext);
+  const { funds } = useContext(FundContext);
 
   return (
     <Page>
@@ -20,7 +22,7 @@ const ActionsPage = function (props) {
         <ActionButton
           type={"funds"}
           title={"Funds"}
-          amount={0}
+          amount={funds.length}
           onClick={props.onClick}
         />
         <ActionButton

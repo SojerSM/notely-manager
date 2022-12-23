@@ -12,7 +12,7 @@
 
 .data {
   background-color: var(--dark__gray-medium-light);
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   display: flex;
   height: 100%;
 
