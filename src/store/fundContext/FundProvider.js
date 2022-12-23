@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { getInitialValue } from "../../helpers/helpers";
+import { defaultFunds } from "../initial-funds";
 
 import FundContext from "./fund-context";
 
 const FundProvider = function (props) {
-  const [funds, setFunds] = useState(getInitialValue("funds"));
+  const [funds, setFunds] = useState(getInitialValue("funds", defaultFunds));
   const [currMonthFunds, setCurrMonthFunds] = useState([]);
   const [currYearFunds, setCurrYearFunds] = useState([]);
   const [avgMonthIncomesValue, setAvgMonthIncomesValue] = useState();

@@ -4,7 +4,7 @@ import { getInitialValue } from "../../helpers/helpers";
 import TaskContext from "./task-context";
 
 const TaskProvider = function (props) {
-  const [tasks, setTasks] = useState(getInitialValue("tasks"));
+  const [tasks, setTasks] = useState(getInitialValue("tasks", []));
   const [important, setImportant] = useState([]);
   const [uncategorized, setUncategorized] = useState([]);
   const [noDate, setNoDate] = useState([]);
@@ -83,7 +83,7 @@ const TaskProvider = function (props) {
     turnOffDisplayingByDate,
   };
 
-  console.log(tasks);
+  console.log(localStorage.funds);
 
   return (
     <TaskContext.Provider value={taskContext}>
