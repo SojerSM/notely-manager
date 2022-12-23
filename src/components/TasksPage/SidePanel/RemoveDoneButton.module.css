@@ -1,0 +1,8 @@
+@import "../../../styles/_dark-theme.css";
+
+.button {
+  position: absolute;
+  top: 90%;
+  background: var(--dark__gray-light);
+  font-size: 1.2rem;
+}

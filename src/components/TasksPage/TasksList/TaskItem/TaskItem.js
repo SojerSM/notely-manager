@@ -39,7 +39,11 @@ const TaskItem = function (props) {
         {capitalizeFirstLetter(props.content.trim())}
       </p>
       <div className={styles["content-details"]}>
-        <div className={styles["option"]}>
+        <div
+          className={`${styles["option"]} ${
+            props.done && styles["option-done"]
+          }`}
+        >
           <p>{capitalizeFirstLetter(props.option)}</p>
         </div>
         <div className={styles["icons"]}></div>

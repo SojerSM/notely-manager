@@ -79,6 +79,14 @@ const TaskProvider = function (props) {
     setDisplayingByDate(false);
   };
 
+  const removeFinished = () => {
+    setTasks(
+      tasks.filter((task) => {
+        return task.done !== true;
+      })
+    );
+  };
+
   const taskContext = {
     tasks,
     important,
@@ -94,6 +102,7 @@ const TaskProvider = function (props) {
     turnOnDisplayingByDate,
     turnOffDisplayingByDate,
     toggleDone,
+    removeFinished,
   };
 
   console.log(tasks);

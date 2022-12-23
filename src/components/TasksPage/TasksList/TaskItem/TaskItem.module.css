@@ -51,9 +51,13 @@
   width: 6rem;
   margin: -0.5rem;
   padding: 0.5rem;
-  background-color: var(--dark__UI-red);
+  background-color: var(--dark__UI-blue);
   border-radius: var(--button__border-radius);
   font-size: 1.1rem;
+}
+
+.option-done {
+  background-color: var(--dark__UI-red);
 }
 
 .icons {
