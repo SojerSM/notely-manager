@@ -4,6 +4,7 @@ import styles from "./App.module.css";
 
 import TaskProvider from "./store/taskContext/TaskProvider";
 import FundProvider from "./store/fundContext/FundProvider";
+import ThemeProvider from "./store/themeContext/ThemeProvider";
 
 import Navigation from "./components/Navigation/Navigation";
 import ActionsPage from "./components/ActionsPage/ActionsPage";
@@ -18,18 +19,20 @@ const App = function () {
   };
 
   return (
-    <TaskProvider>
-      <FundProvider>
-        <div className={styles.app}>
-          <Navigation onClick={changeDisplayedPage} />
-          {displayedPage === "summary" && (
-            <ActionsPage onClick={changeDisplayedPage} />
-          )}
-          {displayedPage === "funds" && <NotesPage />}
-          {displayedPage === "tasks" && <TasksPage />}
-        </div>
-      </FundProvider>
-    </TaskProvider>
+    <ThemeProvider>
+      <TaskProvider>
+        <FundProvider>
+          <div className={styles.app}>
+            <Navigation onClick={changeDisplayedPage} />
+            {displayedPage === "summary" && (
+              <ActionsPage onClick={changeDisplayedPage} />
+            )}
+            {displayedPage === "funds" && <NotesPage />}
+            {displayedPage === "tasks" && <TasksPage />}
+          </div>
+        </FundProvider>
+      </TaskProvider>
+    </ThemeProvider>
   );
 };
 
