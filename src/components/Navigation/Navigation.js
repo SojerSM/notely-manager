@@ -6,6 +6,7 @@ import SpreadButton from "./NavButtons/SpreadButton";
 import TogglePageButton from "./NavButtons/TogglePageButton";
 import NavigationTitle from "./NavigationContents/NavigationTitle";
 import NavigationFooter from "./NavigationContents/NavigationFooter";
+import ThemeButton from "./NavButtons/ThemeButton";
 
 const Navigation = function (props) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -39,6 +40,7 @@ const Navigation = function (props) {
           onClick={props.onClick}
         />
       </div>
+      <ThemeButton />
       <NavigationFooter isExpanded={isExpanded} />
     </nav>
   );
