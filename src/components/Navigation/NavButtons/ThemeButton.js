@@ -6,7 +6,7 @@ import * as icons from "../../../assets/icons";
 import ThemeContext from "../../../store/themeContext/theme-context";
 
 const ThemeButton = function (props) {
-  const { toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const toggleThemeHandler = (event) => {
     event.preventDefault();
@@ -16,7 +16,7 @@ const ThemeButton = function (props) {
   return (
     <button className={styles["button"]} onClick={toggleThemeHandler}>
       <svg className={styles["svg-icon"]} viewBox="0 0 20 20">
-        {icons.themeIcon}
+        {theme === "dark" ? icons.darkThemeIcon : icons.lightThemeIcon}
       </svg>
     </button>
   );
