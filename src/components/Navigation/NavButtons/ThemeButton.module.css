@@ -1,14 +1,23 @@
 @import "../../../styles/_dark-theme.css";
 
 .button {
-  background: none;
-  outline: none;
+  position: absolute;
+  transform: translate(0, 0);
+  top: 85%;
+
+  width: 100%;
   border: none;
+  outline: none;
+  background: none;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, padding 0.5s ease;
 }
 
 .svg-icon {
-  width: 1em;
-  height: 1em;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .svg-icon path,
