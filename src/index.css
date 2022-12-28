@@ -9,11 +9,9 @@
 html {
   font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 0.85vw;
-  color: white;
 }
 
 body {
-  /* background-color: var(--dark__gray-medium-light); */
   overflow: hidden;
 }
 

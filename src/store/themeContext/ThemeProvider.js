@@ -6,12 +6,7 @@ const ThemeProvider = function (props) {
   const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
-    if (theme === "dark") {
-      document.body.style.backgroundColor = "var(--dark__gray-medium-light)";
-    }
-    if (theme === "light") {
-      document.body.style.backgroundColor = "var(--light__gray-light)";
-    }
+    document.body.style.backgroundColor = `var(--${theme}__gray-medium-light)`;
   }, [theme]);
 
   const toggleTheme = () => {
@@ -23,8 +18,6 @@ const ThemeProvider = function (props) {
     theme,
     toggleTheme,
   };
-
-  console.log(theme);
 
   return (
     <ThemeContext.Provider value={themeContext}>
