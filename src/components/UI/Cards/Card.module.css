@@ -2,14 +2,13 @@
 @import "../../../styles/_global-units.css";
 
 .card {
-  outline: 2px solid var(--dark__gray-light);
   border-radius: var(--card__border-radius);
   padding: 1rem;
 
-  transition: all 0.25s ease;
-
   display: flex;
   justify-content: center;
+
+  transition: background 0.25s ease;
 }
 
 .card:hover {
