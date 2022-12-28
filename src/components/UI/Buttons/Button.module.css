@@ -8,7 +8,6 @@
   outline: none;
   border-radius: var(--button__border-radius);
   cursor: pointer;
-  color: var(--dark__font-light);
 
   padding: 0.5rem 1.5rem;
   font-weight: bolder;

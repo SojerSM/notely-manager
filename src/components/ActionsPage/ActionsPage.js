@@ -4,6 +4,7 @@ import styles from "./ActionsPage.module.css";
 
 import TaskContext from "../../store/taskContext/task-context";
 import FundContext from "../../store/fundContext/fund-context";
+import ThemeContext from "../../store/themeContext/theme-context";
 
 import Page from "../UI/Page";
 import ActionButton from "./ActionButton";
@@ -12,13 +13,14 @@ import Highlight from "../UI/Highlight";
 const ActionsPage = function (props) {
   const { tasks } = useContext(TaskContext);
   const { funds } = useContext(FundContext);
+  const { defaultFontColor } = useContext(ThemeContext);
 
   return (
     <Page>
-      <div className={styles.title}>
+      <div className={styles["title"]} style={{ color: defaultFontColor }}>
         Organise your life in a <Highlight>smarter</Highlight> way.
       </div>
-      <div className={styles.actions}>
+      <div className={styles["actions"]}>
         <ActionButton
           type={"funds"}
           title={"Funds"}

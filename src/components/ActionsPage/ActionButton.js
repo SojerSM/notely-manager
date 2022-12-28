@@ -1,9 +1,15 @@
+import { useContext } from "react";
+
 import styles from "./ActionButton.module.css";
+
+import ThemeContext from "../../store/themeContext/theme-context";
 
 import Card from "../UI/Cards/Card";
 import Button from "../UI/Buttons/Button";
 
 const ActionButton = function (props) {
+  const { defaultFontColor } = useContext(ThemeContext);
+
   const togglePageHandler = (event) => {
     event.preventDefault();
     props.onClick(props.type);
@@ -11,7 +17,7 @@ const ActionButton = function (props) {
 
   return (
     <Card className={styles.wrapper}>
-      <p>{props.amount}</p>
+      <p style={{ color: defaultFontColor }}>{props.amount}</p>
       <Button className={styles.button} onClick={togglePageHandler}>
         {props.title}
       </Button>

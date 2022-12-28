@@ -1,6 +1,8 @@
 :root {
-  --light__gray-medium-light: rgb(228, 228, 228);
+  --light__gray-medium-light: rgb(236, 236, 236);
   --light__gray-light: rgb(248, 248, 248);
 
   --light__font-dark: rgb(36, 36, 36);
+
+  --light__UI-green: rgb(46, 184, 46);
 }
