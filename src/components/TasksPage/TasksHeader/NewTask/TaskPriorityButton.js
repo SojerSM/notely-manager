@@ -8,13 +8,16 @@ const TaskPriorityButton = function (props) {
     props.onClick(!props.isImportant);
   };
 
+  const activeIconClass =
+    props.theme === "dark" ? "svg-icon-active-dark" : "svg-icon-active-light";
+
   return (
     <div className={styles["important-btn"]}>
       <label htmlFor={"important"}>Important</label>
       <button id={"important"} type={"button"} onClick={changePriorityHandler}>
         <svg
           className={
-            !props.isImportant ? styles["svg-icon"] : styles["svg-icon-active"]
+            !props.isImportant ? styles["svg-icon"] : styles[activeIconClass]
           }
           viewBox="0 0 20 20"
         >

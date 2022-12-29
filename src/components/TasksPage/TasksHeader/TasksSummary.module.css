@@ -1,11 +1,9 @@
-@import "../../../styles/_dark-theme.css";
-@import "../../../styles/_global-units.css";
-
 .modal {
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: flex-start;
+  color: inherit;
 }
 
 .header {
@@ -17,11 +15,10 @@
 
 .title {
   font-size: var(--font__page-title);
-  color: var(--dark__font-title);
+  color: inherit;
 }
 
 .summary {
-  background-color: var(--dark__gray-light);
   margin: 1.5rem 0 3rem 0;
   padding: 1rem 3rem;
   border-radius: var(--card__border-radius);
@@ -42,15 +39,4 @@
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
-}
-
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
-  fill: #4c0033;
-}
-
-.svg-icon circle {
-  stroke: #4c0033;
-  stroke-width: 1;
 }

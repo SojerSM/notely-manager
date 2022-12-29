@@ -23,6 +23,13 @@ const NewTask = function (props) {
     description: "",
   });
 
+  const optionalsColor =
+    props.theme === "dark"
+      ? "var(--dark__font-light-smoked)"
+      : "var(--light__font-dark-smoked)";
+
+  const bcgCategories = `var(--${props.theme}__gray-medium-dark)`;
+
   const formConfirmHandler = (event) => {
     event.preventDefault();
 
@@ -73,7 +80,11 @@ const NewTask = function (props) {
   };
 
   return (
-    <form className={styles["form"]} onSubmit={formConfirmHandler}>
+    <form
+      className={styles["form"]}
+      onSubmit={formConfirmHandler}
+      style={{ color: props.fontColor }}
+    >
       <h4>Create new Task</h4>
       <TextInput
         className={styles["input"]}
@@ -84,8 +95,13 @@ const NewTask = function (props) {
         onChange={textChangeHandler}
         value={taskContent}
       />
-      <p className={styles["optional"]}>Specify it (optional)</p>
-      <div className={styles["categories"]}>
+      <p className={styles["optional"]} style={{ color: optionalsColor }}>
+        Specify it (optional)
+      </p>
+      <div
+        className={styles["categories"]}
+        style={{ backgroundColor: bcgCategories }}
+      >
         <DateInput
           className={styles["date-input"]}
           input={{
@@ -97,17 +113,24 @@ const NewTask = function (props) {
         />
         <div className={styles["select-wrapper"]}>
           <p>Category</p>
-          <TaskSelector onChange={selectHandler} value={taskOption} />
+          <TaskSelector
+            onChange={selectHandler}
+            value={taskOption}
+            theme={props.theme}
+          />
         </div>
         <TaskPriorityButton
           isImportant={isImportant}
           onClick={priorityInputHandler}
+          theme={props.theme}
         />
       </div>
       <Button className={styles["submit-btn"]} onClick={formConfirmHandler}>
         Submit
       </Button>
-      {formError.status && <NewTaskError formError={formError} />}
+      {formError.status && (
+        <NewTaskError formError={formError} theme={props.theme} />
+      )}
     </form>
   );
 };

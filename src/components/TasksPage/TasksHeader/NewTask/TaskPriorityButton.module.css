@@ -14,19 +14,35 @@
   stroke-width: 1;
 }
 
-.svg-icon-active {
+.svg-icon-acrive-dark {
   width: 3.2rem;
   height: 3.2rem;
 }
 
-.svg-icon-active path,
-.svg-icon-active polygon,
-.svg-icon-active rect {
+.svg-icon-active-dark path,
+.svg-icon-active-dark polygon,
+.svg-icon-active-dark rect {
   fill: var(--dark__yellow);
 }
 
-.svg-icon-active circle {
+.svg-icon-active-dark circle {
   stroke: var(--dark__yellow);
+  stroke-width: 1;
+}
+
+.svg-icon-active-light {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.svg-icon-active-light path,
+.svg-icon-active-light polygon,
+.svg-icon-active-light rect {
+  fill: var(--light__yellow);
+}
+
+.svg-icon-active-light circle {
+  stroke: var(--light__yellow);
   stroke-width: 1;
 }
 

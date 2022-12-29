@@ -1,6 +1,3 @@
-@import "../../../../styles/_dark-theme.css";
-@import "../../../../styles/_global-units.css";
-
 .svg-icon {
   width: 2rem;
   height: 2rem;
@@ -9,11 +6,10 @@
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: var(--dark__red-error);
+  fill: inherit;
 }
 
 .svg-icon circle {
-  stroke: var(--dark__red-error);
   stroke-width: 1;
 }
 

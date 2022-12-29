@@ -7,12 +7,17 @@ const SummaryButton = function (props) {
     props.tasksCtx.changeDisplayedList(props.id);
   };
 
+  const bcgBadge = `var(--${props.theme}__gray-medium-light)`;
+  const badgeClass =
+    props.theme === "dark" ? "active-badge-dark" : "active-badge-light";
+
   const isActive = props.id === props.tasksCtx.displayed;
 
   return (
     <button className={styles.button} onClick={changeSummaryHandler}>
       <div
-        className={`${styles["badge"]} ${isActive && styles["active-badge"]}`}
+        className={`${styles["badge"]} ${isActive && styles[badgeClass]}`}
+        style={{ backgroundColor: bcgBadge }}
       >
         {props.amount}
       </div>

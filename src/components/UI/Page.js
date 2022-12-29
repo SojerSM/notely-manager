@@ -19,6 +19,7 @@ const Page = function (props) {
       className={`${styles.page} ${isDelayed && styles.delayed} ${
         props.className
       }`}
+      style={props.style}
     >
       {props.children}
     </div>

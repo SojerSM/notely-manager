@@ -13,8 +13,9 @@ import NewTask from "./NewTask/NewTask";
 
 const TasksSummary = function (props) {
   const [isFormOpen, setIsFormOpen] = useState(false);
-
   const tasksCtx = useContext(TaskContext);
+
+  const bcgSummary = `var(--${props.theme}__gray-light)`;
 
   const toggleFormHandler = (event) => {
     event.preventDefault();
@@ -26,7 +27,7 @@ const TasksSummary = function (props) {
       {isFormOpen && (
         <Modal onClose={toggleFormHandler} className={styles["modal"]}>
           <ExitButton onClose={toggleFormHandler} />
-          <NewTask />
+          <NewTask theme={props.theme} fontColor={props.fontColor} />
         </Modal>
       )}
       <div className={styles["header"]}>
@@ -35,30 +36,37 @@ const TasksSummary = function (props) {
         </h3>
         <AddButton onClick={toggleFormHandler} />
       </div>
-      <div className={styles["summary"]}>
+      <div
+        className={styles["summary"]}
+        style={{ backgroundColor: bcgSummary }}
+      >
         <SummaryButton
           title={"All"}
           id={"all"}
           amount={tasksCtx.tasks.length}
           tasksCtx={tasksCtx}
+          theme={props.theme}
         />
         <SummaryButton
           title={"Important"}
           id={"important"}
           amount={tasksCtx.important.length}
           tasksCtx={tasksCtx}
+          theme={props.theme}
         />
         <SummaryButton
           title={"Uncategorized"}
           id={"uncategorized"}
           amount={tasksCtx.uncategorized.length}
           tasksCtx={tasksCtx}
+          theme={props.theme}
         />
         <SummaryButton
           title={"No Date"}
           id={"no-date"}
           amount={tasksCtx.noDate.length}
           tasksCtx={tasksCtx}
+          theme={props.theme}
         />
       </div>
     </Fragment>
