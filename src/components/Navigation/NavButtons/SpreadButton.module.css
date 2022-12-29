@@ -34,7 +34,6 @@
   height: 4rem;
   border-style: none;
   outline: none;
-  background: var(--dark__gray-forms);
   border-radius: 50%;
 
   display: flex;

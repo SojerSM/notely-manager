@@ -5,7 +5,7 @@
   font-size: 3.2rem;
   top: 3rem;
   left: 4.5rem;
-  color: var(--dark__font-light);
+  color: inherit;
 
   opacity: 0;
 }
@@ -13,7 +13,6 @@
 .title span {
   font-size: 4rem;
   font-weight: bolder;
-  color: var(--dark__UI-green);
 
   margin-left: 0.25rem;
 }
@@ -21,6 +20,6 @@
 .title-expanded {
   opacity: 1;
 
-  transition: all 0.5s ease;
+  transition: opacity 0.5s ease;
   transition-delay: 0.5s;
 }

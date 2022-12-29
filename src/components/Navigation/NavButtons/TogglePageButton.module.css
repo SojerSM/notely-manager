@@ -31,6 +31,7 @@
   gap: 0.5rem;
   margin-bottom: 2rem;
   padding: 0.75rem 0 0.75rem 1.75rem;
+  color: inherit;
 
   transition: background-color 0.2s ease, padding 0.5s ease;
 }
@@ -51,13 +52,12 @@
   position: absolute;
   left: 9rem;
   font-size: var(--font__large-size);
-  color: var(--dark__font-light);
   opacity: 0;
 }
 
 .content-expanded {
   opacity: 1;
 
-  transition: all 0.5s ease;
+  transition: opacity 0.5s ease;
   transition-delay: 0.5s;
 }
