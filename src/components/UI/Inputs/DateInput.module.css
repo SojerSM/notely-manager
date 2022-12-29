@@ -1,12 +1,7 @@
-@import "../../../styles/_dark-theme.css";
-@import "../../../styles/_global-units.css";
-
 .input {
-  background-color: var(--dark__gray-forms);
   border: none;
   outline: none;
   border-radius: var(--form__border-radius);
-  color: var(--dark__font-light);
 }
 
 .input::-webkit-calendar-picker-indicator {

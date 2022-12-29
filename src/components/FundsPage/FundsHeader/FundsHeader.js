@@ -1,6 +1,8 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useContext } from "react";
 
 import styles from "./FundsHeader.module.css";
+
+import ThemeContext from "../../../store/themeContext/theme-context";
 
 import AddButton from "../../UI/Buttons/AddButton";
 import Modal from "../../UI/Modal";
@@ -13,6 +15,7 @@ import GeneralFundData from "./GeneralFundData/GeneralFundData";
 import MonthlyAverage from "./MonthlyAverage/MonthlyAverage";
 
 const FundsHeader = function () {
+  const { defaultFontColor } = useContext(ThemeContext);
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   const toggleFormHandler = (event) => {
@@ -28,7 +31,7 @@ const FundsHeader = function () {
           <AddFundsForm />
         </Modal>
       )}
-      <div className={styles["header"]}>
+      <div className={styles["header"]} style={{ color: defaultFontColor }}>
         <div className={styles["add-section"]}>
           <h3 className={styles["title"]}>
             Your <Highlight>Funds</Highlight>

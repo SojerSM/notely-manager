@@ -24,6 +24,8 @@ const FundsExpandedForm = function (props) {
     description: "",
   });
 
+  const bcgCategories = `var(--${props.theme}__gray-medium-dark)`;
+
   const formSubmitHandler = (event) => {
     event.preventDefault();
 
@@ -93,7 +95,10 @@ const FundsExpandedForm = function (props) {
         onChange={textChangeHandler}
         value={fundContent}
       />
-      <div className={styles["categories"]}>
+      <div
+        className={styles["categories"]}
+        style={{ backgroundColor: bcgCategories }}
+      >
         <DateInput
           className={styles["date-input"]}
           input={{
@@ -110,6 +115,7 @@ const FundsExpandedForm = function (props) {
               onChange={selectHandler}
               value={fundOption}
               active={props.active}
+              theme={props.theme}
             />
           )}
           {props.active === "expense" && (
@@ -117,12 +123,17 @@ const FundsExpandedForm = function (props) {
               onChange={selectHandler}
               value={fundOption}
               active={props.active}
+              theme={props.theme}
             />
           )}
         </div>
         <div className={styles["amount-wrapper"]}>
           <p>Amount</p>
-          <AmountInput onChange={amountHandler} value={fundAmount} />
+          <AmountInput
+            onChange={amountHandler}
+            value={fundAmount}
+            theme={props.theme}
+          />
         </div>
       </div>
       <Button className={styles["submit-btn"]} onClick={formSubmitHandler}>

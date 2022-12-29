@@ -7,6 +7,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  color: inherit;
 }
 
 .input {
@@ -14,7 +15,7 @@
   margin: 2rem 0 2rem 0;
   font-size: var(--font__medium-size);
   padding: 0.75rem 1rem;
-  color: var(--dark__font-light);
+  color: inherit;
 }
 
 .categories {
@@ -22,8 +23,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  color: inherit;
 
-  background-color: var(--dark__gray-medium-dark);
   border-radius: var(--card__border-radius);
   padding: 1.8rem 1rem 1.8rem 1.8rem;
 }
@@ -31,7 +32,6 @@
 .date-input {
   font-size: var(--font__medium-size);
   padding: 0.6rem 0.5rem;
-  color: var(--dark__font-light);
 }
 
 .select-wrapper,
@@ -44,7 +44,7 @@
 .select-wrapper p,
 .amount-wrapper p {
   font-size: 1.6rem;
-  color: var(--dark__font-light);
+  color: inherit;
 }
 .submit-btn {
   margin-top: 3rem;

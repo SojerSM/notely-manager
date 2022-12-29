@@ -1,14 +1,10 @@
-@import "../../../styles/_dark-theme.css";
-@import "../../../styles/_global-units.css";
-
 .input {
   width: 100%;
-  background: var(--dark__gray-forms);
   outline: none;
   border: none;
   border-radius: var(--form__border-radius);
 }
 
 .input::placeholder {
-  color: var(--dark__font-light-smoked);
+  color: inherit;
 }

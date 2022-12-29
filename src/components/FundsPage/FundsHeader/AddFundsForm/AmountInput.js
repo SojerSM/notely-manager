@@ -8,11 +8,14 @@ const AmountInput = function (props) {
     props.onChange(event.target.value);
   };
 
+  const bcgInput = `var(--${props.theme}__gray-forms)`;
+
   return (
     <Fragment>
       <input
         onChange={inputHandler}
         className={styles["input"]}
+        style={{ backgroundColor: bcgInput }}
         id={"amount"}
         type={"number"}
         min={"0.01"}

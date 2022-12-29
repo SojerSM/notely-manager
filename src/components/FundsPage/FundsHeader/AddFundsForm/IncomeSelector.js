@@ -6,9 +6,12 @@ const FundsSelector = function (props) {
     props.onChange(event.target.value);
   };
 
+  const bcgSelector = `var(--${props.theme}__gray-forms)`;
+
   return (
     <select
       className={styles["selector"]}
+      style={{ backgroundColor: bcgSelector }}
       name={"categories"}
       value={props.value}
       onChange={selectHandler}

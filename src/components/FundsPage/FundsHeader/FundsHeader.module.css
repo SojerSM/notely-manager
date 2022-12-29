@@ -1,9 +1,6 @@
-@import "../../../styles/_dark-theme.css";
-@import "../../../styles/_global-units.css";
-
 .title {
   font-size: var(--font__page-title);
-  color: var(--dark__font-title);
+  color: inherit;
 }
 
 .header {
@@ -21,6 +18,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  color: inherit;
 }
 
 .overviews {

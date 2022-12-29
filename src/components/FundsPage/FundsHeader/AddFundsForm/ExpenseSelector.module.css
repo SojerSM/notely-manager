@@ -1,18 +1,14 @@
-@import "../../../../styles/_dark-theme.css";
-@import "../../../../styles/_global-units.css";
-
 .selector {
-  background: var(--dark__gray-forms);
-  color: var(--dark__font-light);
+  color: inherit;
   padding: 0.6rem;
   outline: none;
   border: none;
   border-radius: var(--form__border-radius);
 
   margin-left: 1rem;
-  font-size: 1.4rem;
+  font-size: var(--font__medium-size);
 }
 
 .selector option {
-  background: var(--dark__gray-medium-light);
+  background-color: inherit;
 }
