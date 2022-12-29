@@ -3,7 +3,6 @@
 
 .chart {
   position: relative;
-  background-color: var(--dark__gray-medium-light);
   height: 100%;
 
   display: flex;
@@ -17,7 +16,7 @@
   left: 50%;
   transform: translate(-50%, 0);
   font-size: 1.2rem;
-  color: var(--dark__font-light);
+  color: inherit;
 
   display: flex;
   flex-direction: column;
@@ -35,4 +34,5 @@
   align-items: center;
   left: 2rem;
   top: 68%;
+  color: inherit;
 }

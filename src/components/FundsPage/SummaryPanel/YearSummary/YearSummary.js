@@ -4,13 +4,17 @@ import styles from "./YearSummary.module.css";
 import * as icons from "../../../../assets/icons";
 
 import FundContext from "../../../../store/fundContext/fund-context";
+import ThemeContext from "../../../../store/themeContext/theme-context";
 
 import FundCardHeader from "../../../UI/FundCardHeader";
 import CardFilled from "../../../UI/Cards/CardFilled";
 import YearSummaryItem from "./YearSummaryItem";
 
 const YearSummary = function (props) {
+  const { theme } = useContext(ThemeContext);
   const fundCtx = useContext(FundContext);
+
+  const bcgData = `var(--${theme}__gray-medium-light)`;
 
   const getTotalValue = (type) => {
     let total = fundCtx.currYearFunds
@@ -37,23 +41,28 @@ const YearSummary = function (props) {
   return (
     <CardFilled className={styles["overview"]}>
       <FundCardHeader
-        className={styles["header"]}
+        className={`${
+          theme === "dark" ? styles["header-dark"] : styles["header-light"]
+        }`}
       >{`${fundCtx.currYear} overview`}</FundCardHeader>
-      <div className={styles["data"]}>
+      <div className={styles["data"]} style={{ backgroundColor: bcgData }}>
         <YearSummaryItem
           value={totalIncomes}
           icon={icons.incomesIcon}
           description={"earned"}
+          theme={theme}
         />
         <YearSummaryItem
           value={totalExpenses}
           icon={icons.expensesIcon}
           description={"spent"}
+          theme={theme}
         />
         <YearSummaryItem
           value={balance}
           icon={icons.balanceIcon}
           description={"saved"}
+          theme={theme}
         />
       </div>
     </CardFilled>

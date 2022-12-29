@@ -10,6 +10,8 @@ import ChartLabel from "./ChartLabel";
 const Chart = function (props) {
   const { currMonthFunds, avgMonthExpensesValue } = useContext(FundContext);
 
+  const bcgChart = `var(--${props.theme}__gray-medium-light)`;
+
   const filtered = currMonthFunds.filter((fund) => {
     return fund.type === "expense";
   });
@@ -106,7 +108,7 @@ const Chart = function (props) {
   ];
 
   return (
-    <div className={styles["chart"]}>
+    <div className={styles["chart"]} style={{ backgroundColor: bcgChart }}>
       {filtered.length > 0 && (
         <PieChart
           data={expenses.map((expense) => {
@@ -139,6 +141,7 @@ const Chart = function (props) {
                 color={expense.color}
                 title={expense.title}
                 total={chartTotal}
+                theme={props.theme}
               />
             );
           })}
