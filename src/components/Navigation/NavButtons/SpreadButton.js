@@ -17,11 +17,11 @@ const SpreadButton = function (props) {
     <button
       className={styles.button}
       onClick={props.onClick}
+      onMouseOver={() => setIsFocused(true)}
+      onMouseLeave={() => setIsFocused(false)}
       style={{
         backgroundColor: isFocused ? "var(--dark__UI-icon)" : bcgColor,
       }}
-      onMouseOver={() => setIsFocused(true)}
-      onMouseLeave={() => setIsFocused(false)}
     >
       <svg className={classes} viewBox="0 0 20 20">
         {props.isExpanded

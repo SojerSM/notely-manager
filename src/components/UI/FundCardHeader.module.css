@@ -1,5 +1,6 @@
 @import "../../styles/_dark-theme.css";
 @import "../../styles/_global-units.css";
+@import "../../styles/_light-theme.css";
 
 .header {
   background-color: var(--dark__gray-dark);
@@ -11,5 +12,5 @@
 
 .header h4 {
   font-size: var(--font__medium-size);
-  color: var(--dark__font-light);
+  color: inherit;
 }

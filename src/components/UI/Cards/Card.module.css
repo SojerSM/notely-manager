@@ -10,7 +10,3 @@
 
   transition: background 0.25s ease;
 }
-
-.card:hover {
-  background-color: var(--dark__gray-light);
-}

@@ -41,9 +41,4 @@
   justify-content: center;
 
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  background: var(--dark__UI-icon);
 }
