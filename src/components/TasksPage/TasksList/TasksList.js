@@ -35,10 +35,12 @@ const TasksList = function (props) {
     tasksCtx.displayed === "no-date" && (currList = tasksCtx.noDate);
   }
 
+  const webkitClass = props.theme === "dark" ? "dark" : "light";
+
   return (
     <Fragment>
       <h3 className={styles["filter"]}>{filterLabel}</h3>
-      <div className={styles["list"]}>
+      <div className={`${styles["list"]} ${styles[webkitClass]}`}>
         {currList.length > 0 ? (
           currList.map((task) => {
             return (
@@ -50,6 +52,7 @@ const TasksList = function (props) {
                 option={task.option}
                 priority={task.priority}
                 done={task.done}
+                theme={props.theme}
               />
             );
           })

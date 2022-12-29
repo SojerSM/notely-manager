@@ -1,6 +1,3 @@
-@import "../../../../styles/_dark-theme.css";
-@import "../../../../styles/_global-units.css";
-
 .task {
   position: relative;
 
@@ -8,13 +5,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  outline: 2px solid var(--dark__gray-forms);
 
   width: 100%;
 }
 
 .task:hover {
-  background: none;
+  background: none !important;
 }
 
 .priority {
@@ -32,8 +28,13 @@
   white-space: nowrap;
 }
 
-.done {
+.done-dark {
   color: var(--dark__font-light-smoked);
+  text-decoration: line-through;
+}
+
+.done-light {
+  color: var(--light__font-dark-smoked);
   text-decoration: line-through;
 }
 
@@ -44,20 +45,32 @@
   align-items: center;
 }
 
-.option {
+.option-dark,
+.option-light {
   display: flex;
   justify-content: center;
 
   width: 6rem;
   margin: -0.5rem;
   padding: 0.5rem;
-  background-color: var(--dark__UI-blue);
   border-radius: var(--button__border-radius);
   font-size: 1.1rem;
 }
 
-.option-done {
+.option-dark {
+  background-color: var(--dark__UI-blue);
+}
+
+.option-light {
+  background-color: var(--light__UI-blue);
+}
+
+.option-done-dark {
   background-color: var(--dark__UI-red);
+}
+
+.option-done-light {
+  background-color: var(--light__UI-red);
 }
 
 .icons {
@@ -85,11 +98,11 @@
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: var(--dark__font-light);
+  fill: inherit;
 }
 
 .svg-icon circle {
-  stroke: var(--dark__font-light);
+  stroke: inherit;
   stroke-width: 1;
 }
 
@@ -97,15 +110,4 @@
   margin: -0.5rem 0;
   width: 2rem;
   height: 2rem;
-}
-
-.svg-icon-important path,
-.svg-icon-important polygon,
-.svg-icon-important rect {
-  fill: rgb(229, 229, 113);
-}
-
-.svg-icon-important circle {
-  stroke: rgb(229, 229, 113);
-  stroke-width: 1;
 }

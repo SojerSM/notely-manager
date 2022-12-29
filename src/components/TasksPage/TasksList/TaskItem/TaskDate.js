@@ -11,16 +11,19 @@ const TaskDate = function (props) {
     day = new Date(props.date).toLocaleString("en-US", { day: "2-digit" });
   }
 
+  const doneClass = props.theme === "dark" ? "done-dark" : "done-light";
+  const noDateClass = props.theme === "dark" ? "no-date-dark" : "no-date-light";
+
   return (
     <Fragment>
       {props.date ? (
-        <div className={`${styles["date"]} ${props.done && styles["done"]}`}>
+        <div className={`${styles["date"]} ${props.done && styles[doneClass]}`}>
           <span>{+day.charAt(0) === 0 ? day.slice(1) : day}</span>
           <span>{month.slice(0, 3)}</span>
           <span>{year}</span>
         </div>
       ) : (
-        <div className={`${styles["date"]} ${styles["no-date"]}`}>
+        <div className={`${styles["date"]} ${styles[noDateClass]}`}>
           <span>No date</span>
         </div>
       )}
