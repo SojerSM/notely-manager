@@ -1,8 +1,8 @@
 :root {
   --light__gray-medium-light: rgb(228, 228, 228);
-  --light__gray-medium-dark: #dbdada;
+  --light__gray-medium-dark: #d4d4d4;
   --light__gray-light: rgb(248, 248, 248);
-  --light__gray-dark: #c4c4c4;
+  --light__gray-dark: #4d4d4d;
   --light__gray-forms: #c4c4c4;
 
   --light__font-dark: rgb(43, 43, 43);
@@ -10,11 +10,12 @@
 
   --light__red-error: #d81233;
 
-  --light__UI-blue: #1290e4;
+  --light__UI-blue: #76c8ff;
 
-  --light__UI-red: #ff2b4e;
+  --light__UI-red: #ff526f;
   --light__UI-icon: #585858;
+  --light__UI-icon-light: #a7a7a7;
 
-  --light__UI-green: rgb(96, 207, 96);
+  --light__UI-green: rgb(108, 216, 108);
   --light__UI-title-span: rgba(196, 144, 22, 1);
 }

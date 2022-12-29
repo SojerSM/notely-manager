@@ -7,7 +7,10 @@ const FundItemDate = function (props) {
     .toLocaleString("en-US", { month: "long" })
     .slice(0, 3);
 
-  const bcgDate = `var(--${props.theme}__gray-medium-dark)`;
+  const bcgDate =
+    props.theme === "dark"
+      ? "var(--dark__gray-medium-dark)"
+      : "var(--light__gray-medium-light)";
   const dateOutline = `2px solid var(--${props.theme}__gray-forms)`;
 
   return (

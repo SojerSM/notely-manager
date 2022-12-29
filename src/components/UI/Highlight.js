@@ -12,7 +12,7 @@ const Highlight = function (props) {
     image:
       theme === "dark"
         ? `linear-gradient(115deg, rgba(225, 188, 40, 1) 0%, rgba(221, 128, 80, 1) 100%)`
-        : `linear-gradient(115deg, rgba(255, 216, 36, 1) 0%, rgba(196, 144, 22, 1) 100%)`,
+        : `linear-gradient(115deg, rgba(248, 219, 77, 1) 0%, rgba(188, 145, 52, 1) 100%)`,
   };
 
   return (

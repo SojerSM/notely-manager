@@ -2,6 +2,11 @@ import styles from "./TogglePageButton.module.css";
 import * as icons from "../../../assets/icons";
 
 const TogglePageButton = function (props) {
+  const iconColor =
+    props.theme === "dark"
+      ? "var(--dark__UI-icon)"
+      : "var(--light__UI-icon-light)";
+
   const btnClasses = `${styles.button} ${
     props.isExpanded && styles["button-expanded"]
   }`;
@@ -17,7 +22,11 @@ const TogglePageButton = function (props) {
 
   return (
     <button className={btnClasses} onClick={togglePageHandler}>
-      <svg className={styles["svg-icon"]} viewBox="0 0 20 20">
+      <svg
+        className={styles["svg-icon"]}
+        style={{ fill: iconColor }}
+        viewBox="0 0 20 20"
+      >
         {props.type === "summary" && icons.navigationSummaryIcon}
         {props.type === "funds" && icons.navigationFundsIcon}
         {props.type === "tasks" && icons.navigationListIcon}

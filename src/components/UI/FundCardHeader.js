@@ -7,12 +7,16 @@ import ThemeContext from "../../store/themeContext/theme-context";
 const FundCardHeader = function (props) {
   const { theme, defaultFontColor } = useContext(ThemeContext);
 
-  const bcgColor = `var(--${theme}__gray-dark)`;
+  const bcgColor =
+    theme === "dark"
+      ? "var(--dark__gray-dark)"
+      : "var(--light__gray-medium-dark)";
+  const fontColor = defaultFontColor;
 
   return (
     <div
       className={`${styles["header"]} ${[props.className]}`}
-      style={{ backgroundColor: bcgColor, color: defaultFontColor }}
+      style={{ backgroundColor: bcgColor, color: fontColor }}
     >
       <h4>{props.children}</h4>
     </div>

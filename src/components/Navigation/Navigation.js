@@ -15,8 +15,7 @@ const Navigation = function (props) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const bcgColor = `var(--${theme}__gray-dark)`;
-  const color =
-    theme === "dark" ? "var(--dark__font-light)" : "var(--light__font-dark)";
+  const color = "var(--dark__font-light)";
 
   const expandHandler = (event) => {
     event.preventDefault();
@@ -40,18 +39,21 @@ const Navigation = function (props) {
           type={"summary"}
           isExpanded={isExpanded}
           onClick={props.onClick}
+          theme={theme}
         />
         <TogglePageButton
           content={"Funds"}
           type={"funds"}
           isExpanded={isExpanded}
           onClick={props.onClick}
+          theme={theme}
         />
         <TogglePageButton
           content={"Tasks"}
           type={"tasks"}
           isExpanded={isExpanded}
           onClick={props.onClick}
+          theme={theme}
         />
       </div>
       <ThemeButton />

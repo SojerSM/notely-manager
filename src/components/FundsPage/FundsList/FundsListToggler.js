@@ -1,9 +1,11 @@
 import styles from "./FundsListToggler.module.css";
 
 const FundsListToggler = function (props) {
-  const bcgToggler = `var(--${props.theme}__gray-dark)`;
-  const switchOutline = `2px solid var(--${props.theme}__UI-icon)`;
-  const bcgSlider = `var(--${props.theme}__UI-icon)`;
+  const bcgToggler =
+    props.theme === "dark"
+      ? "var(--dark__gray-dark)"
+      : "var(--light__gray-medium-dark)";
+  const sliderColor = `var(--${props.theme}__UI-icon)`;
 
   const changeDisplayedHandler = (event) => {
     event.preventDefault();
@@ -30,14 +32,14 @@ const FundsListToggler = function (props) {
       <h4 className={incomesClasses}>Incomes</h4>
       <button
         className={styles["switch-btn"]}
-        style={{ outline: switchOutline }}
+        style={{ outline: `2px solid ${sliderColor}` }}
         onClick={changeDisplayedHandler}
       >
         <div
           className={`${styles["slider"]} ${
             props.displayedList === "expenses" && styles["slider-right"]
           }`}
-          style={{ backgroundColor: bcgSlider }}
+          style={{ backgroundColor: sliderColor }}
         ></div>
       </button>
       <h4 className={expensesClasses}>Expenses</h4>
