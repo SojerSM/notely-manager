@@ -16,6 +16,8 @@ const FundsMonthSelector = function (props) {
     "December",
   ];
 
+  const bcgSelector = `var(--${props.theme}__gray-forms)`;
+
   const selectHandler = (event) => {
     event.preventDefault();
     props.onChange(event.target.value);
@@ -25,6 +27,7 @@ const FundsMonthSelector = function (props) {
     <div className={styles["wrapper"]}>
       <select
         className={styles["selector"]}
+        style={{ backgroundColor: bcgSelector }}
         name={"fund-month"}
         value={props.value}
         onChange={selectHandler}

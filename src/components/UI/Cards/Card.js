@@ -18,6 +18,7 @@ const Card = function (props) {
       style={{
         outline: `2px solid ${bcgColor}`,
         backgroundColor: isFocused ? bcgColor : "",
+        ...props.style,
       }}
     >
       {props.children}

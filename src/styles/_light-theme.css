@@ -8,6 +8,12 @@
   --light__font-dark: rgb(43, 43, 43);
   --light__font-dark-smoked: rgb(43, 43, 43, 0.7);
 
+  --light__red-error: #d81233;
+
+  --light__UI-blue: #1290e4;
+
+  --light__UI-red: #e41638;
+
   --light__UI-green: rgb(96, 207, 96);
   --light__UI-title-span: rgba(196, 144, 22, 1);
 }

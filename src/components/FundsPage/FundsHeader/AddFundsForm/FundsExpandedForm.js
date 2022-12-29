@@ -139,7 +139,9 @@ const FundsExpandedForm = function (props) {
       <Button className={styles["submit-btn"]} onClick={formSubmitHandler}>
         Submit
       </Button>
-      {formError.status && <AddFundsError formError={formError} />}
+      {formError.status && (
+        <AddFundsError formError={formError} theme={props.theme} />
+      )}
     </form>
   );
 };

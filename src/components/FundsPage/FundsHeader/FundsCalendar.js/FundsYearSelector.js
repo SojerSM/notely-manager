@@ -14,6 +14,8 @@ const FundsYearSelector = function (props) {
     "2029",
   ];
 
+  const bcgSelector = `var(--${props.theme}__gray-forms)`;
+
   const selectHandler = (event) => {
     event.preventDefault();
     props.onChange(event.target.value);
@@ -23,6 +25,7 @@ const FundsYearSelector = function (props) {
     <div className={styles["wrapper"]}>
       <select
         className={styles["selector"]}
+        style={{ backgroundColor: bcgSelector }}
         name={"fund-year"}
         value={props.value}
         onChange={selectHandler}

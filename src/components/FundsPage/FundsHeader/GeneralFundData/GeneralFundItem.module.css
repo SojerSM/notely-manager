@@ -1,11 +1,9 @@
-@import "../../../../styles/_dark-theme.css";
-@import "../../../../styles/_global-units.css";
-
 .data-item {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
   width: 100%;
+  color: inherit;
 }
 
 .numbers {
@@ -25,20 +23,18 @@
 
 .amount {
   font-size: var(--font__medium-size);
-  color: var(--dark__font-light);
   font-weight: bolder;
 }
 
 .text {
   font-size: var(--font__small-size);
-  color: var(--dark__font-light);
+  color: inherit;
   text-transform: uppercase;
   margin-bottom: 0.15rem;
 }
 
 .total-worth {
   font-size: 1.5rem;
-  color: var(--dark__font-light);
 }
 
 .bar {

@@ -1,17 +1,9 @@
-@import "../../../../styles/_dark-theme.css";
-@import "../../../../styles/_global-units.css";
-
 .summary {
   margin-top: 1rem;
   align-items: flex-end;
   justify-content: flex-end;
   width: fit-content;
   gap: 1rem;
-  outline: 2px solid var(--dark__gray-forms);
-}
-
-.summary:hover {
-  background: var(--dark__gray-forms);
 }
 
 .content {
@@ -21,14 +13,8 @@
 
   font-size: 1.2rem;
   margin-bottom: 0.2rem;
-  color: var(--dark__font-light);
 }
 
 .amount {
   font-size: var(--font__large-size);
-  color: var(--dark__font-light);
-}
-
-.amount span {
-  color: var(--dark__font-light);
 }

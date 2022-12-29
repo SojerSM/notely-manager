@@ -9,8 +9,8 @@ const GeneralFundItem = function (props) {
 
   const getBarColor = () => {
     let color;
-    if (props.type === "income") color = "var(--dark__UI-blue)";
-    if (props.type === "expense") color = "var(--dark__UI-red)";
+    if (props.type === "income") color = `var(--${props.theme}__UI-blue)`;
+    if (props.type === "expense") color = `var(--${props.theme}__UI-red)`;
     return color;
   };
 

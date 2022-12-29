@@ -1,10 +1,8 @@
-@import "../../../../styles/_dark-theme.css";
-@import "../../../../styles/_dark-theme.css";
-
 .wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
+  color: inherit;
 }
 
 .wrapper p {
@@ -13,8 +11,7 @@
 }
 
 .selector {
-  background: var(--dark__gray-forms);
-  color: var(--dark__font-light);
+  color: inherit;
   padding: 0.6rem;
   outline: none;
   border: none;
@@ -25,5 +22,5 @@
 }
 
 .selector option {
-  background: var(--dark__gray-medium-light);
+  background: inherit;
 }

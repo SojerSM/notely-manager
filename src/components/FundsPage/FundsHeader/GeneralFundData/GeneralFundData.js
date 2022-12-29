@@ -3,6 +3,7 @@ import { useContext } from "react";
 import styles from "./GeneralFundData.module.css";
 
 import FundContext from "../../../../store/fundContext/fund-context";
+import ThemeContext from "../../../../store/themeContext/theme-context";
 
 import FundCardHeader from "../../../UI/FundCardHeader";
 
@@ -12,6 +13,7 @@ import GeneralFundSummary from "./GeneralFundSummary";
 
 const GeneralFundData = function (props) {
   const fundCtx = useContext(FundContext);
+  const { theme, defaultFontColor } = useContext(ThemeContext);
 
   const activeMonth = new Date(
     fundCtx.currYear,
@@ -64,20 +66,26 @@ const GeneralFundData = function (props) {
   return (
     <CardFilled className={styles["general"]}>
       <FundCardHeader>{`Cashflow in ${activeMonth}`}</FundCardHeader>
-      <div className={styles["overview"]}>
+      <div className={styles["overview"]} style={{ color: defaultFontColor }}>
         <GeneralFundItem
           type={"income"}
           funds={incomes}
           amount={incomesAmount}
           barFillWidth={barFills.incomeBar}
+          theme={theme}
         />
         <GeneralFundItem
           type={"expense"}
           funds={expenses}
           amount={expensesAmount}
           barFillWidth={barFills.expenseBar}
+          theme={theme}
         />
-        <GeneralFundSummary balance={monthBalance} month={activeMonth} />
+        <GeneralFundSummary
+          balance={monthBalance}
+          month={activeMonth}
+          theme={theme}
+        />
       </div>
     </CardFilled>
   );

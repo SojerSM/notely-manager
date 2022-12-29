@@ -1,19 +1,13 @@
-@import "../../../../styles/_dark-theme.css";
-
 .svg-icon {
   width: 2rem;
   height: 2rem;
+  color: inherit;
 }
 
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: var(--dark__red-error);
-}
-
-.svg-icon circle {
-  stroke: var(--dark__red-error);
-  stroke-width: 1;
+  fill: inherit;
 }
 
 .error {
@@ -25,5 +19,5 @@
 
 .error p {
   font-size: 1.4rem;
-  color: var(--dark__red-error);
+  color: inherit;
 }
