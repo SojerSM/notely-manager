@@ -2,8 +2,6 @@
 @import "../../../styles/_dark-theme.css";
 
 .button {
-  background-color: var(--dark__UI-green);
-
   border: none;
   outline: none;
   border-radius: var(--button__border-radius);
