@@ -46,7 +46,7 @@ const SidePanel = function (props) {
         </Modal>
       )}
       <h4 className={styles["side-page-title"]}>Calendar</h4>
-      <TasksCalendar />
+      <TasksCalendar theme={props.theme} />
       <RemoveDoneButton onClick={toggleFormHandler} />
     </Panel>
   );

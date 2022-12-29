@@ -7,6 +7,19 @@ import TaskContext from "../../../../../store/taskContext/task-context";
 const TaskCalendarDayItem = function (props) {
   const taskCtx = useContext(TaskContext);
   const [matchingTasks, setMatchingTasks] = useState([]);
+  const [isFocused, setIsFocused] = useState(false);
+
+  const dayClass = props.theme === "dark" ? "day-dark" : "day-light";
+  const focusedColor =
+    props.theme === "dark"
+      ? "var(--dark__gray-light)"
+      : "var(--light__gray-medium-light)";
+  const unactiveClass =
+    props.theme === "dark" ? "unactive-dark" : "unactive-light";
+  const containPanelColor =
+    props.theme === "dark"
+      ? "var(--dark__gray-forms)"
+      : "var(--light__gray-dark)";
 
   useEffect(() => {
     if (!props.date) return;
@@ -38,14 +51,20 @@ const TaskCalendarDayItem = function (props) {
   return (
     <div className={styles["wrapper"]} onClick={dateHandler}>
       <div
-        className={`${styles["day"]} ${dayFilledClass} ${
-          !props.day && styles["unactive"]
+        className={`${styles[dayClass]} ${dayFilledClass} ${
+          !props.day && styles[unactiveClass]
         }`}
+        onMouseOver={() => setIsFocused(true)}
+        onMouseLeave={() => setIsFocused(false)}
+        style={{
+          backgroundColor: isFocused ? focusedColor : "",
+        }}
       >
         <h5>{props.day}</h5>
         {props.day && (
           <div
             className={`${styles["contain-panel"]} ${panelFilledClass}`}
+            style={{ backgroundColor: containPanelColor }}
           ></div>
         )}
       </div>

@@ -4,7 +4,7 @@ import styles from "./TaskCalendarDaysList.module.css";
 
 import TaskCalendarDayItem from "./TaskCalendarDayItem";
 
-const TaskCalendarDaysList = function ({ date }) {
+const TaskCalendarDaysList = function ({ date, theme }) {
   const [days, setDays] = useState([]);
 
   useEffect(() => {
@@ -44,9 +44,10 @@ const TaskCalendarDaysList = function ({ date }) {
             key={day.dayID}
             day={day.dayID}
             date={day.date}
+            theme={theme}
           />
         ) : (
-          <TaskCalendarDayItem key={Math.random().toString()} />
+          <TaskCalendarDayItem key={Math.random().toString()} theme={theme} />
         );
       })}
     </div>

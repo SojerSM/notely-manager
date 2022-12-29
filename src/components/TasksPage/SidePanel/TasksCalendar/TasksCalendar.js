@@ -46,9 +46,17 @@ const TasksCalendar = function (props) {
 
   return (
     <div className={styles["calendar"]}>
-      <TaskCalendarYear year={year} onYearChange={yearChangeHandler} />
-      <TaskCalendarMonth date={date} onMonthChange={monthChangeHandler} />
-      <TaskCalendarDaysList date={date} />
+      <TaskCalendarYear
+        year={year}
+        onYearChange={yearChangeHandler}
+        theme={props.theme}
+      />
+      <TaskCalendarMonth
+        date={date}
+        onMonthChange={monthChangeHandler}
+        theme={props.theme}
+      />
+      <TaskCalendarDaysList date={date} theme={props.theme} />
     </div>
   );
 };

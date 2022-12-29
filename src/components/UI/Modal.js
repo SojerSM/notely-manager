@@ -10,14 +10,14 @@ const Backdrop = function (props) {
 };
 
 const ModalOverlay = function (props) {
-  const { theme } = useContext(ThemeContext);
+  const { theme, defaultFontColor } = useContext(ThemeContext);
 
   const bcgColor = `var(--${theme}__gray-medium-light)`;
 
   return (
     <div
       className={`${styles["modal"]} ${props.styles}`}
-      style={{ backgroundColor: bcgColor }}
+      style={{ backgroundColor: bcgColor, color: defaultFontColor }}
     >
       <div className={styles["content"]}>{props.children}</div>
     </div>

@@ -2,6 +2,12 @@ import styles from "./TaskCalendarMonth.module.css";
 import * as icons from "../../../../assets/icons";
 
 const TaskCalendarMonth = function (props) {
+  const iconColor = `var(--${props.theme}__UI-icon)`;
+  const bcgMonth =
+    props.theme === "dark"
+      ? "var(--dark__gray-medium-light)"
+      : "var(--light__gray-medium-dark)";
+
   const monthBackwardHandler = (event) => {
     event.preventDefault();
 
@@ -17,9 +23,16 @@ const TaskCalendarMonth = function (props) {
   };
 
   return (
-    <div className={styles["month-wrapper"]}>
+    <div
+      className={styles["month-wrapper"]}
+      style={{ backgroundColor: bcgMonth }}
+    >
       <button onClick={monthBackwardHandler}>
-        <svg className={styles["svg-icon"]} viewBox="0 0 20 20">
+        <svg
+          className={styles["svg-icon"]}
+          style={{ fill: iconColor }}
+          viewBox="0 0 20 20"
+        >
           {icons.singleArrowLeft}
         </svg>
       </button>
@@ -27,7 +40,11 @@ const TaskCalendarMonth = function (props) {
         <p>{props.date.formattedMonth}</p>
       </div>
       <button onClick={monthForwardHandler}>
-        <svg className={styles["svg-icon"]} viewBox="0 0 20 20">
+        <svg
+          className={styles["svg-icon"]}
+          style={{ fill: iconColor }}
+          viewBox="0 0 20 20"
+        >
           {icons.singleArrowRight}
         </svg>
       </button>

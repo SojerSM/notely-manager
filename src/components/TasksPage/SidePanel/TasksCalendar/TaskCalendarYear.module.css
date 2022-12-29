@@ -1,10 +1,7 @@
-@import "../../../../styles/_dark-theme.css";
-
 .year-wrapper {
   width: 100%;
   padding: 2rem 1rem;
 
-  background-color: var(--dark__gray-light);
   border-radius: 25px 25px 0 0;
 
   display: flex;
@@ -36,10 +33,10 @@
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: var(--dark__UI-icon);
+  fill: inherit;
 }
 
 .svg-icon circle {
-  stroke: var(--dark__UI-icon);
+  stroke: inherit;
   stroke-width: 1;
 }
