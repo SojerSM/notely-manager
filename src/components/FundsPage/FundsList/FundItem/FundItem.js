@@ -17,16 +17,16 @@ const FundItem = function (props) {
 
   const getAmountBcgColor = () => {
     let color;
-    if (props.type === "income") color = "var(--dark__UI-blue)";
-    if (props.type === "expense") color = "var(--dark__UI-red)";
+    if (props.type === "income") color = `var(--${props.theme}__UI-blue)`;
+    if (props.type === "expense") color = `var(--${props.theme}__UI-red)`;
     return color;
   };
 
   const amountBcgColor = getAmountBcgColor();
 
   return (
-    <div className={styles["fund-item"]}>
-      <FundItemDate date={props.date} />
+    <div className={styles["fund-item"]} style={{ color: props.fontColor }}>
+      <FundItemDate date={props.date} theme={props.theme} />
       <p className={styles[["content"]]}>
         {capitalizeFirstLetter(props.content)}
       </p>
@@ -39,7 +39,11 @@ const FundItem = function (props) {
           <p>{props.amount.toFixed(2)}$</p>
         </div>
         <button className={styles["delete-button"]} onClick={deleteHandler}>
-          <svg className={styles["svg-icon"]} viewBox="0 0 20 20">
+          <svg
+            className={styles["svg-icon"]}
+            style={{ fill: `var(--${props.theme}__UI-icon)` }}
+            viewBox="0 0 20 20"
+          >
             {icons.deleteIcon}
           </svg>
         </button>

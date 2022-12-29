@@ -6,7 +6,6 @@
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
-  color: var(--dark__font-light);
 }
 
 .content {
@@ -69,10 +68,10 @@
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: var(--dark__UI-icon);
+  fill: inherit;
 }
 
 .svg-icon circle {
-  stroke: var(--dark__UI-icon);
+  stroke: inherit;
   stroke-width: 1;
 }

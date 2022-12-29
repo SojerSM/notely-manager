@@ -1,8 +1,4 @@
-@import "../../../styles/_dark-theme.css";
-@import "../../../styles/_global-units.css";
-
 .toggler {
-  background-color: var(--dark__gray-dark);
   width: 100%;
   padding: 1rem;
 
@@ -14,10 +10,9 @@
 
 .title {
   font-size: 1.6rem;
-  color: var(--dark__font-light);
   opacity: 0.5;
 
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .active {
@@ -26,7 +21,6 @@
 
 .switch-btn {
   background: none;
-  outline: 2px solid var(--dark__UI-icon);
   border: none;
   border-radius: var(--form__border-radius);
 
@@ -37,13 +31,12 @@
 }
 
 .slider {
-  background-color: var(--dark__UI-icon);
   height: 100%;
   width: 2.5rem;
   border-radius: inherit;
   transform: translate(0, 0);
 
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .slider-right {

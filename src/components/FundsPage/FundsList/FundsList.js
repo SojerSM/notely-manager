@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import styles from "./FundsList.module.css";
 
 import FundContext from "../../../store/fundContext/fund-context";
+import ThemeContext from "../../../store/themeContext/theme-context";
 
 import Button from "../../UI/Buttons/Button";
 import CardFilled from "../../UI/Cards/CardFilled";
@@ -10,6 +11,7 @@ import FundsListToggler from "./FundsListToggler";
 import FundItem from "./FundItem/FundItem";
 
 const FundsList = function (props) {
+  const { theme, defaultFontColor } = useContext(ThemeContext);
   const fundCtx = useContext(FundContext);
 
   const [displayedList, setDisplayedList] = useState("incomes");
@@ -59,6 +61,8 @@ const FundsList = function (props) {
           amount={item.amount}
           option={item.option}
           type={item.type}
+          theme={theme}
+          fontColor={defaultFontColor}
         />
       );
     });
@@ -69,12 +73,17 @@ const FundsList = function (props) {
       <FundsListToggler
         displayedList={displayedList}
         onChange={changeDisplayedList}
+        theme={theme}
+        fontColor={defaultFontColor}
       />
-      <div className={styles["list"]}>
+      <div className={`${styles["list"]} ${styles[theme]}`}>
         {displayedList === "incomes" && renderSortedList("income")}
         {displayedList === "expenses" && renderSortedList("expense")}
       </div>
-      <div className={styles["sort-buttons"]}>
+      <div
+        className={styles["sort-buttons"]}
+        style={{ color: defaultFontColor }}
+      >
         <p>Sort by</p>
         <Button className={styles["sort"]} onClick={sortByDateHandler}>
           date
