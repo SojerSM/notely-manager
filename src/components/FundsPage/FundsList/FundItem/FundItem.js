@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { capitalizeFirstLetter } from "../../../../helpers/helpers";
+import { capitalizeFirstLetter } from "../../../../utils/helpers";
 
 import styles from "./FundItem.module.css";
 import * as icons from "../../../../assets/icons";

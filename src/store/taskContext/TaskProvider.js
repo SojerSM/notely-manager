@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getInitialValue } from "../../helpers/helpers";
+import { getInitialValue } from "../../utils/helpers";
 import { defaultTasks } from "../initial-tasks";
 
 import TaskContext from "./task-context";

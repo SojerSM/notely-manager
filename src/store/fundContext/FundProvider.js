@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getInitialValue } from "../../helpers/helpers";
+import { getInitialValue } from "../../utils/helpers";
 import { defaultFunds } from "../initial-funds";
 
 import FundContext from "./fund-context";

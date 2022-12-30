@@ -16,10 +16,14 @@ const TaskCalendarDayItem = function (props) {
       : "var(--light__gray-medium-light)";
   const unactiveClass =
     props.theme === "dark" ? "unactive-dark" : "unactive-light";
+  const activeClass =
+    props.theme === "dark" ? "day-active-dark" : "day-active-light";
   const containPanelColor =
     props.theme === "dark"
       ? "var(--dark__gray-forms)"
-      : "var(--light__gray-dark)";
+      : "var(--light__gray-medium-light)";
+  const containActive =
+    props.theme === "dark" ? "contain-active-dark" : "contain-active-light";
 
   useEffect(() => {
     if (!props.date) return;
@@ -43,10 +47,10 @@ const TaskCalendarDayItem = function (props) {
   };
 
   const panelFilledClass = `${
-    matchingTasks.length > 0 && styles["contain-active"]
+    matchingTasks.length > 0 && styles[containActive]
   }`;
 
-  const dayFilledClass = `${matchingTasks.length > 0 && styles["day-active"]}`;
+  const dayFilledClass = `${matchingTasks.length > 0 && styles[activeClass]}`;
 
   return (
     <div className={styles["wrapper"]} onClick={dateHandler}>
