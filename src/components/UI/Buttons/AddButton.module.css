@@ -1,13 +1,8 @@
-@import "../../../styles/_dark-theme.css";
-@import "../../../styles/_global-units.css";
-
 .add-button {
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: var(--font__large-size);
-  background-color: var(--dark__UI-green);
-  color: var(--dark__font-light);
 }
 
 .svg-icon {
@@ -19,10 +14,10 @@
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: var(--dark__font-light);
+  fill: inherit;
 }
 
 .svg-icon circle {
-  stroke: var(--dark__font-light);
+  stroke: inherit;
   stroke-width: 1;
 }
