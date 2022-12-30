@@ -17,7 +17,7 @@ On the other hand, 'tasks' section offers the list of goals, divided into catego
 
 At the end of the process I've already known that not everything was written the best way, but for now I'd like to keep it public just to not fall into infinite loop of upgrades, refactors etc. what is kinda obvious while studying and increasing skills.
 
-Live demo: https://superb-madeleine-70fa75.netlify.app
+Try live demo: https://peaceful-manatee-8aee90.netlify.app
 
 ## Preview
 
