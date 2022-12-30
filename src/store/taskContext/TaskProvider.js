@@ -105,8 +105,6 @@ const TaskProvider = function (props) {
     removeFinished,
   };
 
-  console.log(tasks);
-
   return (
     <TaskContext.Provider value={taskContext}>
       {props.children}
